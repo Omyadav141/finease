@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AU Small Finance Bank Credit Cards</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;500;700&display=swap');
+
+        body {
+            font-family: 'Raleway', sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            animation: fadeInBody 2s ease-in-out;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 80px auto;
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            overflow: hidden;
+        }
+
+        .left-section {
+            width: 50%;
+            position: relative;
+            padding-right: 20px;
+        }
+
+        .card-slider {
+    width: 310px;  /* Set card width to 310px */
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+        .slides {
+            display: flex;
+            transition: transform 0.8s ease-in-out;
+        }
+
+        .slide {
+            min-width: 100%;
+        }
+
+        .slide img {
+            width: 100%;
+            border-radius: 15px;
+        }
+
+        .slider-controls {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 10px;
+        }
+
+        .slider-btn {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 50%;
+            transition: background-color 0.3s;
+        }
+
+        .slider-btn:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .right-section {
+            width: 45%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .ambassador-image {
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .info {
+            margin-top: 30px;
+            line-height: 1.8;
+            font-size: 16px;
+            color: #2c3e50;
+        }
+
+        .info h2 {
+            color: #2980b9;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .info ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .info ul li {
+            background-color: #f7f7f7;
+            margin-bottom: 10px;
+            padding: 10px 15px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .info ul li:hover {
+            background-color: #ecf0f1;
+            transform: translateY(-5px);
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            font-size: 32px;
+            margin-bottom: 30px;
+            font-weight: 700;
+            letter-spacing: 1.2px;
+            position: relative;
+            display: inline-block;
+        }
+
+        h1::after {
+            content: "";
+            display: block;
+            width: 100px;
+            height: 3px;
+            background-color: #2980b9;
+            margin: 10px auto 0 auto;
+            animation: slideIn 1s ease-out;
+        }
+
+        .btn {
+            display: block;
+            text-align: center;
+            background-color: #2980b9;
+            color: #fff;
+            padding: 12px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            margin-top: 40px;
+            letter-spacing: 1px;
+            transition: background-color 0.4s ease, transform 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #3498db;
+            transform: scale(1.05);
+        }
+
+        @keyframes slideIn {
+            from {
+                width: 0;
+            }
+            to {
+                width: 100px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Left Section - Card Slider -->
+        <div class="left-section">
+            <h1>AU Small Finance Bank Credit Cards</h1>
+            <div class="card-slider">
+                <div class="slides">
+                    <div class="slide"><img src="au-bank-altura-plus-credit-card.jpeg" alt="Altura Card Image"></div>
+                    <div class="slide"><img src="zenith.jpeg" alt="Zenith Card Image"></div>
+                    <div class="slide"><img src="vetta.png" alt="Vetta Card Image"></div>
+                </div>
+                <!-- Slider Controls -->
+                <div class="slider-controls">
+                    <button class="slider-btn" id="prev">❮</button>
+                   
+                    <button class="slider-btn" id="next">❯</button>
+                    
+                </div>
+                
+            </div>
+
+            <!-- Information Section -->
+            <div class="info">
+                <h2>Eligibility</h2>
+                <ul id="eligibility-list">
+                    <!-- Eligibility info will be dynamically inserted here -->
+                </ul>
+
+                <h2>Features</h2>
+                <ul id="features-list">
+                    <!-- Features info will be dynamically inserted here -->
+                </ul>
+
+                <h2>Interest Rate</h2>
+                <ul>
+                    <li id="interest-rate">1.99% - 3.49% per month (23.88% - 41.88% annually)</li>
+                </ul>
+
+                <h2>Fees</h2>
+                <ul id="fees-list">
+                    <!-- Fees info will be dynamically inserted here -->
+                </ul>
+            </div>
+            <a href="#" class="btn">Apply Now</a>
+        </div>
+
+        <!-- Right Section - Brand Ambassador Image -->
+        <div class="right-section">
+            <img src="brand.jpeg" alt="Brand Ambassador" class="ambassador-image">
+        </div>
+    </div>
+
+    <script>
+        const slides = document.querySelector('.slides');
+        const prevBtn = document.getElementById('prev');
+        const nextBtn = document.getElementById('next');
+
+        const eligibilityList = document.getElementById('eligibility-list');
+        const featuresList = document.getElementById('features-list');
+        const feesList = document.getElementById('fees-list');
+        const interestRate = document.getElementById('interest-rate');
+
+        let index = 0;
+
+        const cardsInfo = [
+            {
+                name: "Altura",
+                eligibility: [
+                    "Minimum age: 21 years",
+                    "Minimum annual income: ₹3 Lakhs",
+                    "Good credit score and stable financial history"
+                ],
+                features: [
+                    "4 reward points per ₹100 spent on online transactions and 2 points per ₹100 on offline transactions",
+                    "500 bonus reward points on spending ₹5,000 in the first 60 days",
+                    "Complimentary lounge access (2 per quarter)",
+                    "Fuel surcharge waiver of up to ₹100 per month",
+                    "Up to 20% discount at partner restaurants",
+                    "1% cashback on EMI transactions",
+                    "Reward points have no expiry"
+                ],
+                fees: [
+                    "Joining Fee: ₹499 + GST",
+                    "Annual Fee: ₹499 + GST (Waived on spending ₹50,000 in a year)"
+                ]
+            },
+            {
+                name: "Zenith",
+                eligibility: [
+                    "Minimum age: 21 years",
+                    "Minimum annual income: ₹7 Lakhs",
+                    "Good credit history"
+                ],
+                features: [
+                    "10X reward points on dining, travel, and international transactions",
+                    "Complimentary access to 4 domestic lounges and 2 international lounges per quarter",
+                    "Personal accident cover of ₹2 Lakhs",
+                    "Complimentary golf games (2 games per quarter)",
+                    "Fuel surcharge waiver of up to ₹500 per month",
+                    "Exclusive travel insurance benefits",
+                    "No expiry of reward points"
+                ],
+                fees: [
+                    "Joining Fee: ₹3,000 + GST",
+                    "Annual Fee: ₹3,000 + GST (Waived off on spending ₹1,50,000 in a year)"
+                ]
+            },
+            {
+                name: "Vetta",
+                eligibility: [
+                    "Minimum age: 21 years",
+                    "Minimum annual income: ₹15 Lakhs or high-net-worth individuals",
+                    "Excellent credit score and financial history"
+                ],
+                features: [
+                    "16 reward points per ₹100 on international transactions, 10X points on dining and travel",
+                    "Unlimited complimentary domestic and international lounge access",
+                    "24x7 concierge services for lifestyle, travel, and reservations",
+                    "Complimentary golf games at premium golf courses",
+                    "Personal accident insurance cover of ₹5 Lakhs",
+                    "Complimentary travel insurance and purchase protection",
+                    "Fuel surcharge waiver up to ₹1,000 per month"
+                ],
+                fees: [
+                    "Joining Fee: ₹10,000 + GST",
+                    "Annual Fee: ₹10,000 + GST (Waived on spending ₹4,00,000 in a year)"
+                ]
+            }
+        ];
+
+        function showSlide(newIndex) {
+            index = newIndex;
+            slides.style.transform = `translateX(-${index * 100}%)`;
+            updateCardInfo(index);
+        }
+
+        function updateCardInfo(index) {
+            // Update eligibility
+            eligibilityList.innerHTML = '';
+            cardsInfo[index].eligibility.forEach(item => {
+                const li = document.createElement('li');
+                li.textContent = item;
+                eligibilityList.appendChild(li);
+            });
+
+            // Update features
+            featuresList.innerHTML = '';
+            cardsInfo[index].features.forEach(item => {
+                const li = document.createElement('li');
+                li.textContent = item;
+                featuresList.appendChild(li);
+            });
+
+            // Update fees
+            feesList.innerHTML = '';
+            cardsInfo[index].fees.forEach(item => {
+                const li = document.createElement('li');
+                li.textContent = item;
+                feesList.appendChild(li);
+            });
+        }
+
+        prevBtn.addEventListener('click', () => {
+            index = (index > 0) ? index - 1 : 2;
+            showSlide(index);
+        });
+
+        nextBtn.addEventListener('click', () => {
+            index = (index < 2) ? index + 1 : 0;
+            showSlide(index);
+        });
+
+        // Show first card on load
+        updateCardInfo(0);
+    </script>
+</body>
+</html>

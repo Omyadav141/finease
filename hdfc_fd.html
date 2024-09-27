@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HDFC Bank - Fixed Deposits</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            margin: 0;
+            height: 100%;
+            overflow-y: scroll;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+
+        .image-section {
+            flex: 1;
+            min-width: 300px;
+            background-image: url('https://www.hdfcbank.com/assets/images/common/logo.png');
+            background-size: cover;
+            background-position: center;
+            animation: slideInLeft 2s ease-in-out;
+        }
+
+        .content-section {
+            flex: 2;
+            padding: 20px;
+            overflow-y: auto;
+            animation: slideInRight 2s ease-in-out;
+        }
+
+        h1 {
+            color: #1c4587;
+            text-align: center;
+            animation: bounceIn 2s ease-in-out;
+        }
+
+        h2 {
+            color: #1c4587;
+            margin-top: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 16px;
+            animation: fadeInUp 2s ease-in-out;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #1c4587;
+            color: white;
+        }
+
+        .highlight {
+            background-color: #e6f2ff;
+        }
+
+        a {
+            color: #0073e6;
+            text-decoration: none;
+            font-weight: bold;
+            animation: pulse 2s infinite;
+        }
+
+        a:hover {
+            color: #005bb5;
+        }
+
+        .open-account {
+            display: block;
+            margin: 20px auto;
+            padding: 15px 30px;
+            font-size: 18px;
+            color: white;
+            background-color: #0073e6;
+            text-align: center;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            max-width: 300px;
+        }
+
+        .open-account:hover {
+            background-color: #005bb5;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideInLeft {
+            from { transform: translateX(-100%); }
+            to { transform: translateX(0); }
+        }
+
+        @keyframes slideInRight {
+            from { transform: translateX(100%); }
+            to { transform: translateX(0); }
+        }
+
+        @keyframes bounceIn {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-20px);
+            }
+            60% {
+                transform: translateY(-10px);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="image-section"></div>
+    <div class="content-section">
+        <h1>HDFC Bank - Fixed Deposits</h1>
+
+        <p>HDFC Bank Fixed Deposits and the interest on them are a good source of income – in a safe and assured manner. Choose a tenure and amount of your choice to grow your income in a steady fashion. You can open an FD for as less as ₹5,000, and use it as a back-up for your savings or current account with Sweep-in and Super Saver Facilities. HDFC Bank Fixed Deposits are easy and convenient to open or liquidate whenever necessary.</p>
+
+        <h2>Features of Fixed Deposit Account</h2>
+        <table>
+            <tr>
+                <th>Feature</th>
+                <th>Details</th>
+            </tr>
+            <tr>
+                <td class="highlight">Investment Flexibility</td>
+                <td>Easy investment with attractive interest rates, flexibility, high returns, and security.</td>
+            </tr>
+            <tr>
+                <td>Senior Citizen Rates</td>
+                <td>Higher rate of interest on Fixed Deposit for Senior Citizens.</td>
+            </tr>
+            <tr>
+                <td class="highlight">Booking Convenience</td>
+                <td>Convenience of booking deposit through NetBanking.</td>
+            </tr>
+        </table>
+
+        <h2>Tax Deductions For Re-investment Fixed Deposits</h2>
+        <table>
+            <tr>
+                <th>Tax Category</th>
+                <th>Rate</th>
+            </tr>
+            <tr>
+                <td class="highlight">Resident Individuals & HUF</td>
+                <td>10%</td>
+            </tr>
+            <tr>
+                <td>Corporate Entity</td>
+                <td>10%</td>
+            </tr>
+            <tr>
+                <td class="highlight">Firms</td>
+                <td>10%</td>
+            </tr>
+            <tr>
+                <td>Cooperative Societies & Local Authority</td>
+                <td>10%</td>
+            </tr>
+        </table>
+
+        <h2>Eligibility</h2>
+        <table>
+            <tr>
+                <th>Eligible Categories</th>
+            </tr>
+            <tr>
+                <td class="highlight">Residents</td>
+            </tr>
+            <tr>
+                <td>Hindu Undivided Families</td>
+            </tr>
+            <tr>
+                <td>Sole Proprietorship Firms</td>
+            </tr>
+            <tr>
+                <td>Partnership Firms</td>
+            </tr>
+            <tr>
+                <td>Limited Companies</td>
+            </tr>
+            <tr>
+                <td>Trust Accounts</td>
+            </tr>
+        </table>
+
+        <h2>Document Requirements</h2>
+        <table>
+            <tr>
+                <th>Category</th>
+                <th>Documents</th>
+            </tr>
+            <tr>
+                <td class="highlight">Individual</td>
+                <td>Recent photograph, PAN card, Aadhaar Card, Passport, Driving License, Voter’s ID.</td>
+            </tr>
+            <tr>
+                <td>Company</td>
+                <td>Incorporating certificate, Authorised signatories ID proofs, Partnership Deed, Authorised signatories’ signatures.</td>
+            </tr>
+            <tr>
+                <td class="highlight">Hindu Undivided Family</td>
+                <td>Self-attested PAN card, HUF declaration deed, HUF’s Bank Statement.</td>
+            </tr>
+        </table>
+        <h2>Contact Information</h2>
+        <table>
+            <tr>
+                <th>Service</th>
+                <th>Contact Info</th>
+            </tr>
+            <tr>
+                <td class="highlight">Customer Care</td>
+                <td>1800-258-3838 (Toll-Free)</td>
+            </tr>
+            <tr>
+                <td>Branch Locator</td>
+                <td><a href="https://www.hdfcbank.com/branch-atm-locator" target="_blank">Find your nearest branch</a></td>
+            </tr>
+            <tr>
+                <td class="highlight">Email Support</td>
+                <td>support@hdfcbank.com</td>
+            </tr>
+            <tr>
+                <td>Website</td>
+                <td><a href="https://www.hdfcbank.com" target="_blank">www.hdfcbank.com</a></td>
+            </tr>
+        </table>
+        <a href="compare.html" target="_blank" class="apply-now">compare them with other bank account-type</a>
+      
+        
+        <p><a href="https://applyonline.hdfcbank.com/fixed-deposits/existing-customers-open-fd-online.html?LGcode=MKTG&mc_id=website_organic_regularfdpdpg&icid=website_organic_regularfdpdpg#nbb" target="_blank" class="open-account">Open Fixed Deposit Account Online</a></p>
+
+    </div>
+    
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HDFC Bank - Current Accounts</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            margin: 0;
+            height: 100%;
+            overflow-y: scroll;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+
+        .image-section {
+            flex: 1;
+            min-width: 300px;
+            background-image: url('https://www.hdfcbank.com/assets/images/common/logo.png');
+            background-size: cover;
+            background-position: center;
+            animation: slideInLeft 2s ease-in-out;
+        }
+
+        .content-section {
+            flex: 2;
+            padding: 20px;
+            overflow-y: auto;
+            animation: slideInRight 2s ease-in-out;
+        }
+
+        h1 {
+            color: #1c4587;
+            text-align: center;
+            animation: bounceIn 2s ease-in-out;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 16px;
+            animation: fadeInUp 2s ease-in-out;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #1c4587;
+            color: white;
+        }
+
+        .highlight {
+            background-color: #e6f2ff;
+        }
+
+        a {
+            color: #0073e6;
+            text-decoration: none;
+            font-weight: bold;
+            animation: pulse 2s infinite;
+        }
+
+        a:hover {
+            color: #005bb5;
+        }
+
+        .open-account {
+            display: block;
+            margin: 20px auto;
+            padding: 15px 30px;
+            font-size: 18px;
+            color: white;
+            background-color: #0073e6;
+            text-align: center;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            max-width: 300px;
+        }
+
+        .open-account:hover {
+            background-color: #005bb5;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideInLeft {
+            from { transform: translateX(-100%); }
+            to { transform: translateX(0); }
+        }
+
+        @keyframes slideInRight {
+            from { transform: translateX(100%); }
+            to { transform: translateX(0); }
+        }
+
+        @keyframes bounceIn {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-20px);
+            }
+            60% {
+                transform: translateY(-10px);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="image-section"></div>
+    <div class="content-section">
+        <h1>HDFC Bank - Current Accounts</h1>
+
+        <p>HDFC Bank offers a Current Account to meet every kind of requirement from every kind of organisation – be it a large corporate, a small entrepreneur, a charitable trust, a housing society, a hospital or a professional.</p>
+
+        <p>With HDFC Bank Current Accounts, you can efficiently manage cash, simplify your payments and collections, and benefit from a wide range of free banking services such as fund transfers, local clearing, dynamic limits, cash deposits and withdrawals, etc.</p>
+
+        <h2>Features of Regular Current Account</h2>
+        <table>
+            <tr>
+                <th>Feature</th>
+                <th>Details</th>
+            </tr>
+            <tr>
+                <td class="highlight">Cash Deposit Limit</td>
+                <td>Deposit up to ₹2 lakhs cash free per month OR 25 transactions (whichever is breached first) at any HDFC Bank Branches.</td>
+            </tr>
+            <tr>
+                <td>Cheque Collection & Payment</td>
+                <td>Free local/intercity cheque collection & payment within HDFC Bank Branch locations.</td>
+            </tr>
+            <tr>
+                <td class="highlight">Transaction Alerts</td>
+                <td>Get instant alerts on your transactions through our InstaAlert service.</td>
+            </tr>
+        </table>
+
+        <h2>Eligibility</h2>
+        <table>
+            <tr>
+                <th>Category</th>
+            </tr>
+            <tr>
+                <td class="highlight">Resident Individual</td>
+            </tr>
+            <tr>
+                <td>Hindu Undivided Family</td>
+            </tr>
+            <tr>
+                <td>Sole Proprietorship Firms</td>
+            </tr>
+            <tr>
+                <td>Partnership Firms</td>
+            </tr>
+            <tr>
+                <td>Limited Liability Partnership Firms</td>
+            </tr>
+            <tr>
+                <td>Private and Public Limited Companies</td>
+            </tr>
+        </table>
+
+        <p><strong>Note:</strong> Regular Current Account Variant is applicable for Non-Metro Locations only.</p>
+
+        <h2>Fees and Charges</h2>
+        <table>
+            <tr>
+                <th>Feature</th>
+                <th>Charges</th>
+            </tr>
+            <tr>
+                <td class="highlight">Average Quarterly Balance (AQB)</td>
+                <td>₹10,000/- (only Non-Metro locations)</td>
+            </tr>
+            <tr>
+                <td>Non-Maintenance Charges</td>
+                <td>₹1,500/- per quarter</td>
+            </tr>
+            <tr>
+                <td class="highlight">Note</td>
+                <td>Cash deposit limits will lapse if AQB maintained is less than 75% of required product AQB.</td>
+            </tr>
+        </table>
+
+        <h2>Contact Information</h2>
+        <table>
+            <tr>
+                <th>Service</th>
+                <th>Contact Info</th>
+            </tr>
+            <tr>
+                <td class="highlight">Customer Care</td>
+                <td>1800-258-3838 (Toll-Free)</td>
+            </tr>
+            <tr>
+                <td>Branch Locator</td>
+                <td><a href="https://www.hdfcbank.com/branch-atm-locator" target="_blank">Find your nearest branch</a></td>
+            </tr>
+            <tr>
+                <td class="highlight">Email Support</td>
+                <td>support@hdfcbank.com</td>
+            </tr>
+            <tr>
+                <td>Website</td>
+                <td><a href="https://www.hdfcbank.com" target="_blank">www.hdfcbank.com</a></td>
+            </tr>
+        </table>
+        
+        <a href="compare.html" target="_blank" class="open-account">Compare them with other bank account-type</a>
+
+        <a href="https://www.hdfcbank.com" target="_blank" class="open-account">Open New Account</a>
+
+    </div>
+</div>
+
+</body>
+</html>

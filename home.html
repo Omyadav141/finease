@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FINEASE - Home</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            text-align: center;
+            padding-top: 50px;
+        }
+        h1 {
+            font-size: 48px;
+            color: #007BFF;
+            margin-bottom: 20px;
+            animation: fadeInDown 0.8s ease-out;
+        }
+        p {
+            font-size: 18px;
+        }
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        button {
+            background-color: #007BFF;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            margin-top: 30px;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .open-account {
+            display: block;
+            margin: 20px auto;
+            padding: 15px 30px;
+            font-size: 18px;
+            color: white;
+            background-color: #0073e6;
+            text-align: center;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            max-width: 300px;
+        }
+
+        .open-account:hover {
+            background-color: #005bb5;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Welcome to FINEASE</h1>
+    
+
+    <a href="index.html" target="_blank" class="apply-now">GO TO HOME PAGE </a>
+      
+
+    <script>
+        function displayUserInfo() {
+            const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
+            if (loggedInUser) {
+                document.getElementById('user-info').innerText = `Hello, ${loggedInUser.name}`;
+            } else {
+                document.getElementById('user-info').innerText = 'User information not found.';
+            }
+        }
+
+        function handleLogout() {
+            localStorage.removeItem('loggedInUser');  // Remove the logged-in user from localStorage
+            alert('You have been logged out.');
+            window.location.href = 'login.html';  // Redirect to login page after logout
+        }
+
+        window.onload = displayUserInfo;
+    </script>
+</body>
+</html>

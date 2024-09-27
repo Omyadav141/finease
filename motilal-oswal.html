@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motilal Oswal</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #004d99;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            animation: slideInDown 1s ease-out;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        h2 {
+            color: #004d99;
+            text-align: center;
+            margin-top: 20px;
+            animation: fadeIn 2s ease-in;
+        }
+        .button-container button {
+            background-color: #004d99;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .button-container button:hover {
+            background-color: #003366;
+        }
+        .product-basket, .brokerage-plan, .margins, .pros-cons, .additional-features, .other-investment-options, .ratings, .customer-service, .ease-of-use, .account-opening {
+            background-color: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            animation: fadeInUp 1s ease-in-out;
+        }
+        .tick {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            background-color: green;
+            color: white;
+            text-align: center;
+            line-height: 16px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        .pros-cons {
+            display: flex;
+            justify-content: space-between;
+        }
+        .pros, .cons {
+            width: 48%;
+        }
+        .ratings ul {
+            list-style: none;
+            padding: 0;
+        }
+        .ratings ul li {
+            display: flex;
+            align-items: center;
+        }
+        .ratings ul li::before {
+            content: '★';
+            color: gold;
+            margin-right: 5px;
+        }
+        .charges-margins {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+        .charges-margins div {
+            background-color: #e6f7ff;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .open-account {
+            display: block;
+            margin: 20px auto;
+            padding: 15px 30px;
+            font-size: 18px;
+            color: white;
+            background-color: #0073e6;
+            text-align: center;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            max-width: 300px;
+        }
+
+        .open-account:hover {
+            background-color: #005bb5;
+        }
+        @keyframes slideInDown {
+            from {
+                transform: translateY(-100%);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Motilal Oswal</h1>
+            <nav>
+                <ul>
+                    <li><a href="#overview">Overview</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section id="overview">
+            <div class="container">
+                <h2>Overview</h2>
+                <p>Motilal Oswal Financial Services Ltd. is one of India's most renowned financial service providers, offering comprehensive financial solutions. It was founded in 1987 and has grown to provide services in retail broking, institutional broking, wealth management, investment banking, and more. As of July 2024, Motilal Oswal has an active client base of 9,50,000 clients.</p>
+                <img src="motilal-oswal.jpg" alt="Motilal Oswal Image">
+                <div class="button-container">
+                    <button onclick="window.location.href='https://www.motilaloswal.com/'">Open Account Instantly</button>
+                </div>
+            </div>
+        </section>
+        <section id="services">
+            <div class="container">
+                <h2>Services</h2>
+                <div class="product-basket">
+                    <h3>Product Basket</h3>
+                    <ul>
+                        <li>Equity Broking <span class="tick">✔</span></li>
+                        <li>Derivatives Trading <span class="tick">✔</span></li>
+                        <li>Mutual Funds <span class="tick">✔</span></li>
+                        <li>Portfolio Management <span class="tick">✔</span></li>
+                        <li>Research & Advisory <span class="tick">✔</span></li>
+                        <li>Wealth Management <span class="tick">✔</span></li>
+                    </ul>
+                </div>
+                <div class="brokerage-plan">
+                    <h3>Brokerage Plan</h3>
+                    <div class="charges-margins">
+                        <div>Account Opening Charges: ₹499</div>
+                        <div>Annual Maintenance Charges: ₹400</div>
+                        <div>Equity Delivery Brokerage: 0.50%</div>
+                        <div>Equity Intraday Brokerage: 0.05%</div>
+                        <div>Derivatives Brokerage: 0.03%</div>
+                        <div>Commodity Futures Brokerage: 0.05%</div>
+                        <div>Currency Futures Brokerage: ₹20 per lot</div>
+                        <div>Currency Options Brokerage: ₹10 per lot</div>
+                    </div>
+                </div>
+                <div class="pros-cons">
+                    <div class="pros">
+                        <h4>Pros</h4>
+                        <ul>
+                            <li>Comprehensive research reports</li>
+                            <li>Wide range of financial products</li>
+                            <li>Strong advisory services</li>
+                            <li>High-quality customer support</li>
+                        </ul>
+                    </div>
+                    <div class="cons">
+                        <h4>Cons</h4>
+                        <ul>
+                            <li>High brokerage for beginners</li>
+                            <li>Annual maintenance charges</li>
+                            <li>Non-negotiable fees for premium clients</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="other-investment-options">
+                    <h3>Other Investment Options</h3>
+                    <ul>
+                        <li>Bonds & Fixed Income Products</li>
+                        <li>Mutual Funds</li>
+                        <li>Insurance</li>
+                        <li>Wealth Management Services</li>
+                    </ul>
+                </div>
+            </div>
+            <section id="reviews">
+                <div class="container">
+                    <h2>Finease Ratings & Reviews for Motilal Oswal</h2>
+                    <div class="ratings">
+                        <h3>Charges</h3>
+                        <ul>
+                            <li>Brokerage fees are higher compared to discount brokers.</li>
+                            <li>Annual maintenance charges are applicable.</li>
+                            <li>Offers premium research reports and advisory services.</li>
+                            <li>Additional charges for portfolio management.</li>
+                        </ul>
+                    </div>
+                    <div class="customer-service">
+                        <h3>Customer Service</h3>
+                        <ul>
+                            <li>Provides support through phone and email.</li>
+                            <li>Dedicated relationship managers for premium clients.</li>
+                            <li>Excellent feedback on research and advisory services.</li>
+                        </ul>
+                    </div>
+                    <div class="ease-of-use">
+                        <h3>Ease of Use</h3>
+                        <p>Advanced trading platforms with a user-friendly interface.</p>
+                    </div>
+                </div>
+            </section>
+            <a href="compredmat.html" target="_blank" class="open-account">Compare them with other bank account-type</a>
+
+            
+                <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <div class="container">
+        <!-- Existing content here -->
+        <div id="contact" class="contact-section">
+            <h3>Contact Information</h3>
+            <p>Company name: Motilal Oswal Financial Services Ltd</p>
+            <p>Contact: 022-40548000</p>
+            <p>Email: query@motilaloswal.com</p>
+            <p>Active Users: 11,94,380</p>
+            <div class="chart-container">
+                <canvas id="complaintChart"></canvas>
+            </div>
+        </div>
+    </div>
+    <script>
+        const ctx = document.getElementById('complaintChart').getContext('2d');
+        const complaintChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Complaints Received', 'Complaints Resolved'],
+                datasets: [{
+                    label: 'Complaints',
+                    data: [120000, 110000], // Example data
+                    backgroundColor: ['#ff6384', '#36a2eb'],
+                    borderColor: ['#ff6384', '#36a2eb'],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+                
+            </section>
+        </section>
+    </main>
+</body>
+</html>

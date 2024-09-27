@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zerodha</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #004d99;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            animation: slideInDown 1s ease-out;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        h2 {
+            color: #004d99;
+            text-align: center;
+            margin-top: 20px;
+            animation: fadeIn 2s ease-in;
+        }
+        .button-container button {
+            background-color: #004d99;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .button-container button:hover {
+            background-color: #003366;
+        }
+        .product-basket, .brokerage-plan, .margins, .pros-cons, .additional-features, .other-investment-options, .ratings, .customer-service, .ease-of-use, .account-opening {
+            background-color: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            animation: fadeInUp 1s ease-in-out;
+        }
+        .tick {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            background-color: green;
+            color: white;
+            text-align: center;
+            line-height: 16px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        .pros-cons {
+            display: flex;
+            justify-content: space-between;
+        }
+        .pros, .cons {
+            width: 48%;
+        }
+        .ratings ul {
+            list-style: none;
+            padding: 0;
+        }
+        .ratings ul li {
+            display: flex;
+            align-items: center;
+        }
+        .ratings ul li::before {
+            content: '★';
+            color: gold;
+            margin-right: 5px;
+        }
+        .charges-margins {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+        .charges-margins div {
+            background-color: #e6f7ff;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        @keyframes slideInDown {
+            from {
+                transform: translateY(-100%);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Zerodha</h1>
+            <nav>
+                <ul>
+                    <li><a href="#overview">Overview</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section id="overview">
+            <div class="container">
+                <h2>Overview</h2>
+                <p>Zerodha is an Indian discount stockbroker that offers online trading and investment services. It was founded in 2010 by Nithin Kamath and Nikhil Kamath. Zerodha has an active client base of 77,95,025 as of July 2024.</p>
+                <img src="broker-image.jpg" alt="Broker Image">
+                <div class="button-container">
+                    <button onclick="window.location.href='https://zerodha.com/open-account/'">Open Account Instantly</button>
+                </div>
+            </div>
+        </section>
+        <section id="services">
+            <div class="container">
+                <h2>Services</h2>
+                <div class="product-basket">
+                    <h3>Product Basket</h3>
+                    <ul>
+                        <li>3 in 1 Account <span class="tick">✔</span></li>
+                        <li>Free Trading Calls <span class="tick">✔</span></li>
+                        <li>Free Research Reports <span class="tick">✔</span></li>
+                        <li>SMS Alerts <span class="tick">✔</span></li>
+                        <li>Margin Funding <span class="tick">✔</span></li>
+                        <li>Margin Against Share <span class="tick">✔</span></li>
+                    </ul>
+                </div>
+                <div class="brokerage-plan">
+                    <h3>Brokerage Plan</h3>
+                    <div class="charges-margins">
+                        <div>Account Opening Charges: Free</div>
+                        <div>Account Maintenance Charges: Free</div>
+                        <div>Plan Charges: ₹ 1,00,000</div>
+                        <div>Call & Trade Charges: Free</div>
+                        <div>Equity Delivery Brokerage: 0.15%</div>
+                        <div>Equity Intraday Brokerage: 0.015%</div>
+                        <div>Equity Futures Brokerage: 0.025%</div>
+                        <div>Equity Options Brokerage: ₹ 100</div>
+                        <div>Currency Futures Brokerage: ₹ 12</div>
+                        <div>Currency Options Brokerage: ₹ 10</div>
+                        <div>Commodity Futures Brokerage: ₹ 20</div>
+                        <div>Commodity Options Brokerage: ₹ 100</div>
+                        <div>Equity Delivery Margin: 0x</div>
+                        <div>Equity Intraday Margin: 4x</div>
+                        <div>Equity Futures Margin: 0x</div>
+                        <div>Equity Options Margin: 0x</div>
+                        <div>Currency Futures Margin: 0x</div>
+                        <div>Currency Options Margin: 0x</div>
+                        <div>Commodity Futures Margin: 0x</div>
+                        <div>Commodity Options Margin: 0x</div>
+                    </div>
+                </div>
+                <div class="pros-cons">
+                    <div class="pros">
+                        <h4>Pros</h4>
+                        <ul>
+                            <li>3 in 1 Account</li>
+                            <li>Free Trading Calls</li>
+                            <li>Free Research Reports</li>
+                            <li>SMS Alerts</li>
+                            <li>Margin Funding</li>
+                            <li>Margin Against Share</li>
+                        </ul>
+                    </div>
+                    <div class="cons">
+                        <h4>Cons</h4>
+                        <ul>
+                            <li>High brokerage charges</li>
+                            <li>Account opening charges are higher compared to peers</li>
+                            <li>Research based tips and SMS services are chargeable</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="additional-features">
+                    <h3>Additional Features</h3>
+                    <ul>
+                        <li>3 in 1 Account <span class="tick">✔</span></li>
+                        <li>Free Trading Calls <span class="tick">✔</span></li>
+                        <li>Free Research Reports <span class="tick">✔</span></li>
+                        <li>SMS Alerts <span class="tick">✔</span></li>
+                        <li>Margin Funding <span class="tick">✔</span></li>
+                        <li>Margin Against Share <span class="tick">✔</span></li>
+                    </ul>
+                </div>
+                <div class="other-investment-options">
+                    <h3>Other Investment Options</h3>
+                    <ul>
+                        <li>Mutual Funds(Zerodha COIN)</li>
+                        <li>IPO Platform</li>
+                        <li>Bonds & Debt</li>
+                        <li>Exchange Traded Funds</li>
+                        <li>Insurance</li>
+                    </ul>
+                </div>
+            </div>
+            <section id="reviews">
+                <div class="container">
+                    <h2>Finease Ratings & Reviews for Zerodha Broking </h2>
+                    <div class="ratings">
+                        <h3>Charges</h3>
+                        <ul>
+                            <li>Zerodha charges a high brokerage that is non-negotiable.</li>
+                            <li>Account opening charges are higher in comparison to its peers.</li>
+                            <li>Provide various tools and services such as portfolio analyzers, monitoring services, Zerodha COIN. with their premium plans.</li>
+                            <li>Research based tips and SMS services are chargeable.</li>
+                        </ul>
+                    </div>
+                    <div class="customer-service">
+                        <h3>Customer Service</h3>
+                        <ul>
+                            <li>Zerodha Broking provide support over call and e-mail.</li>
+                            <li>They provide automated chat support as well i.e., AI smart visual assistant.</li>
+                            <li>Research capabilities as per customers, was satisfactory.</li>
+                        </ul>
+                    </div>
+                    <div class="ease-of-use">
+                        <h3>Ease of Use</h3>
+                        <p>Trading platforms are technically advanced and user-friendly.</p>
+                    </div>
+                </div>
+            </section>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #004d99;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            animation: slideInDown 1s ease-out;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        h2 {
+            color: #004d99;
+            text-align: center;
+            margin-top: 20px;
+            animation: fadeIn 2s ease-in;
+        }
+        .button-container button {
+            background-color: #004d99;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .button-container button:hover {
+            background-color: #003366;
+        }
+        .product-basket, .brokerage-plan, .margins, .pros-cons, .additional-features, .other-investment-options, .ratings, .customer-service, .ease-of-use, .account-opening {
+            background-color: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            animation: fadeInUp 1s ease-in-out;
+        }
+        .tick {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            background-color: green;
+            color: white;
+            text-align: center;
+            line-height: 16px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        .pros-cons {
+            display: flex;
+            justify-content: space-between;
+        }
+        .pros, .cons {
+            width: 48%;
+        }
+        .ratings ul {
+            list-style: none;
+            padding: 0;
+        }
+        .ratings ul li {
+            display: flex;
+            align-items: center;
+        }
+        .ratings ul li::before {
+            content: '★';
+            color: gold;
+            margin-right: 5px;
+        }
+        .charges-margins {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+        .charges-margins div {
+            background-color: #e6f7ff;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        @keyframes slideInDown {
+            from {
+                transform: translateY(-100%);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .contact-section {
+            background-color: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            animation: fadeInUp 1s ease-in-out;
+        }
+        .contact-section h3 {
+            color: #004d99;
+        }
+        .contact-section p {
+            margin: 5px 0;
+        }
+        .chart-container {
+            width: 100%;
+            height: 400px;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <div class="container">
+        <!-- Existing content here -->
+        <div id="contact" class="contact-section">
+            <h3>Contact Information</h3>
+            <p>Company name: Zerodha Broking Limited</p>
+            <p>Contact: 8047181888, 8047181999</p>
+            <p>Email: support.zerodha.com</p>
+            <p>Active Users: 77,95,025</p>
+            <div class="chart-container">
+                <canvas id="complaintChart"></canvas>
+            </div>
+        </div>
+    </div>
+    <script>
+        const ctx = document.getElementById('complaintChart').getContext('2d');
+        const complaintChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Complaints Received', 'Complaints Resolved'],
+                datasets: [{
+                    label: 'Complaints',
+                    data: [120000, 110000], // Example data
+                    backgroundColor: ['#ff6384', '#36a2eb'],
+                    borderColor: ['#ff6384', '#36a2eb'],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

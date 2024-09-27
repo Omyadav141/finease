@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Axis Bank - Account Information</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            height: 100%;
+            overflow-y: scroll;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+
+        .image-section {
+            flex: 1;
+            min-width: 300px;
+            background-size: cover;
+            background-position: center;
+            animation: slideInLeft 2s ease-in-out;
+        }
+
+        .content-section {
+            flex: 2;
+            padding: 20px;
+            overflow-y: auto;
+            animation: slideInRight 2s ease-in-out;
+        }
+
+        h1 {
+            color: #003d66;
+            text-align: center;
+            animation: bounceIn 2s ease-in-out;
+        }
+
+        h2 {
+            color: #004d99;
+            margin-top: 20px;
+            border-bottom: 2px solid #004d99;
+            padding-bottom: 10px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 16px;
+            animation: fadeInUp 2s ease-in-out;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #003d66;
+            color: white;
+        }
+
+        .highlight {
+            background-color: #e6f0ff;
+        }
+
+        a {
+            color: #004d99;
+            text-decoration: none;
+            font-weight: bold;
+            animation: pulse 2s infinite;
+        }
+
+        a:hover {
+            color: #00264d;
+        }
+
+        .apply-now {
+            display: block;
+            margin: 20px auto;
+            padding: 15px 30px;
+            font-size: 18px;
+            color: white;
+            background-color: #004d99;
+            text-align: center;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            max-width: 300px;
+        }
+
+        .apply-now:hover {
+            background-color: #003366;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #004d99;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px;
+        }
+
+        button:hover {
+            background-color: #003366;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideInLeft {
+            from { transform: translateX(-100%); }
+            to { transform: translateX(0); }
+        }
+
+        @keyframes slideInRight {
+            from { transform: translateX(100%); }
+            to { transform: translateX(0); }
+        }
+
+        @keyframes bounceIn {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-20px);
+            }
+            60% {
+                transform: translateY(-10px);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+    </style>
+    <script>
+        function showBanks() {
+            alert("Showing banks for the selected account.");
+        }
+
+        function compareBanks() {
+            window.open("compare.html", "_blank", "width=800,height=600");
+        }
+    </script>
+</head>
+<body>
+
+<div class="container">
+    <div class="image-section" style="background-image: url('https://www.axisbank.com/images/axisbank_logo.png');"></div>
+    <div class="content-section">
+        <h1>Axis Bank - Savings Account</h1>
+
+        <h2>Benefits of Savings Account</h2>
+        <table>
+            <tr>
+                <th>Benefit</th>
+                <th>Details</th>
+            </tr>
+            <tr>
+                <td class="highlight">Zero Balance Account</td>
+                <td>Enjoy a zero-balance account with the convenience of no minimum balance requirement.</td>
+            </tr>
+            <tr>
+                <td class="highlight">ATM Withdrawals</td>
+                <td>Free ATM withdrawals at Axis Bank ATMs and affiliated networks.</td>
+            </tr>
+            <tr>
+                <td class="highlight">Free Cheque Leaves</td>
+                <td>Free cheque leaves available with the account.</td>
+            </tr>
+        </table>
+
+        <h2>Eligibility</h2>
+        <table>
+            <tr>
+                <th>Eligibility Criteria</th>
+                <th>Details</th>
+            </tr>
+            <tr>
+                <td class="highlight">Individuals or Organizations</td>
+                <td>Open to individuals and organizations permitted by RBI.</td>
+            </tr>
+            <tr>
+                <td class="highlight">Senior Citizens</td>
+                <td>Special provisions available for senior citizens.</td>
+            </tr>
+            <tr>
+                <td class="highlight">Non-Residents</td>
+                <td>Available for Non-Residents under specific conditions.</td>
+            </tr>
+            <tr>
+                <td class="highlight">Online Application</td>
+                <td>Account opening available online for eligible individuals.</td>
+            </tr>
+        </table>
+
+        <h2>Features</h2>
+        <table>
+            <tr>
+                <th>Feature</th>
+                <th>Details</th>
+            </tr>
+            <tr>
+                <td class="highlight">Minimum Balance</td>
+                <td>Maintain an average monthly balance as low as Rs. 500.</td>
+            </tr>
+            <tr>
+                <td class="highlight">Insurance Coverage</td>
+                <td>Personal accidental death cover and air accident cover available.</td>
+            </tr>
+            <tr>
+                <td class="highlight">Debit Card</td>
+                <td>Free debit card issued with the account.</td>
+            </tr>
+            <tr>
+                <td class="highlight">Locker Facility</td>
+                <td>Concessions on locker rentals for account holders.</td>
+            </tr>
+        </table>
+
+        <h2>Required Documents</h2>
+        <table>
+            <tr>
+                <th>Document</th>
+                <th>Details</th>
+            </tr>
+            <tr>
+                <td class="highlight">PAN Card</td>
+                <td>Required for identity verification.</td>
+            </tr>
+            <tr>
+                <td class="highlight">Aadhaar Card</td>
+                <td>Required for identity and address verification.</td>
+            </tr>
+            <tr>
+                <td class="highlight">Passport</td>
+                <td>For non-residents and foreign nationals.</td>
+            </tr>
+            <tr>
+                <td class="highlight">Driving License</td>
+                <td>Alternative identity proof.</td>
+            </tr>
+            <tr>
+                <td class="highlight">Voter’s ID</td>
+                <td>For identity verification.</td>
+            </tr>
+        </table>
+
+        <h2>Contact Information</h2>
+        <table>
+            <tr>
+                <th>Service</th>
+                <th>Contact Info</th>
+            </tr>
+            <tr>
+                <td class="highlight">Customer Care</td>
+                <td>1800-425-0018 (Toll-Free)</td>
+            </tr>
+            <tr>
+                <td>Branch Locator</td>
+                <td><a href="https://branch.axisbank.com" target="_blank">Find your nearest branch</a></td>
+            </tr>
+            <tr>
+                <td class="highlight">Email Support</td>
+                <td>customercare@axisbank.com</td>
+            </tr>
+            <tr>
+                <td>Website</td>
+                <td><a href="https://www.axisbank.com" target="_blank">www.axisbank.com</a></td>
+            </tr>
+            
+        </table>
+        <a href="compare.html" target="_blank" class="apply-now">compare them with other bank account-type</a>
+      
+        <a href="https://www.axisbank.co.in" target="_blank" class="apply-now">Apply Now</a>
+
+
+        <
+</body>
+</html>

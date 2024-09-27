@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial App</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            position: relative;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            position: relative;
+            text-align: center; /* Center the heading */
+        }
+        header h1 {
+            margin: 0;
+            font-size: 32px;
+        }
+        nav {
+            margin: 0;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center; /* Center the navigation items */
+            gap: 20px;
+        }
+        nav ul li {
+            margin: 0;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+        .profile-btn {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            font-size: 30px; /* Adjust font size for emoji */
+            text-align: center;
+            line-height: 50px;
+            cursor: pointer;
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            transition: background-color 0.3s;
+        }
+        .profile-btn:hover {
+            background-color: #0056b3; /* Darker shade on hover */
+        }
+        .slide-menu {
+            position: fixed;
+            top: 0;
+            right: -400px;
+            width: 400px;
+            height: 100%;
+            background-color: #f4f4f4;
+            box-shadow: -2px 0 5px rgba(0,0,0,0.5);
+            transition: right 0.3s;
+            padding: 30px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .slide-menu.open {
+            right: 0;
+        }
+        .slide-menu .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 30px;
+            cursor: pointer;
+            color: #333;
+            transition: color 0.3s;
+        }
+        .slide-menu .close-btn:hover {
+            color: #f00;
+        }
+        .slide-menu .profile-img-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .slide-menu .profile-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+            object-fit: cover;
+        }
+        .slide-menu .profile-img-container label {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            display: block;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .slide-menu .profile-img-container input[type="file"] {
+            display: none;
+        }
+        .slide-menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            width: 100%;
+        }
+        .slide-menu ul li {
+            margin: 20px 0;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.5s forwards;
+            animation-delay: calc(0.1s * var(--i));
+        }
+        .slide-menu ul li a {
+            text-decoration: none;
+            color: #007BFF;
+            font-size: 20px;
+            display: block;
+            text-align: center;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .slide-menu ul li a:hover {
+            background-color: #007BFF;
+            color: #fff;
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .change-details-form {
+            position: fixed;
+            top: 0;
+            right: -400px;
+            width: 400px;
+            height: 100%;
+            background-color: #f4f4f4;
+            box-shadow: -2px 0 5px rgba(0,0,0,0.5);
+            transition: right 0.3s;
+            padding: 30px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            z-index: 10;
+        }
+        .change-details-form.open {
+            right: 0;
+        }
+        .change-details-form .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 30px;
+            cursor: pointer;
+            color: #333;
+            transition: color 0.3s;
+        }
+        .change-details-form .close-btn:hover {
+            color: #f00;
+        }
+        .change-details-form h3 {
+            margin: 0 0 20px 0;
+            font-size: 24px;
+        }
+        .change-details-form input {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        .change-details-form button {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+        }
+        .change-details-form button:hover {
+            background-color: #0056b3;
+        }
+        .info-slide {
+            position: fixed;
+            top: 0;
+            right: -400px;
+            width: 400px;
+            height: 100%;
+            background-color: #f4f4f4;
+            box-shadow: -2px 0 5px rgba(0,0,0,0.5);
+            transition: right 0.3s;
+            padding: 30px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            z-index: 10;
+        }
+        .info-slide.open {
+            right: 0;
+        }
+        .info-slide .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 30px;
+            cursor: pointer;
+            color: #333;
+            transition: color 0.3s;
+        }
+        .info-slide .close-btn:hover {
+            color: #f00;
+        }
+        .info-slide h3 {
+            margin: 0 0 20px 0;
+            font-size: 24px;
+        }
+        .info-slide p {
+            margin: 10px 0;
+            font-size: 18px;
+        }
+    </style>
+    <script>
+        let userInfo = {
+            name: '',
+            email: '',
+            mobile: '',
+            age: ''
+        };
+
+        function openNewWindow(section) {
+            const url = section + ".html";
+            window.open(url, "_blank");
+        }
+
+        function toggleMenu() {
+            document.querySelector('.slide-menu').classList.toggle('open');
+        }
+
+        function openChangeDetailsForm() {
+            document.querySelector('.change-details-form').classList.add('open');
+        }
+
+        function closeChangeDetailsForm() {
+            document.querySelector('.change-details-form').classList.remove('open');
+        }
+
+        function openInfoSlide() {
+            if (!userInfo.name || !userInfo.email || !userInfo.mobile || !userInfo.age) {
+                alert('Please provide your information first.');
+                openChangeDetailsForm();
+            } else {
+                document.querySelector('.info-slide').classList.add('open');
+            }
+        }
+
+        function closeInfoSlide() {
+            document.querySelector('.info-slide').classList.remove('open');
+        }
+
+        function saveDetails() {
+            userInfo.name = document.getElementById('name').value;
+            userInfo.email = document.getElementById('email').value;
+            userInfo.mobile = document.getElementById('mobile').value;
+            userInfo.age = document.getElementById('age').value;
+
+            if (userInfo.name && userInfo.email && userInfo.mobile && userInfo.age) {
+                document.querySelector('.profile-img').src = document.querySelector('#new-profile-image').files[0] ? URL.createObjectURL(document.querySelector('#new-profile-image').files[0]) : 'boy-emoji.png';
+                closeChangeDetailsForm();
+                document.querySelector('.info-slide').classList.add('open');
+                updateInfoSlide();
+            } else {
+                alert('Please fill in all fields.');
+            }
+        }
+
+        function updateProfileImage(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    document.querySelector('.profile-img').src = e.target.result;
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+
+        function updateInfoSlide() {
+            document.getElementById('info-name').innerText = `Name: ${userInfo.name}`;
+            document.getElementById('info-email').innerText = `Email: ${userInfo.email}`;
+            document.getElementById('info-mobile').innerText = `Mobile: ${userInfo.mobile}`;
+            document.getElementById('info-age').innerText = `Age: ${userInfo.age}`;
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>FINEASE</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="javascript:void(0);" onclick="openNewWindow('bank-account')">Bank Account</a></li>
+                <li><a href="javascript:void(0);" onclick="openNewWindow('demat-account')">Dmat accounts </a></li>
+                
+                <li><a href="javascript:void(0);" onclick="openNewWindow('cards')">Credit Cards</a></li>
+                
+                <li><a href="javascript:void(0);" onclick="openNewWindow('loan')">Loan</a></li>
+            </ul>
+        </nav>
+        <button class="profile-btn" onclick="toggleMenu()">🧑</button> <!-- Man Emoji as Profile Button -->
+    </header>
+    <main>
+        <section id="home">
+            <h2>Welcome to the Financial App</h2>
+            <p>Your one-stop solution for all financial needs.</p>
+        </section>
+    </main>
+
+    <div class="slide-menu">
+        <span class="close-btn" onclick="toggleMenu()">&times;</span>
+        <h1>FINEASE</h1> <!-- Centered Heading in Slide Menu -->
+        
+        <div class="profile-img-container">
+            <img src="boy-emoji.png" alt="Profile Image" class="profile-img"> <!-- Default Boy Emoji -->
+             </div>
+             <ul>
+                <li style="--i:1;"><a href="javascript:void(0);" onclick="openInfoSlide()">Your Information</a></li>
+          
+                
+                <li style="--i:1;"><a href="login.html">Login</a></li>
+                <li style="--i:2;"><a href="settings.html">Settings</a></li>
+                <li style="--i:3;"><a href="complaints.html">Complaints</a></li>
+                <li style="--i:4;"><a href="raise-request.html">Raise a Request</a></li>
+                <li style="--i:5;"><a href="help.html">Help</a></li>
+                <li style="--i:6;"><a href="chat.html">Chat with Customer Care</a></li>
+            </ul>
+    </div>
+         
+    <div class="change-details-form">
+        <span class="close-btn" onclick="closeChangeDetailsForm()">&times;</span>
+        <h3>Change Details</h3>
+        <input type="text" id="name" placeholder="Name">
+        <input type="email" id="email" placeholder="Email">
+        <input type="tel" id="mobile" placeholder="Mobile Number">
+        <input type="number" id="age" placeholder="Age">
+        <label for="new-profile-image">Change Image</label>
+        <input type="file" id="new-profile-image" onchange="updateProfileImage(event)">
+        <button onclick="saveDetails()">Save Details</button>
+    </div>
+
+    <div class="info-slide">
+        <span class="close-btn" onclick="closeInfoSlide()">&times;</span>
+        <h3>Your Information</h3>
+        <p id="info-name">Name: Not provided</p>
+        <p id="info-email">Email: Not provided</p>
+        <p id="info-mobile">Mobile: Not provided</p>
+        <p id="info-age">Age: Not provided</p>
+    </div>
+</body>
+</html>

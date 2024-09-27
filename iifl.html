@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIFL Securities</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #003366;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            animation: slideInDown 1s ease-out;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        h2 {
+            color: #003366;
+            text-align: center;
+            margin-top: 20px;
+            animation: fadeIn 2s ease-in;
+        }
+        .button-container button {
+            background-color: #003366;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .button-container button:hover {
+            background-color: #002244;
+        }
+        .product-basket, .brokerage-plan, .pros-cons, .additional-features, .other-investment-options, .charges-fees, .customer-services, .contact-section {
+            background-color: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            animation: fadeInUp 1s ease-in-out;
+        }
+        .tick {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            background-color: green;
+            color: white;
+            text-align: center;
+            line-height: 16px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        .pros-cons {
+            display: flex;
+            justify-content: space-between;
+        }
+        .pros, .cons {
+            width: 48%;
+        }
+        .charges-fees, .other-investment-options {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+        .charges-fees div, .other-investment-options div {
+            background-color: #e6f7ff;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        @keyframes slideInDown {
+            from {
+                transform: translateY(-100%);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .contact-section {
+            background-color: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            animation: fadeInUp 1s ease-in-out;
+        }
+        .contact-section h3 {
+            color: #003366;
+        }
+        .open-account {
+            display: block;
+            margin: 20px auto;
+            padding: 15px 30px;
+            font-size: 18px;
+            color: white;
+            background-color: #0073e6;
+            text-align: center;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            max-width: 300px;
+        }
+
+        .open-account:hover {
+            background-color: #005bb5;
+        }
+        .contact-section p {
+            margin: 5px 0;
+        }
+        .chart-container {
+            width: 100%;
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>LIFL Securities</h1>
+            <nav>
+                <ul>
+                    <li><a href="#overview">Overview</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section id="overview">
+            <div class="container">
+                <h2>Overview</h2>
+                <p>LIFL Securities is part of L'Institut de Formation de la Bourse, a French financial institution. It provides a range of financial services and securities brokerage.</p>
+                <img src="broker-image.jpg" alt="Broker Image">
+                <div class="button-container">
+                    <button onclick="window.location.href='https://www.iiflsecurities.com/demat'">Open Account</button>
+                </div>
+            </div>
+        </section>
+        <section id="services">
+            <div class="container">
+                <h2>Services</h2>
+                <div class="product-basket">
+                    <h3>Product Basket</h3>
+                    <ul>
+                        <li>Equities:
+                            <ul>
+                                <li>Stocks</li>
+                                <li>ETFs</li>
+                            </ul>
+                        </li>
+                        <li>Fixed Income:
+                            <ul>
+                                <li>Bonds</li>
+                                <li>Bond Funds</li>
+                            </ul>
+                        </li>
+                        <li>Derivatives:
+                            <ul>
+                                <li>Options</li>
+                                <li>Futures</li>
+                            </ul>
+                        </li>
+                        <li>Mutual Funds:
+                            <ul>
+                                <li>Equity Funds</li>
+                                <li>Bond Funds</li>
+                                <li>Balanced Funds</li>
+                            </ul>
+                        </li>
+                        <li>Alternative Investments:
+                            <ul>
+                                <li>Real Estate</li>
+                                <li>Commodities</li>
+                            </ul>
+                        </li>
+                        <li>Structured Products:
+                            <ul>
+                                <li>Certificates</li>
+                                <li>Notes</li>
+                            </ul>
+                        </li>
+                        <li>Investment Advisory:
+                            <ul>
+                                <li>Portfolio Management</li>
+                                <li>Financial Planning</li>
+                            </ul>
+                        </li>
+                        <li>Research and Analysis:
+                            <ul>
+                                <li>Market Research Reports</li>
+                                <li>Technical Analysis</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="brokerage-plan">
+                    <h3>Brokerage Plans</h3>
+                    <ul>
+                        <li>Standard Brokerage Plan:
+                            <ul>
+                                <li>Commission Fees</li>
+                                <li>Minimum Deposit</li>
+                                <li>Access</li>
+                                <li>Trading Fees</li>
+                            </ul>
+                        </li>
+                        <li>Premium Brokerage Plan:
+                            <ul>
+                                <li>Commission Fees</li>
+                                <li>Minimum Deposit</li>
+                                <li>Access</li>
+                                <li>Additional Services</li>
+                            </ul>
+                        </li>
+                        <li>Institutional Brokerage Plan:
+                            <ul>
+                                <li>Commission Fees</li>
+                                <li>Minimum Deposit</li>
+                                <li>Access</li>
+                                <li>Additional Services</li>
+                            </ul>
+                        </li>
+                        <li>Active Trader Plan:
+                            <ul>
+                                <li>Commission Fees</li>
+                                <li>Minimum Deposit</li>
+                                <li>Access</li>
+                                <li>Additional Services</li>
+                            </ul>
+                        </li>
+                        <li>Retirement Plan:
+                            <ul>
+                                <li>Commission Fees</li>
+                                <li>Minimum Deposit</li>
+                                <li>Access</li>
+                                <li>Additional Services</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="pros-cons">
+                    <div class="pros">
+                        <h4>Pros</h4>
+                        <ul>
+                            <li>Diverse Product Offering</li>
+                            <li>Advanced Trading Platforms</li>
+                            <li>Investment Advisory Services</li>
+                            <li>Research and Analysis</li>
+                            <li>Customer Support</li>
+                            <li>Flexible Brokerage Plans</li>
+                        </ul>
+                    </div>
+                    <div class="cons">
+                        <h4>Cons</h4>
+                        <ul>
+                            <li>Fee Structure</li>
+                            <li>Minimum Deposit Requirements</li>
+                            <li>Complexity</li>
+                            <li>Service Variability</li>
+                            <li>Availability</li>
+                            <li>Potential Hidden Fees</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="additional-features">
+                    <h3>Additional Features</h3>
+                    <ul>
+                        <li>Electronic Storage</li>
+                        <li>Easy Transfer and Settlement</li>
+                        <li>Integrated Trading Platform</li>
+                        <li>Automated Dividend and Interest Credit</li>
+                        <li>Regular Account Statements</li>
+                        <li>Online Access</li>
+                        <li>Advanced Security Features</li>
+                        <li>Consolidated Holdings</li>
+                        <li>Ease of Conversion</li>
+                        <li>Support for Multiple Accounts</li>
+                        <li>Customer Support</li>
+                        <li>Regular Updates</li>
+                    </ul>
+                </div>
+                <div class="other-investment-options">
+                    <h3>Other Investment Options</h3>
+                    <ul>
+                        <li>Equities</li>
+                        <li>Bonds and Debentures</li>
+                        <li>Mutual Funds</li>
+                        <li>Exchange-Traded Funds (ETFs)</li>
+                        <li>Government Securities (G-Secs)</li>
+                        <li>Real Estate Investment Trusts (REITs)</li>
+                        <li>Commodities</li>
+                        <li>Structured Products</li>
+                        <li>Derivatives</li>
+                        <li>Alternate Investments</li>
+                        <li>Initial Public Offerings (IPOs)</li>
+                        <li>Gold and Precious Metals</li>
+                        <li>Unit Linked Insurance Plans (ULIPs)</li>
+                    </ul>
+                </div>
+                <div class="charges-fees">
+                    <h3>Charges and Fees</h3>
+                    <div>
+                        <h4>Account Opening Charges</h4>
+                        <p>Fee: One-time fee for opening a demat account. Details: May vary based on account type and additional services.</p>
+                    </div>
+                    <div>
+                        <h4>Annual Maintenance Charges (AMC)</h4>
+                        <p>Fee: Annual fee for maintaining the demat account. Details: Can be a flat fee or based on the number of holdings.</p>
+                    </div>
+                    <div>
+                        <h4>Transaction Charges</h4>
+                        <p>Fee: Charges per transaction when buying or selling securities. Details: May vary based on the volume of transactions and the type of security.</p>
+                    </div>
+                    <div>
+                        <h4>Dematerialization Charges</h4>
+                        <p>Fee: Charges for converting physical securities into electronic form. Details: Can be a per-security fee or based on the number of certificates.</p>
+                    </div>
+                    <div>
+                        <h4>Rematerialization Charges</h4>
+                        <p>Fee: Charges for converting electronic securities back into physical form. Details: Typically charged per certificate or security.</p>
+                    </div>
+                    <div>
+                        <h4>Custodian Charges</h4>
+                        <p>Fee: Charges for the safekeeping of securities. Details: May be included in the AMC or billed separately.</p>
+                    </div>
+                    <div>
+                        <h4>Service Charges</h4>
+                        <p>Fee: Charges for additional services such as handling corporate actions (e.g., rights issues, bonus shares). Details: Can be a flat fee or based on the type of corporate action.</p>
+                    </div>
+                    <div>
+                        <h4>Handling Charges</h4>
+                        <p>Fee: Charges for processing requests like transfer of securities, change of address, etc. Details: Can be billed per request or transaction.</p>
+                    </div>
+                    <div>
+                        <h4>Late Fees</h4>
+                        <p>Fee: Charges for delayed payments or penalties. Details: Applied if there are delays in payment of fees or charges.</p>
+                    </div>
+                    <div>
+                        <h4>Other Miscellaneous Charges</h4>
+                        <p>Fee: Any other fees that may apply, such as for account inactivity or specific administrative services.</p>
+                    </div>
+                </div>
+                <div class="customer-services">
+                    <h3>Customer Services</h3>
+                    <ul>
+                        <li>Customer Support Hotline</li>
+                        <li>Email Support</li>
+                        <li>Online Chat</li>
+                        <li>Branch Offices</li>
+                        <li>Account Managers</li>
+                        <li>Help Center/FAQ</li>
+                        <li>Online Portal</li>
+                        <li>Feedback and Complaints</li>
+                        <li>Educational Resources</li>
+                        <li>Social Media</li>
+                    </ul>
+                    <a href="compredmat.html" target="_blank" class="open-account">Compare them with other bank account-type</a>
+
+                </div>
+                <div class="contact-section" id="contact">
+                    <h3>Contact Information</h3>
+                    <p><strong>Phone:</strong> Available on the official website</p>
+                    <p><strong>Email:</strong> Look for an email address dedicated to demat services or general support</p>
+                    <p><strong>Website:</strong> <a href="https://www.liflsec.com/" target="_blank">www.liflsec.com</a></p>
+                    <p><strong>Branch Offices:</strong> Contact information for physical branch locations</p>
+                    <p><strong>Postal Address:</strong> For sending physical documents or formal correspondence</p>
+                </div>
+            </div>
+           
+            
+                <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <div class="container">
+        <!-- Existing content here -->
+        <div id="contact" class="contact-section">
+            <h3>About Complaints</h3>
+            
+            <div class="chart-container">
+                <canvas id="complaintChart"></canvas>
+            </div>
+        </div>
+    </div>
+    <script>
+        const ctx = document.getElementById('complaintChart').getContext('2d');
+        const complaintChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Complaints Received', 'Complaints Resolved'],
+                datasets: [{
+                    label: 'Complaints',
+                    data: [120000, 110000], // Example data
+                    backgroundColor: ['#ff6384', '#36a2eb'],
+                    borderColor: ['#ff6384', '#36a2eb'],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+            
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 LIFL Securities. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Credit Cards</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #3C3B3F, #605C3C); /* Luxury themed background */
+      color: #333;
+    }
+
+    h1 {
+      text-align: center;
+      color: white;
+      font-size: 3em;
+      margin-bottom: 20px;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.5);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      font-weight: bold;
+    }
+
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr); /* 4 cards per row */
+      gap: 20px;
+      padding: 40px;
+    }
+
+    /* Card Style */
+    .card {
+      background-color: white;
+      border-radius: 15px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      border-top: 5px solid #007bff;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .card-body {
+      padding: 15px;
+      text-align: center;
+    }
+
+    /* Card Title Color */
+    .card h3 {
+      margin-top: 10px;
+      font-size: 1.5em;
+      color: #007bff;
+      font-weight: bold;
+    }
+
+    .card p {
+      font-size: 1em;
+      color: #666;
+      margin-bottom: 15px;
+    }
+
+    /* Know More Button */
+    .card button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .card button:hover {
+      background-color: #0056b3;
+    }
+
+    /* Animation */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: scale(0.95);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .card {
+      animation: fadeIn 0.5s ease-in;
+    }
+
+  </style>
+</head>
+<body>
+
+  <h1>Select Your Credit Card</h1>
+
+  <div class="card-container">
+    <!-- First Row -->
+    <div class="card">
+      <img src="card1.jpg" alt="Card 1 Image">
+      <div class="card-body">
+        <h3>Platinum Credit Card</h3>
+        <p>Exclusive rewards, low interest rates, travel benefits.</p>
+        <button onclick="window.location.href='platinum-info.html'">Know More</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="card2.jpg" alt="Card 2 Image">
+      <div class="card-body">
+        <h3>Gold Credit Card</h3>
+        <p>High rewards for shopping and dining, with cash-back offers.</p>
+        <button onclick="window.location.href='gold-info.html'">Know More</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="card3.jpg" alt="Card 3 Image">
+      <div class="card-body">
+        <h3>Silver Credit Card</h3>
+        <p>Great savings on fuel, perfect for daily purchases.</p>
+        <button onclick="window.location.href='silver-info.html'">Know More</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="card4.jpg" alt="Card 4 Image">
+      <div class="card-body">
+        <h3>Travel Credit Card</h3>
+        <p>Earn miles and points for every purchase abroad.</p>
+        <button onclick="window.location.href='travel-info.html'">Know More</button>
+      </div>
+    </div>
+
+    <!-- Second Row -->
+    <div class="card">
+      <img src="card5.jpg" alt="Card 5 Image">
+      <div class="card-body">
+        <h3>Business Credit Card</h3>
+        <p>Designed for business spending with high credit limits.</p>
+        <button onclick="window.location.href='business-info.html'">Know More</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="card6.jpg" alt="Card 6 Image">
+      <div class="card-body">
+        <h3>Cashback Credit Card</h3>
+        <p>Earn cash back on every purchase with no annual fee.</p>
+        <button onclick="window.location.href='cashback-info.html'">Know More</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="card7.jpg" alt="Card 7 Image">
+      <div class="card-body">
+        <h3>Student Credit Card</h3>
+        <p>Perfect for students with no annual fees and rewards on essentials.</p>
+        <button onclick="window.location.href='student-info.html'">Know More</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="card8.jpg" alt="Card 8 Image">
+      <div class="card-body">
+        <h3>Luxury Credit Card</h3>
+        <p>Exclusive access to premium lounges, high reward points.</p>
+        <button onclick="window.location.href='luxury-info.html'">Know More</button>
+      </div>
+    </div>
+
+    <!-- Third Row -->
+    <div class="card">
+      <img src="card9.jpg" alt="Card 9 Image">
+      <div class="card-body">
+        <h3>Premium Rewards Credit Card</h3>
+        <p>Earn double points on all purchases with no cap.</p>
+        <button onclick="window.location.href='premium-info.html'">Know More</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="card10.jpg" alt="Card 10 Image">
+      <div class="card-body">
+        <h3>Entertainment Credit Card</h3>
+        <p>Get discounts on movies, concerts, and events with every swipe.</p>
+        <button onclick="window.location.href='entertainment-info.html'">Know More</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="card11.jpg" alt="Card 11 Image">
+      <div class="card-body">
+        <h3>Travel Elite Credit Card</h3>
+        <p>Special travel perks including free airport lounge access worldwide.</p>
+        <button onclick="window.location.href='travel-elite-info.html'">Know More</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="card12.jpg" alt="Card 12 Image">
+      <div class="card-body">
+        <h3>Family Credit Card</h3>
+        <p>Share your credit limit with family members for a single bill.</p>
+        <button onclick="window.location.href='family-info.html'">Know More</button>
+      </div>
+    </div>
+
+    <!-- Fourth Row -->
+    <div class="card">
+      <img src="card13.jpg" alt="Card 13 Image">
+      <div class="card-body">
+        <h3>Eco-Friendly Credit Card</h3>
+        <p>Earn rewards for sustainable purchases and eco-friendly habits.</p>
+        <button onclick="window.location.href='eco-info.html'">Know More</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="card14.jpg" alt="Card 14 Image">
+      <div class="card-body">
+        <h3>Smart Shopper Credit Card</h3>
+        <p>Extra rewards for grocery and retail purchases.</p>
+        <button onclick="window.location.href='smart-shopper-info.html'">Know More</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="card15.jpg" alt="Card 15 Image">
+      <div class="card-body">
+        <h3>Low Interest Credit Card</h3>
+        <p>Save on interest with the lowest rates in the market.</p>
+        <button onclick="window.location.href='low-interest-info.html'">Know More</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="card16.jpg" alt="Card 16 Image">
+      <div class="card-body">
+        <h3>Fuel Saver Credit Card</h3>
+        <p>Earn points and discounts on fuel purchases across major stations.</p>
+        <button onclick="window.location.href='fuel-saver-info.html'">Know More</button>
+      </div>
+    </div>
+  </div>
+  
+</body>
+</html>
+

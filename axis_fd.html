@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOI - Savings Account</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            height: 100%;
+            overflow-y: scroll;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+
+        .image-section {
+            flex: 1;
+            min-width: 300px;
+            background-image: url('https://www.bankofindia.co.in/images/boi_logo.png');
+            background-size: cover;
+            background-position: center;
+            animation: slideInLeft 2s ease-in-out;
+        }
+
+        .content-section {
+            flex: 2;
+            padding: 20px;
+            overflow-y: auto;
+            animation: slideInRight 2s ease-in-out;
+        }
+
+        h1 {
+            color: #003d66;
+            text-align: center;
+            animation: bounceIn 2s ease-in-out;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 16px;
+            animation: fadeInUp 2s ease-in-out;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #003d66;
+            color: white;
+        }
+
+        .highlight {
+            background-color: #e6f0ff;
+        }
+
+        a {
+            color: #004d99;
+            text-decoration: none;
+            font-weight: bold;
+            animation: pulse 2s infinite;
+        }
+
+        a:hover {
+            color: #00264d;
+        }
+
+        .apply-now {
+            display: block;
+            margin: 20px auto;
+            padding: 15px 30px;
+            font-size: 18px;
+            color: white;
+            background-color: #004d99;
+            text-align: center;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            max-width: 300px;
+        }
+
+        .apply-now:hover {
+            background-color: #003366;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideInLeft {
+            from { transform: translateX(-100%); }
+            to { transform: translateX(0); }
+        }
+
+        @keyframes slideInRight {
+            from { transform: translateX(100%); }
+            to { transform: translateX(0); }
+        }
+
+        @keyframes bounceIn {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-20px);
+            }
+            60% {
+                transform: translateY(-10px);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+    </style>
+    <script>
+        function showBanks() {
+            alert("Showing banks for the selected account.");
+        }
+
+        function compareBanks() {
+            window.open("compare.html", "_blank", "width=800,height=600");
+        }
+    </script>
+</head>
+<body>
+
+<div class="container">
+    <div class="image-section"></div>
+    <div class="content-section">
+        <h1>axis bank - Fixed deposit</h1>
+
+        <h2>Benefits of Savings Account</h2>
+        <table>
+            <tr>
+                <th>Benefit</th>
+                <th>Details</th>
+            </tr>
+            <tr>
+                <td class="highlight">Zero Deposit</td>
+                <td>Enjoy a zero-deposit, zero balance account with Basic Savings Bank Deposit Account (BSBDA).</td>
+            </tr>
+            <tr>
+                <td class="highlight">ATM Withdrawals</td>
+                <td>Higher ATM withdrawals of up to Rs. 5 Lakh/month.</td>
+            </tr>
+            <tr>
+                <td class="highlight">Free Cheque Leaves</td>
+                <td>Free cheque leaves available.</td>
+            </tr>
+        </table>
+
+        <h2>Eligibility</h2>
+        <table>
+            <tr>
+                <th>Eligibility Criteria</th>
+                <th>Details</th>
+            </tr>
+            <tr>
+                <td class="highlight">Individuals or Institutions</td>
+                <td>Can be opened by any individual or institution permitted by RBI.</td>
+            </tr>
+            <tr>
+                <td class="highlight">VKYC Savings Account</td>
+                <td>Can only be opened under one bank across the banking system.</td>
+            </tr>
+            <tr>
+                <td class="highlight">Hindu Undivided Families</td>
+                <td>Eligible for opening a savings account.</td>
+            </tr>
+            <tr>
+                <td class="highlight">Foreign Nationals</td>
+                <td>Foreign Nationals residing in India for more than 180 days with a valid passport, visa, FRRO Certificate, and Residential Permit.</td>
+            </tr>
+            <tr>
+                <td class="highlight">Online Account Opening</td>
+                <td>Available for individuals above 18 years with Aadhaar and PAN card as officially valid documents.</td>
+            </tr>
+        </table>
+
+        <h2>Features</h2>
+        <table>
+            <tr>
+                <th>Feature</th>
+                <th>Details</th>
+            </tr>
+            <tr>
+                <td class="highlight">AQB Requirement</td>
+                <td>Starts as low as Rs. 500*.</td>
+            </tr>
+            <tr>
+                <td class="highlight">Personal Accidental Death Cover</td>
+                <td>Up to Rs. 30 lakhs*.</td>
+            </tr>
+            <tr>
+                <td class="highlight">Air Accident Cover</td>
+                <td>Up to Rs. 1 crore*.</td>
+            </tr>
+            <tr>
+                <td class="highlight">Debit Card</td>
+                <td>Free of cost*.</td>
+            </tr>
+            <tr>
+                <td class="highlight">Free DD Pay Orders</td>
+                <td>Available*.</td>
+            </tr>
+            <tr>
+                <td class="highlight">Locker Facility</td>
+                <td>Concession on locker facility*.</td>
+            </tr>
+            <tr>
+                <td class="highlight">Retail Loans</td>
+                <td>Waiver of processing charges*.</td>
+            </tr>
+            <tr>
+                <td class="highlight">Salary Account</td>
+                <td>No minimum balance requirement*.</td>
+            </tr>
+        </table>
+
+        <h2>Required Documents</h2>
+        <table>
+            <tr>
+                <th>Document</th>
+                <th>Details</th>
+            </tr>
+            <tr>
+                <td class="highlight">PAN Card</td>
+                <td>Required for identity verification.</td>
+            </tr>
+            <tr>
+                <td class="highlight">Passport</td>
+                <td>For foreign nationals.</td>
+            </tr>
+            <tr>
+                <td class="highlight">Driving License</td>
+                <td>Alternative identity proof.</td>
+            </tr>
+            <tr>
+                <td class="highlight">Voter’s ID</td>
+                <td>For identity verification.</td>
+            </tr>
+            <tr>
+                <td class="highlight">Ration Card</td>
+                <td>For address verification.</td>
+            </tr>
+            <tr>
+                <td class="highlight">Aadhaar Card</td>
+                <td>Required for identity and address verification.</td>
+            </tr>
+        </table>
+
+        <h2>Fixed Deposit Account</h2>
+        <table>
+            <tr>
+                <th>Feature</th>
+                <th>Details</th>
+            </tr>
+            <tr>
+                <td class="highlight">Fixed Tenure Deposits</td>
+                <td>Fixed deposits for a set tenure.</td>
+            </tr>
+            <tr>
+                <td class="highlight">Higher Returns</td>
+                <td>Higher returns compared to Savings Accounts.</td>
+            </tr>
+            <tr>
+                <td class="highlight">Flexible Tenures</td>
+                <td>Tenure ranges from 7 days to 10 years.</td>
+            </tr>
+            <tr>
+                <td class="highlight">Interest Payouts</td>
+                <td>Interest paid at regular intervals or on maturity.</td>
+            </tr>
+        </table>
+
+        <h2>Fixed Deposit Eligibility</h2>
+        <table>
+            <tr>
+                <th>Eligibility</th>
+                <th>Details</th>
+            </tr>
+            <tr>
+                <td class="highlight">Open to All</td>
+                <td>Available for all eligible individuals.</td>
+            </tr>
+        </table>
+
+        <h2>Fixed Deposit Interest Rate</h2>
+        <p>Interest rates vary based on tenure and amount invested. For more information, please refer to the <a href="https://www.bankofindia.co.in" target="_blank">Axis Bank Fixed Deposit Interest Rates</a> page.</p>
+
+        <h2>Contact Information</h2>
+        <table>
+            <tr>
+                <th>Service</th>
+                <th>Contact Info</th>
+            </tr>
+            <tr>
+                <td class="highlight">Customer Care</td>
+                <td>1800-220-229 (Toll-Free)</td>
+            </tr>
+            <tr>
+                <td>Branch Locator</td>
+                <td><a href="https://www.bankofindia.co.in" target="_blank">Find your nearest branch</a></td>
+            </tr>
+            <tr>
+                <td class="highlight">Email Support</td>
+                <td>customercare@bankofindia.co.in</td>
+            </tr>
+            <tr>
+                <td>Website</td>
+                <td><a href="https://www.bankofindia.co.in" target="_blank">www.bankofindia.co.in</a></td>
+            </tr>
+        </table>
+        <div style="text-align: center; margin-top: 20px;">
+            
+            <button onclick="compareBanks()">Compare with other bank account </button>
+        </div>
+
+        <a href="compare.html" target="_blank" class="apply-now">compare them with other bank account-type</a>
+      
+        <a href="https://www.bankofindia.co.in" target="_blank" class="apply-now">Apply Now</a>
+        
+</div>
+
+</body>
+</html>

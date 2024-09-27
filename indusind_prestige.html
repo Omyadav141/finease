@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IndusInd Bank - Prestige Savings Account</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            color: #333;
+            margin: 0;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+
+        .image-section {
+            flex: 1;
+            min-width: 300px;
+            background-image: url('https://www.indusind.com/assets/images/logo.png');
+            background-size: cover;
+            background-position: center;
+            animation: slideInLeft 2s ease-in-out;
+        }
+
+        .content-section {
+            flex: 2;
+            padding: 20px;
+            animation: slideInRight 2s ease-in-out;
+        }
+
+        h1 {
+            color: #004b8d;
+            text-align: center;
+            animation: bounceIn 2s ease-in-out;
+        }
+
+        h2 {
+            color: #004b8d;
+            border-bottom: 2px solid #004b8d;
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+            animation: fadeInUp 2s ease-in-out;
+        }
+
+        p, ul {
+            line-height: 1.6;
+            margin-bottom: 20px;
+            animation: fadeInUp 2s ease-in-out;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 16px;
+            animation: fadeInUp 2s ease-in-out;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #004b8d;
+            color: white;
+            font-weight: bold;
+        }
+
+        a {
+            color: #004b8d;
+            text-decoration: none;
+            font-weight: bold;
+            animation: pulse 2s infinite;
+        }
+
+        a:hover {
+            color: #003366;
+        }
+
+        .open-account {
+            display: block;
+            margin: 20px auto;
+            padding: 15px 30px;
+            font-size: 18px;
+            color: white;
+            background-color: #004b8d;
+            text-align: center;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            max-width: 300px;
+        }
+
+        .open-account:hover {
+            background-color: #003366;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideInLeft {
+            from { transform: translateX(-100%); }
+            to { transform: translateX(0); }
+        }
+
+        @keyframes slideInRight {
+            from { transform: translateX(100%); }
+            to { transform: translateX(0); }
+        }
+
+        @keyframes bounceIn {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-20px);
+            }
+            60% {
+                transform: translateY(-10px);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="image-section"></div>
+    <div class="content-section">
+        <h1>IndusInd Bank - Prestige Savings Account</h1>
+
+        <p>The IndusInd Bank Prestige Savings Account offers exclusive banking privileges, personalized services, and higher benefits.</p>
+
+        <h2>Key Features</h2>
+        <table>
+            <tr>
+                <th>Premium Debit Card</th>
+                <td>Complimentary Platinum Plus Debit Card with withdrawal and shopping limits of ₹2 lakhs. Lost card insurance cover up to ₹3 lakhs.</td>
+            </tr>
+            <tr>
+                <th>Higher Interest Rates</th>
+                <td>Tiered interest structure for better returns based on your savings balance.</td>
+            </tr>
+            <tr>
+                <th>Unlimited ATM Withdrawals</th>
+                <td>Unlimited free withdrawals at IndusInd and other bank ATMs across India.</td>
+            </tr>
+            <tr>
+                <th>Relationship Manager</th>
+                <td>Dedicated relationship manager for tailored financial advice and assistance.</td>
+            </tr>
+            <tr>
+                <th>Exclusive Benefits</th>
+                <td>Special offers on dining, travel, lifestyle, and 24/7 concierge services.</td>
+            </tr>
+            <tr>
+                <th>Priority Service</th>
+                <td>Faster service at branches and priority processing for banking requests.</td>
+            </tr>
+            <tr>
+                <th>Free Doorstep Banking</th>
+                <td>Cash pickup, delivery, and cheque collection from your home.</td>
+            </tr>
+        </table>
+
+        <h2>Eligibility Criteria</h2>
+        <p>Available for individuals aged 18+ with higher income or investment portfolios.</p>
+
+        <h2>Documents Required</h2>
+        <ul>
+            <li>Proof of Identity (Aadhaar card, PAN card, Passport, etc.)</li>
+            <li>Proof of Address (Utility Bill, Rental Agreement, etc.)</li>
+            <li>Passport-sized photographs</li>
+        </ul>
+
+        <h2>Minimum Balance Requirement</h2>
+        <p>Urban/Metro: ₹2 lakhs. Semi-Urban/Rural: Slightly lower requirements may apply.</p>
+
+        <h2>Fees and Charges</h2>
+        <ul>
+            <li>No non-maintenance charges if account activity meets minimum requirements.</li>
+            <li>Free cheque book issuance and debit card.</li>
+        </ul>
+
+        <h2>Exclusive Lifestyle Benefits</h2>
+        <p>Special offers across dining, travel, and shopping. Access to 24/7 concierge services.</p>
+
+        <h2>Contact Information</h2>
+        <p>For more information or to open a Prestige Savings Account, contact:</p>
+        <ul>
+            <li><strong>Customer Service:</strong> 1860 267 7777</li>
+            <li><strong>Head Office:</strong> IndusInd Bank Ltd, 2401, Gen. Thimmayya Road, Pune - 411 001, Maharashtra</li>
+            <li><strong>Email:</strong> <a href="mailto:customer.service@indusind.com">customer.service@indusind.com</a></li>
+            <li><strong>Website:</strong> <a href="https://www.indusind.com" target="_blank">www.indusind.com</a></li>
+        </ul>
+
+        <a href="https://www.indusind.com" class="open-account">Open New Account</a>
+        <a href="compare.html" class="open-account">Compare with Other Accounts</a>
+    </div>
+</div>
+
+</body>
+</html>

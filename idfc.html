@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IDFC FIRST Bank - Savings Account</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            height: 100%;
+            overflow-y: scroll;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+
+        .image-section {
+            flex: 1;
+            min-width: 300px;
+            background-image: url('https://www.idfcfirstbank.com/images/logo-idfc-first-bank.png');
+            background-size: cover;
+            background-position: center;
+            animation: slideInLeft 2s ease-in-out;
+        }
+
+        .content-section {
+            flex: 2;
+            padding: 20px;
+            overflow-y: auto;
+            animation: slideInRight 2s ease-in-out;
+        }
+
+        h1 {
+            color: #003d66;
+            text-align: center;
+            animation: bounceIn 2s ease-in-out;
+        }
+
+        h2 {
+            color: #003d66;
+            margin-top: 20px;
+        }
+
+        ul {
+            margin: 10px 0;
+            padding: 0;
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 16px;
+            animation: fadeInUp 2s ease-in-out;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #003d66;
+            color: white;
+        }
+
+        .highlight {
+            background-color: #e6f0ff;
+        }
+
+        a {
+            color: #004d99;
+            text-decoration: none;
+            font-weight: bold;
+            animation: pulse 2s infinite;
+        }
+
+        a:hover {
+            color: #00264d;
+        }
+
+        .apply-now {
+            display: block;
+            margin: 20px auto;
+            padding: 15px 30px;
+            font-size: 18px;
+            color: white;
+            background-color: #004d99;
+            text-align: center;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            max-width: 300px;
+        }
+
+        .apply-now:hover {
+            background-color: #003366;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideInLeft {
+            from { transform: translateX(-100%); }
+            to { transform: translateX(0); }
+        }
+
+        @keyframes slideInRight {
+            from { transform: translateX(100%); }
+            to { transform: translateX(0); }
+        }
+
+        @keyframes bounceIn {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-20px);
+            }
+            60% {
+                transform: translateY(-10px);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="image-section"></div>
+    <div class="content-section">
+        <h1>IDFC FIRST Bank - Savings Account</h1>
+
+        <p>Open an IDFC FIRST Bank Savings Account and enjoy Zero Fee Banking on all Savings Account services such as IMPS, NEFT, RTGS, ATM transactions, Debit Card, and SMS Alerts among others. IDFC FIRST Bank has been recognized as a ‘Class Apart’ by IIT Bombay and Moneylife Foundation* for fairness in its service charges on Savings Account, helping customers experience true savings.</p>
+
+        <p>So, open a savings account with us and watch your savings grow rapidly with zero fee banking and by earning interest up to 7.25% p.a., credited to your account monthly. With us, you can open a savings account online seamlessly. Simply click on ‘Open Account Now’ or download the IDFC FIRST Bank Mobile app to open a bank account online. Opening an account with us takes only a few minutes with our paperless and digital account opening process. What’s more? If you prefer to open a bank account offline, you can simply walk into your nearest branch and do so. Whether you open a bank account online or offline, the benefits you enjoy from your IDFC FIRST Bank Savings Account ensure that you get to save big and meet your financial goals easily.</p>
+
+        <h2>Features & Benefits of an Online Bank Account</h2>
+        <ul>
+            <li>No lengthy steps to open a bank account, ensuring a quick and instant setup.</li>
+            <li>Instant fund access and money transfers online.</li>
+            <li>Hassle-free account management through net banking/mobile banking.</li>
+            <li>Convenient withdrawals at ATMs across the country using your debit card.</li>
+            <li>Exciting debit card offers.</li>
+            <li>Pay bills online anywhere and anytime.</li>
+            <li>Receive real-time alerts about account activity, including deposits, withdrawals, and other transactions.</li>
+            <li>A secure and reliable way of enjoying online banking services.</li>
+            <li>Invest conveniently in FDs, mutual funds, and other investment opportunities.</li>
+        </ul>
+
+        <h2>Eligibility</h2>
+        <ul>
+            <li>Indian citizens.</li>
+            <li>Residents of India.</li>
+            <li>Foreign nationals residing in India and meeting GOI criteria.</li>
+        </ul>
+
+        <h2>Documentation</h2>
+        <p>To open a savings account online:</p>
+        <ul>
+            <li>Aadhaar Number.</li>
+            <li>PAN number.</li>
+        </ul>
+        <p>To open a savings account at branch:</p>
+        <ul>
+            <li>Passport-size photograph.</li>
+            <li>PAN Card or filled Form 60.</li>
+            <li>Any one of the following document:
+                <ul>
+                    <li>Aadhaar Card.</li>
+                    <li>Passport.</li>
+                    <li>Voter’s Identity Card (Election Card).</li>
+                    <li>Permanent and valid driving license with photograph.</li>
+                    <li>Job Card issued by NREGA duly signed by an officer of the State Government.</li>
+                    <li>Letter issued by the National Population Register containing details of name and address.</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>Savings Account Fees and Charges</h2>
+        <p>IDFC FIRST Bank offers ZERO FEE banking on ALL variants of Savings Account, including Rs. 10,000 AMB variant, Rs. 25,000 AMB variant, and all other variants. We have no complicated descriptions and you have no complex calculations to do to calculate the fees to be paid. Because it is just ZERO. We don’t charge you, even when you are not looking. ZERO FEE Banking is peace-of-mind Banking.</p>
+
+        <table>
+            <tr>
+                <th>Service</th>
+                <th>Charges</th>
+            </tr>
+            <tr>
+                <td class="highlight">IMPS charges (outward)</td>
+                <td>FREE</td>
+            </tr>
+            <tr>
+                <td>NEFT charges (outward at branches)</td>
+                <td>FREE</td>
+            </tr>
+            <tr>
+                <td>RTGS charges (outward at branches)</td>
+                <td>FREE</td>
+            </tr>
+            <tr>
+                <td>ATM transaction Charges at IDFC FIRST Bank ATMs</td>
+                <td>FREE</td>
+            </tr>
+            <tr>
+                <td>ATM transaction Charges at Other Bank ATMs</td>
+                <td>FREE</td>
+            </tr>
+            <tr>
+                <td>Debit Card Issuance Charges</td>
+                <td>FREE</td>
+            </tr>
+            <tr>
+                <td>Debit Card Annual Charges</td>
+                <td>FREE</td>
+            </tr>
+            <tr>
+                <td>Debit Card Replacement/Re-issuance Charges</td>
+                <td>FREE</td>
+            </tr>
+            <tr>
+                <td>SMS Alert Charges</td>
+                <td>FREE</td>
+            </tr>
+            <tr>
+                <td>Cheque Book Re-issuance Charges</td>
+                <td>FREE</td>
+            </tr>
+            <tr>
+                <td>Cash Deposit & Withdrawal Charges at Branches (by number)</td>
+                <td>FREE</td>
+            </tr>
+            <tr>
+                <td>Cash Deposit and Withdrawal Charges at Branches (by value)</td>
+                <td>FREE</td>
+            </tr>
+            <tr>
+                <td>Third Party Cash Deposit and Withdrawal Charges at Branches</td>
+                <td>FREE</td>
+            </tr>
+            <tr>
+                <td>Stop Payment of Cheque Charges</td>
+                <td>FREE</td>
+            </tr>
+            <tr>
+                <td>Cheque Return – Deposited</td>
+                <td>FREE</td>
+            </tr>
+            <tr>
+                <td>Cheque Return – Issued</td>
+                <td>FREE</td>
+            </tr>
+            <tr>
+                <td>Demand Draft/Pay Order Issuance Charges at Branches</td>
+                <td>FREE</td>
+            </tr>
+            <tr>
+                <td>Demand Draft/Pay Order Cancellation/Revalidation Charges</td>
+                <td>FREE</td>
+            </tr>
+            <tr>
+                <td>Duplicate Statement Issuance Charges</td>
+                <td>FREE</td>
+            </tr>
+            <tr>
+                <td>Duplicate Passbook Issuance Charges</td>
+                <td>FREE</td>
+            </tr>
+            <tr>
+                <td>Decline Charges for Insufficient Balance at ATM</td>
+                <td>FREE</td>
+            </tr>
+            <tr>
+                <td>Doorstep Banking - Cheque & Document Pickup - Adhoc Request</td>
+                <td>FREE</td>
+            </tr>
+            <tr>
+                <td>Balance Certificate Issuance Charges</td>
+                <td>FREE</td>
+            </tr>
+            <tr>
+                <td>Interest Certificate Issuance Charges</td>
+                <td>FREE</td>
+            </tr>
+            <tr>
+                <td>Account Closure Charges</td>
+                <td>FREE</td>
+            </tr>
+            <tr>
+                <td>International ATM/POS Transaction Charges</td>
+                <td>FREE</td>
+            </tr>
+            <tr>
+                <td>Standing Instruction Setup Charges</td>
+                <td>FREE</td>
+            </tr>
+            <tr>
+                <td>Standing Instruction Failure Charges</td>
+                <td>FREE</td>
+            </tr>
+            <tr>
+                <td>ECS Return Charges</td>
+                <td>FREE</td>
+            </tr>
+            <tr>
+                <td>Photo Attestation Charges</td>
+                <td>FREE</td>
+            </tr>
+            <tr>
+                <td>Signature Attestation Charges</td>
+                <td>FREE</td>
+            </tr>
+            <tr>
+                <td>Charges for Retrieval of Old Transactional Records</td>
+                <td>FREE</td>
+            </tr>
+            <tr>
+                <td>Charges for Any Deliverable Returned by Courier Due to Negative Reasons</td>
+                <td>FREE</td>
+            </tr>
+            <tr>
+                <td>Address Confirmation Charges</td>
+                <td>FREE</td>
+            </tr>
+            <tr>
+                <td>I-Pin Regeneration Charges</td>
+                <td>FREE</td>
+            </tr>
+            <tr>
+                <td>Debit Card Pin Regeneration Charges</td>
+                <td>FREE</td>
+            </tr>
+        </table>
+        <h2>Contact Information</h2>
+        <table>
+            <tr>
+                <th>Service</th>
+                <th>Contact Info</th>
+            </tr>
+            <tr>
+                <td class="highlight">Customer Care</td>
+                <td>1800-419-4332 (Toll-Free)</td>
+            </tr>
+            <tr>
+                <td>Branch Locator</td>
+                <td><a href="https://www.idfcfirstbank.com/branch-atm-locator" target="_blank">Find your nearest branch</a></td>
+            </tr>
+            <tr>
+                <td class="highlight">Email Support</td>
+                <td>customercare@idfcfirstbank.com</td>
+            </tr>
+            <tr>
+                <td>Website</td>
+                <td><a href="https://www.idfcfirstbank.com" target="_blank">www.idfcfirstbank.com</a></td>
+            </tr>
+        </table>
+
+        <h2>Open Savings Account with IDFC FIRST Bank</h2>
+        <a href="https://www.idfcfirstbank.com" target="_blank" class="apply-now">Open Instantly Account Now</a>
+
+        
+        <a href="compare.html" target="_blank" class="apply-now">compare them with other bank account-type</a>
+      
+    </div>
+</div>
+
+</body>
+</html>

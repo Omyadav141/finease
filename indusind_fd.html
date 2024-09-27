@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IndusInd Bank - Fixed Deposit Account</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            animation: slideIn 2s ease-in-out;
+        }
+
+        h1 {
+            text-align: center;
+            color: #0073e6;
+            animation: bounceIn 2s ease-in-out;
+        }
+
+        h2 {
+            color: #0073e6;
+            border-bottom: 2px solid #0073e6;
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+            animation: fadeInUp 2s ease-in-out;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 16px;
+            animation: fadeInUp 2s ease-in-out;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #0073e6;
+            color: white;
+            font-weight: bold;
+        }
+
+        ul {
+            margin: 10px 0;
+            padding: 0 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+            animation: fadeInUp 2s ease-in-out;
+        }
+
+        a {
+            color: #0073e6;
+            text-decoration: none;
+            font-weight: bold;
+            animation: pulse 2s infinite;
+        }
+
+        a:hover {
+            color: #005bb5;
+        }
+
+        .open-account {
+            display: block;
+            margin: 20px auto;
+            padding: 15px 30px;
+            font-size: 18px;
+            color: white;
+            background-color: #0073e6;
+            text-align: center;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            max-width: 300px;
+        }
+
+        .open-account:hover {
+            background-color: #005bb5;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(100px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes bounceIn {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-20px);
+            }
+            60% {
+                transform: translateY(-10px);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>IndusInd Bank - Fixed Deposit Account</h1>
+
+    <h2>Features of IndusInd Bank Fixed Deposit</h2>
+    <ul>
+        <li>Interest Rates: Competitive interest rates that vary depending on the deposit amount and tenure. Higher interest rates for senior citizens.</li>
+        <li>Flexible Tenure: Choose a deposit tenure ranging from 7 days to 10 years.</li>
+        <li>Premature Withdrawal: Option for premature withdrawal with applicable penalties.</li>
+        <li>Loan Against FD: You can avail of a loan against your FD, typically up to 90% of the FD amount.</li>
+        <li>Automatic Renewal: The FD can be renewed automatically upon maturity, based on the account holder's instructions.</li>
+        <li>Nomination Facility: You can nominate someone to receive the FD amount in the event of your demise.</li>
+        <li>Tax-Saving FD: A special scheme under Section 80C of the Income Tax Act, offering tax benefits.</li>
+    </ul>
+
+    <h2>Types of IndusInd Bank Fixed Deposit Accounts</h2>
+    <ul>
+        <li><strong>Regular Fixed Deposit:</strong> Minimum Deposit starts from ₹10,000, Tenure from 7 days to 10 years, interest payout options include cumulative or non-cumulative.</li>
+        <li><strong>Senior Citizen Fixed Deposit:</strong> Higher interest rates for citizens aged 60 and above, with flexible payout options.</li>
+        <li><strong>Tax Saver Fixed Deposit:</strong> Enjoy tax benefits under Section 80C of the Income Tax Act. Minimum deposit ₹100, lock-in period of 5 years.</li>
+        <li><strong>Flexi Fixed Deposit:</strong> Linked to your savings account for automatic sweep-in and sweep-out, providing liquidity while earning FD interest rates.</li>
+    </ul>
+
+    <h2>Fixed Deposit Interest Rates</h2>
+    <table>
+        <tr>
+            <th>Customer Type</th>
+            <th>Interest Rate</th>
+        </tr>
+        <tr>
+            <td>Regular Customers</td>
+            <td>3.50% to 7.50% (subject to change based on RBI rates)</td>
+        </tr>
+        <tr>
+            <td>Senior Citizens</td>
+            <td>0.50% more than the regular rates</td>
+        </tr>
+    </table>
+
+    <h2>Premature Withdrawal</h2>
+    <p>IndusInd Bank allows premature withdrawal of fixed deposits with applicable penalties, which depend on the tenure of the deposit and the remaining period at the time of withdrawal. Tax-Saving FDs cannot be withdrawn prematurely during the 5-year lock-in period.</p>
+
+    <h2>Loan Against Fixed Deposit</h2>
+    <ul>
+        <li>Loan Amount: Up to 90% of the FD amount.</li>
+        <li>Interest Rate: Typically 1% to 2% higher than the FD interest rate.</li>
+        <li>Loan Tenure: Linked to the FD tenure, not exceeding the FD term.</li>
+        <li>Benefit: Retain FD interest earnings while accessing liquidity.</li>
+    </ul>
+
+    <h2>Fixed Deposit for NRI Customers</h2>
+    <ul>
+        <li><strong>NRE Fixed Deposit:</strong> Fully repatriable, tax-free interest, tenure from 1 to 10 years.</li>
+        <li><strong>NRO Fixed Deposit:</strong> Non-repatriable principal, but interest is repatriable, tenure from 7 days to 10 years.</li>
+        <li><strong>FCNR Fixed Deposit:</strong> Available in multiple currencies, tenure from 1 to 5 years, tax-free interest.</li>
+    </ul>
+
+    <h2>Renewal and Auto-Renewal</h2>
+    <p>Upon maturity, the FD can be automatically renewed based on the account holder’s instructions or manually renewed via branch or internet banking.</p>
+
+    <h2>How to Open a Fixed Deposit Account</h2>
+    <p>You can open an FD account online through the IndusNet internet banking portal, the IndusMobile app, or by visiting a branch. Relationship managers are available for premium customers.</p>
+
+    <a href="https://www.indusind.com" class="open-account">Open Fixed Deposit Now
+    <a href="compare.html" class="open-account"> Compare them with other bank account </div>
+
+</body>
+</html>

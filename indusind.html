@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IndusInd Bank - Savings Accounts</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            margin: 0;
+            height: 100%;
+            overflow-y: scroll;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+
+        .image-section {
+            flex: 1;
+            min-width: 300px;
+            background-image: url('https://www.indusind.com/assets/images/logo.png');
+            background-size: cover;
+            background-position: center;
+            animation: slideInLeft 2s ease-in-out;
+        }
+
+        .content-section {
+            flex: 2;
+            padding: 20px;
+            overflow-y: auto;
+            animation: slideInRight 2s ease-in-out;
+        }
+
+        h1 {
+            color: #1c4587;
+            text-align: center;
+            animation: bounceIn 2s ease-in-out;
+        }
+
+        h2 {
+            color: #1c4587;
+            border-bottom: 2px solid #0073e6;
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+            animation: fadeInUp 2s ease-in-out;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 16px;
+            animation: fadeInUp 2s ease-in-out;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #1c4587;
+            color: white;
+            font-weight: bold;
+        }
+
+        .highlight {
+            background-color: #e6f2ff;
+        }
+
+        a {
+            color: #0073e6;
+            text-decoration: none;
+            font-weight: bold;
+            animation: pulse 2s infinite;
+        }
+
+        a:hover {
+            color: #005bb5;
+        }
+
+        .open-account {
+            display: block;
+            margin: 20px auto;
+            padding: 15px 30px;
+            font-size: 18px;
+            color: white;
+            background-color: #0073e6;
+            text-align: center;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            max-width: 300px;
+        }
+
+        .open-account:hover {
+            background-color: #005bb5;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideInLeft {
+            from { transform: translateX(-100%); }
+            to { transform: translateX(0); }
+        }
+
+        @keyframes slideInRight {
+            from { transform: translateX(100%); }
+            to { transform: translateX(0); }
+        }
+
+        @keyframes bounceIn {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-20px);
+            }
+            60% {
+                transform: translateY(-10px);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        .open-account {
+            display: block;
+            margin: 20px auto;
+            padding: 15px 30px;
+            font-size: 18px;
+            color: white;
+            background-color: #0073e6;
+            text-align: center;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            max-width: 300px;
+        }
+
+        .open-account:hover {
+            background-color: #005bb5;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="image-section"></div>
+    <div class="content-section">
+        <h1>IndusInd Bank - Savings Accounts</h1>
+
+        <p>Explore the features and benefits of IndusInd Bank's Basic Savings Account and see how it can meet your banking needs.</p>
+
+        <h2>IndusInd Bank Basic Savings Account</h2>
+        <table>
+            <tr>
+                <th>Key Features</th>
+                <td>
+                    <strong>Zero Balance Account:</strong> No requirement to maintain a minimum balance.<br>
+                    <strong>Interest Rate:</strong> Interest is calculated on the daily closing balance and credited quarterly.<br>
+                    <strong>Debit Card:</strong> A complimentary RuPay or Visa debit card is issued, providing access to ATMs for cash withdrawals and shopping.<br>
+                    <strong>ATM Transactions:</strong> Free limited transactions at IndusInd Bank ATMs and limited free transactions at non-IndusInd Bank ATMs as per RBI guidelines.<br>
+                    <strong>Transaction Limits:</strong> Maximum withdrawals per month are limited; additional withdrawals may attract charges. Free services like passbook updates, cheque issuance, and deposit/withdrawal requests are offered up to a certain limit.<br>
+                    <strong>Internet and Mobile Banking:</strong> Free access to internet and mobile banking for fund transfers, bill payments, account management, and more.<br>
+                    <strong>Chequebook:</strong> Includes a chequebook, but issuance may be limited (additional chequebooks may incur fees).<br>
+                    <strong>Passbook:</strong> Provided for easy account tracking.<br>
+                    <strong>Maximum Account Balance:</strong> No minimum balance requirement, but there may be a maximum balance limit as per RBI regulations (typically ₹50,000 at any point in time).
+                </td>
+            </tr>
+            <tr>
+                <th>Eligibility</th>
+                <td>Individuals: Any resident Indian aged 18 years or above. Joint accounts can be opened with any eligible individual.</td>
+            </tr>
+            <tr>
+                <th>Documents Required</th>
+                <td>
+                    <strong>Proof of Identity (KYC requirements):</strong> Aadhaar card, Passport, Voter ID, PAN card, or any government-approved ID.<br>
+                    <strong>Proof of Address:</strong> Aadhaar, Utility Bills (recent), Passport, Voter ID, or other valid address proof.<br>
+                    <strong>Passport-Sized Photographs:</strong> Recent photographs (usually 1-2).<br>
+                    <strong>Additional Documents:</strong> For minors or senior citizens, additional documentation like a birth certificate or senior citizen card may be required.
+                </td>
+            </tr>
+            <tr>
+                <th>Fees and Charges</th>
+                <td>
+                    <strong>Account Opening Charges:</strong> No charges for opening the account.<br>
+                    <strong>Non-maintenance Charges:</strong> No penalties for not maintaining a specific balance.<br>
+                    <strong>Debit Card Charges:</strong> Typically no annual fee for the debit card, but premium versions may have associated costs.<br>
+                    <strong>Transaction Charges:</strong> Limited free transactions at ATMs and bank branches; exceeding the limit may incur charges. Free electronic fund transfers via NEFT, RTGS, and IMPS (subject to certain limits).
+                </td>
+            </tr>
+            <tr>
+                <th>Benefits</th>
+                <td>
+                    <strong>Financial Inclusion:</strong> Helps individuals with low or no income to access banking services.<br>
+                    <strong>Convenient Banking:</strong> Provides access to essential banking services such as deposits, withdrawals, and online transactions.<br>
+                    <strong>Government Subsidies:</strong> Can be used to receive government subsidies, pensions, and other direct benefits.<br>
+                    <strong>Accessible:</strong> Available across all urban, semi-urban, and rural branches of IndusInd Bank.<br>
+                    <strong>Savings Encouragement:</strong> Encourages small savings and inculcates the habit of banking among individuals.
+                </td>
+            </tr>
+            <tr>
+                <th>Restrictions</th>
+                <td>
+                    <strong>Transaction Limits:</strong> Limitations on the number of withdrawals and other transactions (usually four withdrawals per month, including ATM and branch transactions).<br>
+                    <strong>Balance Cap:</strong> Cap on the maximum balance that can be held in the account (typically ₹50,000).<br>
+                    <strong>Credit Transaction Limits:</strong> Total credit in the account should not exceed ₹1,00,000 in a financial year, as per BSBDA guidelines.
+                </td>
+            </tr>
+            <tr>
+                <th>Ideal For</th>
+                <td>Individuals with low banking requirements, those looking for an account with no minimum balance requirement, and those who want to use the account for receiving government benefits and subsidies.</td>
+            </tr>
+        </table>
+
+        <h2>Contact Information</
+            <h2>Contact Information</h2>
+            <p>For more information or to open an IndusInd Bank Basic Savings Account, please contact:</p>
+            <ul>
+                <li><strong>Customer Service:</strong> 1860 267 7777</li>
+                <li><strong>Head Office:</strong> IndusInd Bank Ltd, 2401, Gen. Thimmayya Road, Pune - 411 001, Maharashtra</li>
+                <li><strong>Email:</strong> <a href="mailto:customer.service@indusind.com">customer.service@indusind.com</a></li>
+                <li><strong>Website:</strong> <a href="https://www.indusind.com" target="_blank">www.indusind.com</a></li>
+            </ul>
+    
+           
+            <a href="https://www.indusind.com" class="open-account">Open New Account</a>
+            <a href="compare.html" class="open-account">Compare them with other account type</a>
+            
+        </div>
+    </div>
+    
+    </body>
+    </html>
+    

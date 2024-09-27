@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SBI - Student Account</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            margin: 0;
+            height: 100%;
+            overflow-y: scroll;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+
+        .image-section {
+            flex: 1;
+            min-width: 300px;
+            background-image: url('https://www.sbi.co.in/webfiles/uploads/images/sbi_logo.png');
+            background-size: cover;
+            background-position: center;
+            animation: slideInLeft 2s ease-in-out;
+        }
+
+        .content-section {
+            flex: 2;
+            padding: 20px;
+            overflow-y: auto;
+            animation: slideInRight 2s ease-in-out;
+        }
+
+        h1 {
+            color: #1c4587;
+            text-align: center;
+            animation: bounceIn 2s ease-in-out;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 16px;
+            animation: fadeInUp 2s ease-in-out;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #1c4587;
+            color: white;
+        }
+
+        .highlight {
+            background-color: #e6f2ff;
+        }
+
+        a {
+            color: #0073e6;
+            text-decoration: none;
+            font-weight: bold;
+            animation: pulse 2s infinite;
+        }
+
+        a:hover {
+            color: #005bb5;
+        }
+
+        .open-account {
+            display: block;
+            margin: 20px auto;
+            padding: 15px 30px;
+            font-size: 18px;
+            color: white;
+            background-color: #0073e6;
+            text-align: center;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            max-width: 300px;
+        }
+
+        .open-account:hover {
+            background-color: #005bb5;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideInLeft {
+            from { transform: translateX(-100%); }
+            to { transform: translateX(0); }
+        }
+
+        @keyframes slideInRight {
+            from { transform: translateX(100%); }
+            to { transform: translateX(0); }
+        }
+
+        @keyframes bounceIn {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-20px);
+            }
+            60% {
+                transform: translateY(-10px);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="image-section"></div>
+    <div class="content-section">
+        <h1>SBI - Student Account</h1>
+
+        <p>SBI offers two types of Savings Accounts for minors: Pehla Kadam and Pehli Udaan. These accounts are designed to teach children the importance of saving money while providing them with modern banking features.</p>
+
+        <h2>Features</h2>
+        <table>
+            <tr>
+                <th>Feature</th>
+                <th>Details</th>
+            </tr>
+            <tr>
+                <td class="highlight">Monthly Average Balance (MAB)</td>
+                <td>Requirement not applicable</td>
+            </tr>
+            <tr>
+                <td class="highlight">Maximum Balance</td>
+                <td>Rs. 10 lakh</td>
+            </tr>
+            <tr>
+                <td class="highlight">Cheque Book</td>
+                <td>
+                    <strong>Pehla Kadam:</strong> Available with specially designed personalized chequebook (10 leaves).<br>
+                    <strong>Pehli Udaan:</strong> Available if the minor can sign uniformly, with specially designed personalized chequebook (10 leaves).
+                </td>
+            </tr>
+            <tr>
+                <td class="highlight">Photo ATM-cum-Debit Card</td>
+                <td>
+                    <strong>Pehla Kadam:</strong> Child's photo embossed card with withdrawal/POS limit of Rs. 5,000.<br>
+                    <strong>Pehli Udaan:</strong> Photo embossed card with withdrawal/POS limit of Rs. 5,000.
+                </td>
+            </tr>
+            <tr>
+                <td class="highlight">Mobile Banking</td>
+                <td>
+                    <strong>Pehla Kadam:</strong> Viewing rights with limited transactions (Bill payment, Top ups). Per day limit Rs. 2,000.<br>
+                    <strong>Pehli Udaan:</strong> Viewing rights with limited transactions (Bill payment, Top ups, IMPS). Per day limit Rs. 2,000.
+                </td>
+            </tr>
+            <tr>
+                <td class="highlight">Auto Sweep Facility</td>
+                <td>Minimum threshold of Rs. 20,000. Sweep in multiples of Rs. 1,000 with a minimum of Rs. 10,000.</td>
+            </tr>
+        </table>
+
+        <h2>Eligibility</h2>
+        <table>
+            <tr>
+                <th>Account Type</th>
+                <th>Eligibility</th>
+            </tr>
+            <tr>
+                <td class="highlight">Pehla Kadam</td>
+                <td>Minor of any age, jointly opened with parent/guardian.</td>
+            </tr>
+            <tr>
+                <td>Pehli Udaan</td>
+                <td>Minors above the age of 10 who can sign uniformly. Opened in the sole name of the minor.</td>
+            </tr>
+        </table>
+
+        <h2>KYC Requirements</h2>
+        <table>
+            <tr>
+                <th>Account Type</th>
+                <th>KYC Requirements</th>
+            </tr>
+            <tr>
+                <td class="highlight">Pehla Kadam</td>
+                <td>Date of Birth proof of the minor + KYC of the Parent.</td>
+            </tr>
+            <tr>
+                <td>Pehli Udaan</td>
+                <td>Date of Birth proof of the minor + KYC of the Parent.</td>
+            </tr>
+        </table>
+
+        <h2>Other Features</h2>
+        <table>
+            <tr>
+                <th>Feature</th>
+                <th>Details</th>
+            </tr>
+            <tr>
+                <td class="highlight">Interest Rate</td>
+                <td>2.70% p.a. (less than Rs.10 Cr.)<br>3.00% p.a. (Rs.10 Cr. and above)</td>
+            </tr>
+            <tr>
+                <td>Transferability</td>
+                <td>Accounts can be transferred to any SBI branch without changing the account number.</td>
+            </tr>
+            <tr>
+                <td class="highlight">Nomination Facility</td>
+                <td>Available and recommended.</td>
+            </tr>
+            <tr>
+                <td>Passbook</td>
+                <td>Specially designed branded passbook issued free of charge.</td>
+            </tr>
+            <tr>
+                <td class="highlight">Inter Core Charges</td>
+                <td>NIL for transfer transactions.</td>
+            </tr>
+        </table>
+        <h2>Contact Information</h2>
+        <table>
+            <tr>
+                <th>Service</th>
+                <th>Contact Info</th>
+            </tr>
+            <tr>
+                <td class="highlight">Customer Care</td>
+                <td>1800-258-3838 (Toll-Free)</td>
+            </tr>
+            <tr>
+                <td>Branch Locator</td>
+                <td><a href="https://www.hdfcbank.com/branch-atm-locator" target="_blank">Find your nearest branch</a></td>
+            </tr>
+            <tr>
+                <td class="highlight">Email Support</td>
+                <td>support@hdfcbank.com</td>
+            </tr>
+            <tr>
+                <td>Website</td>
+                <td><a href="https://www.hdfcbank.com" target="_blank">www.hdfcbank.com</a></td>
+            </tr>
+        </table>
+        <a href="compare.html" target="_blank" class="apply-now">compare them with other bank account-type</a>
+      
+        <a href="https://www.sbi.co.in" target="_blank" class="open-account">Open New Account</a>
+
+    </div>
+</div>
+
+</body>
+</html>

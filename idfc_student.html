@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IDFC FIRST Bank - Student Account</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            height: 100%;
+            overflow-y: scroll;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+
+        .image-section {
+            flex: 1;
+            min-width: 300px;
+            background-image: url('https://www.idfcfirstbank.com/images/logo-idfc-first-bank.png');
+            background-size: cover;
+            background-position: center;
+            animation: slideInLeft 2s ease-in-out;
+        }
+
+        .content-section {
+            flex: 2;
+            padding: 20px;
+            overflow-y: auto;
+            animation: slideInRight 2s ease-in-out;
+        }
+
+        h1 {
+            color: #003d66;
+            text-align: center;
+            animation: bounceIn 2s ease-in-out;
+        }
+
+        h2 {
+            color: #003d66;
+            margin-top: 20px;
+        }
+
+        ul {
+            margin: 10px 0;
+            padding: 0;
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 16px;
+            animation: fadeInUp 2s ease-in-out;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #003d66;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .highlight {
+            background-color: #e6f0ff;
+        }
+
+        a {
+            color: #004d99;
+            text-decoration: none;
+            font-weight: bold;
+            animation: pulse 2s infinite;
+        }
+
+        a:hover {
+            color: #00264d;
+        }
+
+        .apply-now {
+            display: block;
+            margin: 20px auto;
+            padding: 15px 30px;
+            font-size: 18px;
+            color: white;
+            background-color: #004d99;
+            text-align: center;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            max-width: 300px;
+        }
+
+        .apply-now:hover {
+            background-color: #003366;
+        }
+
+        /* Enhanced Table Design */
+        th {
+            background-color: #004d99;
+            color: #ffffff;
+            border: 1px solid #003d66;
+        }
+
+        td {
+            border: 1px solid #ddd;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tr:nth-child(odd) {
+            background-color: #ffffff;
+        }
+
+        tr:hover {
+            background-color: #e6f0ff;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideInLeft {
+            from { transform: translateX(-100%); }
+            to { transform: translateX(0); }
+        }
+
+        @keyframes slideInRight {
+            from { transform: translateX(100%); }
+            to { transform: translateX(0); }
+        }
+
+        @keyframes bounceIn {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-20px);
+            }
+            60% {
+                transform: translateY(-10px);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="image-section"></div>
+    <div class="content-section">
+        <h1>IDFC FIRST Bank - Student Account</h1>
+
+        <p>The IDFC FIRST Bank Student Account is tailored to meet the needs of young students, providing them with a platform to manage their finances efficiently while gaining financial literacy.</p>
+
+        <h2>Features</h2>
+        <ul>
+            <li><strong>No Minimum Balance Requirement:</strong> Maintain a zero-balance account without any monthly charges.</li>
+            <li><strong>Free Debit Card:</strong> Receive a free debit card with no annual fee.</li>
+            <li><strong>Online and Mobile Banking:</strong> Access your account through our secure online and mobile banking platforms.</li>
+            <li><strong>Student Discounts:</strong> Enjoy exclusive discounts and offers on various products and services.</li>
+            <li><strong>Financial Literacy Program:</strong> Participate in programs designed to enhance your financial knowledge and skills.</li>
+        </ul>
+
+        <h2>Eligibility</h2>
+        <ul>
+            <li>Indian citizens</li>
+            <li>Students currently enrolled in an educational institution</li>
+            <li>Age between 16 to 25 years</li>
+        </ul>
+
+        <h2>Documentation</h2>
+        <p>To open a Student Account, please provide the following documents:</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Document Type</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Photograph</td>
+                    <td>Passport-size photograph</td>
+                </tr>
+                <tr>
+                    <td>Identity Proof</td>
+                    <td>Any one of the following:
+                        <ul>
+                            <li>Aadhaar Card</li>
+                            <li>Passport</li>
+                            <li>Voter’s Identity Card (Election Card)</li>
+                            <li>Driving License</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Address Proof</td>
+                    <td>Any one of the following:
+                        <ul>
+                            <li>Aadhaar Card</li>
+                            <li>Utility Bill</li>
+                            <li>Bank Statement</li>
+                            <li>Rental Agreement</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Student ID Card</td>
+                    <td>Valid student ID from the educational institution</td>
+                </tr>
+            </tbody>
+        </table>
+        <a href="compare.html" target="_blank" class="apply-now">compare them with other bank account-type</a>
+      
+
+        <a href="#" class="apply-now">Open Student Account</a>
+    </div>
+</div>
+
+</body>
+</html>

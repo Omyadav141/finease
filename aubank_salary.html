@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AU Small Finance Bank - Salary Account</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            overflow-y: scroll;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            width: 90%;
+            max-width: 1200px;
+            margin: 40px auto;
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .image-section {
+            flex: 1;
+            min-width: 300px;
+            background-image: url('https://www.aubank.in/assets/images/au-bank-logo.svg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-color: #ffe6e6;
+            animation: slideInLeft 2s ease-in-out;
+        }
+
+        .content-section {
+            flex: 2;
+            padding: 40px;
+            background-color: #fafafa;
+            animation: slideInRight 2s ease-in-out;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            font-size: 36px;
+            color: #ff6600;
+            text-align: center;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        h2 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 10px;
+            text-align: left;
+            border-bottom: 2px solid #ff6600;
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            font-size: 20px;
+            color: #555;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.7;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .button {
+            display: inline-block;
+            padding: 12px 24px;
+            margin: 10px 0;
+            font-size: 16px;
+            color: #fff;
+            background-color: #ff6600; /* Orange */
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        ul li {
+            font-size: 16px;
+            line-height: 1.8;
+            margin: 10px 0;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        ul li:before {
+            content: '✔';
+            color: #ff6600;
+            font-size: 18px;
+            position: absolute;
+            left: 0;
+            top: 3px;
+        }
+
+        a {
+            color: #ff6600;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #cc5200;
+        }
+
+        .apply-now {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 15px 40px;
+            font-size: 18px;
+            color: white;
+            background-color: #ff6600;
+            text-align: center;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            font-weight: bold;
+        }
+
+        .apply-now:hover {
+            background-color: #cc5200;
+        }
+
+        .highlight {
+            background-color: #ffeded;
+            padding: 15px;
+            border-left: 4px solid #ff6600;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideInLeft {
+            from { transform: translateX(-100%); }
+            to { transform: translateX(0); }
+        }
+
+        @keyframes slideInRight {
+            from { transform: translateX(100%); }
+            to { transform: translateX(0); }
+        }
+
+        /* Table Styling */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            font-size: 16px;
+            animation: fadeInUp 2s ease-in-out;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #ff6600;
+            color: white;
+        }
+
+        td {
+            background-color: #fafafa;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="image-section"></div>
+    <div class="content-section">
+        <h1>AU Small Finance Bank - Salary Account</h1>
+
+        <h2>About AU Salary Account</h2>
+        <div class="highlight">
+            <p>Your Zero Balance Salary Account with AU Small Finance Bank is the hub of your financial activities. In addition to managing your salary, it offers competitive interest rates, insurance benefits, a free Debit Card, and exclusive offers. Explore our Salary Account options to find the best fit for you.</p>
+        </div>
+
+        <h2>Account Types</h2>
+        <div class="section">
+            <h3>AU Royale Salary</h3>
+            <ul>
+                <li>Min AMB: ₹Zero</li>
+                <li>Special Benefit: 1% Monthly Cashback</li>
+                <li>Suited for: Senior Management</li>
+                <li>Interest Earned: Up to 7.25% p.a.</li>
+            </ul>
+            <a href="https://www.aubank.in/au-royale-salary" target="_blank" class="apply-now">View Details & Apply Now</a>
+        </div>
+
+        <div class="section">
+            <h3>Salary Account Value</h3>
+            <ul>
+                <li>Min AMB: ₹Zero</li>
+                <li>Special Benefit: Higher Insurance Covers</li>
+                <li>Suited for: Salaried Professionals</li>
+                <li>Interest Earned: Up to 7.25% p.a.</li>
+            </ul>
+            <a href="https://www.aubank.in/salary-account-value" target="_blank" class="apply-now">View Details & Apply Now</a>
+        </div>
+
+        <div class="section">
+            <h3>Salary Account Platinum</h3>
+            <ul>
+                <li>Min AMB: ₹Zero</li>
+                <li>Special Benefit: Higher Insurance Covers</li>
+                <li>Suited for: Middle Management</li>
+                <li>Interest Earned: Up to 7.25% p.a.</li>
+            </ul>
+            <a href="https://www.aubank.in/salary-account-platinum" target="_blank" class="apply-now">View Details & Apply Now</a>
+        </div>
+
+        <h2>Features and Benefits</h2>
+        <h3>Features</h3>
+        <ul>
+            <li>High-interest rates: Earn up to 7.25%* p.a. with monthly interest payouts. Click <a href="https://www.aubank.in/savings-account-interest-rates" target="_blank">here</a> for details.</li>
+            <li>State-of-the-art Digital Banking: 24x7 access to funds through AU 0101 App or AU 0101 NetBanking. Book flights, hotels, recharge your mobile, and more.</li>
+            <li>Easily accessible: Our digital-first approach and extensive network of touchpoints make banking simple and convenient.</li>
+            <li>Dedicated Relationship Officer: Your single point of contact for all banking and financial needs.</li>
+        </ul>
+
+        <h3>Benefits</h3>
+        <ul>
+            <li>Zero Balance Salary Account: No minimum balance requirement.</li>
+            <li>Instant Salary Account Opening: Open your account instantly through TAB Banking.</li>
+            <li>Banking at your convenience: Perform transactions and service requests from home using Video Banking.</li>
+            <li>Paperless banking: Deposit funds without the need for a deposit slip.</li>
+            <li>Wide range of products: Access Term Deposits, Credit Cards, Lockers, Mutual Funds, Insurance, and more.</li>
+            <li>Asset Offering: Special rates on Retail Asset products for salaried customers.</li>
+        </ul>
+
+        <h2>Salary Account Benefits for Employers</h2>
+        <ul>
+            <li>Comprehensive banking solutions with a Current Account for business needs.</li>
+            <li>Simplified Payroll Solution and online salary upload facility.</li>
+            <li>Instant intimation and salary credit to employee accounts.</li>
+            <li>Dedicated Relationship Manager and extended banking hours.</li>
+        </ul>
+
+        <h2>Eligibility Criteria</h2>
+        <p>You can open a Salary Savings Account if you are an on-roll employee of a company empanelled for the salary relationship with AU Small Finance Bank.</p>
+
+        <h2>How to Apply</h2>
+        <ul>
+            <li>Open Salary Account Online: Fill out the online form, and a representative will contact you.</li>
+            <li>Contact your Relationship Manager: Request assistance from your HR team to get the contact details of AU Small Finance Bank Relationship Manager.</li>
+            <li>Visit your nearest branch: Walk in with your KYC documents and photographs to start the process.</li>
+        </ul>
+
+        <h2>Documents Required</h2>
+        <p>Prepare the following for online or branch account opening:</p>
+        <ul>
+            <li>Aadhaar Card Number</li>
+            <li>Original PAN Card</li>
+            <li>Employment Confirmation proof (OTP verification, offer letter, salary slip, or Employee ID card)</li>
+            <li>For AU Royale Salary Account: Application form, recent photograph, and KYC documents.</li>
+        </ul>
+
+        <h2>Fees & Charges</h2>
+        <p>For a list of charges, refer to our <a href="https://www.aubank.in/service-fee-reckoner" target="_blank">Service Fee Reckoner</a>.</p>
+        <a href="compare.html" class="button">Compare Accounts with other bank</a>
+    </div>
+</div>
+
+</body>
+</html>

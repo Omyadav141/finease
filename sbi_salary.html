@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SBI - Digi Salary Account</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            margin: 0;
+            height: 100%;
+            overflow-y: scroll;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+
+        .image-section {
+            flex: 1;
+            min-width: 300px;
+            background-image: url('https://www.sbi.co.in/webfiles/uploads/images/sbi_logo.png');
+            background-size: cover;
+            background-position: center;
+            animation: slideInLeft 2s ease-in-out;
+        }
+
+        .content-section {
+            flex: 2;
+            padding: 20px;
+            overflow-y: auto;
+            animation: slideInRight 2s ease-in-out;
+        }
+
+        h1 {
+            color: #1c4587;
+            text-align: center;
+            animation: bounceIn 2s ease-in-out;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 16px;
+            animation: fadeInUp 2s ease-in-out;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #1c4587;
+            color: white;
+        }
+
+        .highlight {
+            background-color: #e6f2ff;
+        }
+
+        a {
+            color: #0073e6;
+            text-decoration: none;
+            font-weight: bold;
+            animation: pulse 2s infinite;
+        }
+
+        a:hover {
+            color: #005bb5;
+        }
+
+        .apply-now {
+            display: block;
+            margin: 20px auto;
+            padding: 15px 30px;
+            font-size: 18px;
+            color: white;
+            background-color: #0073e6;
+            text-align: center;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            max-width: 300px;
+        }
+
+        .apply-now:hover {
+            background-color: #005bb5;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideInLeft {
+            from { transform: translateX(-100%); }
+            to { transform: translateX(0); }
+        }
+
+        @keyframes slideInRight {
+            from { transform: translateX(100%); }
+            to { transform: translateX(0); }
+        }
+
+        @keyframes bounceIn {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-20px);
+            }
+            60% {
+                transform: translateY(-10px);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="image-section"></div>
+    <div class="content-section">
+        <h1>SBI - Digi Salary Account</h1>
+
+        <h2>Features</h2>
+        <table>
+            <tr>
+                <th>Feature</th>
+                <th>Details</th>
+            </tr>
+            <tr>
+                <td class="highlight">Eligibility</td>
+                <td>Only Resident India Individuals over 18 years of age with capacity to contract in accordance with applicable laws in India, without any tax liability outside India.</td>
+            </tr>
+            <tr>
+                <td class="highlight">Account Type</td>
+                <td>Only one SBI Digital Savings Account per individual. Joint accounts or joint mandates are not permitted.</td>
+            </tr>
+            <tr>
+                <td class="highlight">Conversion</td>
+                <td>Account can be converted to a joint account or CSP Account only after converting it to a normal savings account by visiting the home branch.</td>
+            </tr>
+            <tr>
+                <td class="highlight">Platform Availability</td>
+                <td>Available on iPhone with iOS 8 and above, Android Phones with Android version 5.0 and above.</td>
+            </tr>
+            <tr>
+                <td class="highlight">Nomination Facility</td>
+                <td>Available within the Yono by SBI app and is mandatory for Digital Savings Account. Only one nominee allowed.</td>
+            </tr>
+            <tr>
+                <td class="highlight">Account Closure</td>
+                <td>Can be closed by making a written request at the home branch only.</td>
+            </tr>
+            <tr>
+                <td class="highlight">Cheque Book</td>
+                <td>Charges will be the same as applicable to normal savings accounts.</td>
+            </tr>
+            <tr>
+                <td class="highlight">Debit Card</td>
+                <td>A Classic Debit Card will be issued free of cost. ATM pin has to be generated through Green PIN process. Annual maintenance charges as per normal savings accounts.</td>
+            </tr>
+            <tr>
+                <td class="highlight">Passbook</td>
+                <td>Not provided. Audio-visual statement sent by email.</td>
+            </tr>
+            <tr>
+                <td class="highlight">Electronic Statement</td>
+                <td>Available monthly, as per Bank's record, subject to discretion of the Bank.</td>
+            </tr>
+            <tr>
+                <td class="highlight">Minimum Balance</td>
+                <td>To be maintained as defined for normal Savings Bank Account. Minimum balance charges waived till 31st March 2019.</td>
+            </tr>
+        </table>
+
+        <h2>Eligibility</h2>
+        <table>
+            <tr>
+                <th>Eligibility Criteria</th>
+                <th>Details</th>
+            </tr>
+            <tr>
+                <td class="highlight">Age</td>
+                <td>Over 18 years</td>
+            </tr>
+            <tr>
+                <td class="highlight">Identification</td>
+                <td>Valid Aadhaar number and Permanent Account Number (PAN). Name on Aadhaar should match the PAN card.</td>
+            </tr>
+            <tr>
+                <td class="highlight">Contact Information</td>
+                <td>Valid and active local mobile number and email address.</td>
+            </tr>
+            <tr>
+                <td class="highlight">e-KYC</td>
+                <td>Completion of e-KYC through biometric authentication at any SBI branch.</td>
+            </tr>
+            <tr>
+                <td class="highlight">Account Limitations</td>
+                <td>One SBI Digital Savings Account per individual. One account per Mobile Phone/Device.</td>
+            </tr>
+        </table>
+
+        <h2>Interest Rates</h2>
+        <table>
+            <tr>
+                <th>Interest Rate</th>
+                <th>Details</th>
+            </tr>
+            <tr>
+                <td class="highlight">Less than Rs.10 Cr.</td>
+                <td>2.70% p.a. w.e.f 15.10.22</td>
+            </tr>
+            <tr>
+                <td>Rs.10 Cr. and above</td>
+                <td>3.00% p.a. w.e.f 15.10.22</td>
+            </tr>
+        </table>
+        <h2>Contact Information</h2>
+        <table>
+            <tr>
+                <th>Service</th>
+                <th>Contact Info</th>
+            </tr>
+            <tr>
+                <td class="highlight">Customer Care</td>
+                <td>1800-258-3838 (Toll-Free)</td>
+            </tr>
+            <tr>
+                <td>Branch Locator</td>
+                <td><a href="https://www.hdfcbank.com/branch-atm-locator" target="_blank">Find your nearest branch</a></td>
+            </tr>
+            <tr>
+                <td class="highlight">Email Support</td>
+                <td>support@hdfcbank.com</td>
+            </tr>
+            <tr>
+                <td>Website</td>
+                <td><a href="https://www.hdfcbank.com" target="_blank">www.hdfcbank.com</a></td>
+            </tr>
+        </table>
+        <a href="compare.html" target="_blank" class="apply-now">compare them with other bank account-type</a>
+      
+        <a href="https://www.sbi.co.in" target="_blank" class="apply-now">Apply Now</a>
+        <p>Request Rejected: <a href="mailto:sbiyono.sbi">sbiyono.sbi</a></p>
+    </div>
+</div>
+
+</body>
+</html>

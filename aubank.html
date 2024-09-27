@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AU Small Finance Bank - Digital Savings Account</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            overflow-y: scroll;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            width: 90%;
+            max-width: 1200px;
+            margin: 40px auto;
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .image-section {
+            flex: 1;
+            min-width: 300px;
+            background-image: url('https://www.aubank.in/assets/images/au-bank-logo.svg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-color: #ffe4b5; /* Light orange */
+            animation: slideInLeft 2s ease-in-out;
+        }
+
+        .content-section {
+            flex: 2;
+            padding: 40px;
+            background-color: #fafafa;
+            animation: slideInRight 2s ease-in-out;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            font-size: 36px;
+            color: #ff6600; /* Orange */
+            text-align: center;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        h2 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 10px;
+            text-align: left;
+            border-bottom: 2px solid #ff6600; /* Orange */
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            font-size: 20px;
+            color: #555;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.7;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li {
+            font-size: 16px;
+            line-height: 1.8;
+            margin: 10px 0;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        ul li:before {
+            content: '✔';
+            color: #ff6600; /* Orange */
+            font-size: 18px;
+            position: absolute;
+            left: 0;
+            top: 3px;
+        }
+
+        a {
+            color: #ff6600; /* Orange */
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #cc5200; /* Darker Orange */
+        }
+
+        .apply-now {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 15px 40px;
+            font-size: 18px;
+            color: white;
+            background-color: #ff6600; /* Orange */
+            text-align: center;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            font-weight: bold;
+        }
+
+        .apply-now:hover {
+            background-color: #cc5200; /* Darker Orange */
+        }
+
+        .highlight {
+            background-color: #ffe4b5; /* Light orange */
+            padding: 15px;
+            border-left: 4px solid #ff6600; /* Orange */
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideInLeft {
+            from { transform: translateX(-100%); }
+            to { transform: translateX(0); }
+        }
+
+        @keyframes slideInRight {
+            from { transform: translateX(100%); }
+            to { transform: translateX(0); }
+        }
+
+        /* Table Styling */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            font-size: 16px;
+            animation: fadeInUp 2s ease-in-out;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #ff6600; /* Orange */
+            color: white;
+        }
+
+        td {
+            background-color: #fafafa;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        .button {
+            display: inline-block;
+            padding: 12px 24px;
+            margin: 10px 0;
+            font-size: 16px;
+            color: #fff;
+            background-color: #ff6600; /* Orange */
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="image-section"></div>
+    <div class="content-section">
+        <h1>AU Small Finance Bank - Digital Savings Account</h1>
+
+        <h2>Top Features Of AU Digital Savings Account</h2>
+        <div class="highlight">
+            <p>Open an account instantly with our AU Digital Savings offering. Enjoy high-interest rates along with monthly payouts, and get 24x7 access to your funds through AU 0101 App / NetBanking.</p>
+        </div>
+
+        <h2>About AU Digital Savings Account</h2>
+        <p>Today's fast-paced lifestyle demands the simplification of practically every task to save time and increase convenience. So, why should banking be any different? We make banking fast, secure, and effortless with the fully digital AU Digital Savings Account.</p>
+        <p>Our Digital Savings Account lets you access banking services from anywhere. This Zero Balance Savings Account's instant banking facility also provides you with a power-packed Debit Card, free transactions at other Bank ATMs, and free online money transfers coupled with monthly interest payouts. These are just some of the nifty features you can enjoy.</p>
+
+        <h2>Features of AU Digital Savings Account</h2>
+        <ul>
+            <li>High-interest rates: Earn up to 7.25%* p.a. on your Savings Bank Account & receive monthly interest payouts. For details, visit <a href="https://www.aubank.in/savings-account-interest-rates" target="_blank">Savings Account Interest Rates</a>.</li>
+            <li>Domestic Airport Lounge Access: Get access to domestic airport lounges by flashing your Debit Card. (Effective 1st July 2024, complimentary lounge access benefit given to RuPay Platinum International Debit Card is withdrawn.)</li>
+            <li>No minimum balance: No need to worry about fines for failing to maintain a minimum average balance.</li>
+            <li>Feature-rich Debit Card: Get a RuPay Platinum Debit Card providing purchase protection, enhanced insurance coverage, and exciting offers and discounts across leading brands in India.</li>
+            <li>State-of-the-art Digital Banking: Enjoy 24x7 access to your funds through AU 0101 App/NetBanking. Book flights, hotels, recharge your mobile, and apply for various products and services.</li>
+            <li>Extended banking hours: Enjoy extended banking hours and visit any AU Small Finance Bank branch till 6 pm^.</li>
+            <li>Tap & Go: A contactless Debit Card allows transactions up to INR 5,000 in India without the need to enter a PIN.</li>
+        </ul>
+
+        <h2>Benefits of AU Digital Savings Account</h2>
+        <ul>
+            <li>Banking at your convenience: Perform all banking transactions & service requests from the comfort of your home with Video Banking facilities.</li>
+            <li>24x7 online transactions: Make online transactions such as utility bill payments and mobile recharges anytime, instantly.</li>
+            <li>Paperless banking: Deposit funds into your account without the need for a deposit slip.</li>
+            <li>Wide range of products & services: Access Lockers, Demat, Mutual Funds, Loans, Insurance, and more. We are a one-stop-shop for all your needs!</li>
+            <li>Free of charge fund transfers: Enjoy free unlimited RTGS/NEFT fund transfers through our digital channels.</li>
+        </ul>
+
+        <h2>Fees & Charges</h2>
+        <p>We, India's best Small Finance Bank, believe in complete transparency and provide you with a list of charges for the services we offer. Depending on the type of Savings Account you have opened, these include charges for your Debit Card, payment and collection services, transactions, and delivery fees. For more details, please refer to our <a href="https://www.aubank.in/service-fee-reckoner" target="_blank">Service Fee Reckoner</a>.</p>
+
+        <h2>Eligibility Criteria</h2>
+        <p>If you reside in India, are 18 years or above, and have the necessary KYC documents issued by the government, you can open a Savings Account with us. Video KYC is currently available for account opening.</p>
+
+        <a href="https://aubank.in" class="button">open instant account now</a>
+        <a href="compare.html" class="button">Compare Accounts with other bank</a>
+    </div>
+</div>
+
+</body>
+</html>

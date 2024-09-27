@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demat Account Comparison</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Demat Account Comparison</h1>
+    </header>
+    <main>
+        <input type="text" id="search" placeholder="Search for Demat accounts...">
+        <div id="results"></div>
+    </main>
+    <script>
+        const dmatAccounts = [
+            { 
+                name: 'Zerodha', 
+                file: 'zerodha.html', 
+                image: 'images/zerodha.png', 
+                rating: 4.5, 
+                fees: '₹20 per trade', 
+                services: 'Equity, Mutual Funds, Bonds' 
+            },
+            { 
+                name: 'Upstox', 
+                file: 'upstox.html', 
+                image: 'images/upstox.png', 
+                rating: 4.3, 
+                fees: '₹20 per trade', 
+                services: 'Equity, Mutual Funds, IPOs' 
+            },
+            { 
+                name: '5Paisa', 
+                file: '5paisa.html', 
+                image: 'images/5paisa.png', 
+                rating: 4.0, 
+                fees: '₹10 per trade', 
+                services: 'Equity, Mutual Funds, Insurance' 
+            },
+            { 
+                name: 'Angel One', 
+                file: 'angel-one.html', 
+                image: 'images/angel-one.png', 
+                rating: 4.2, 
+                fees: '₹20 per trade', 
+                services: 'Equity, Mutual Funds, Loans' 
+            },
+            { 
+                name: 'Sharekhan', 
+                file: 'sharekhan.html', 
+                image: 'images/sharekhan.png', 
+                rating: 4.1, 
+                fees: '₹20 per trade', 
+                services: 'Equity, Mutual Funds, Portfolio Management' 
+            },
+            { 
+                name: 'Motilal Oswal', 
+                file: 'motilal-oswal.html', 
+                image: 'images/motilal-oswal.png', 
+                rating: 4.0, 
+                fees: '₹20 per trade', 
+                services: 'Equity, Mutual Funds, Research Reports' 
+            },
+            { 
+                name: 'India Infoline (IIFL)', 
+                file: 'iifl.html', 
+                image: 'images/iifl.png', 
+                rating: 4.1, 
+                fees: '₹20 per trade', 
+                services: 'Equity, Mutual Funds, Loans' 
+            },
+            { 
+                name: 'HDFC Securities', 
+                file: 'hdfc-securities.html', 
+                image: 'images/hdfc-securities.png', 
+                rating: 4.3, 
+                fees: '₹20 per trade', 
+                services: 'Equity, Mutual Funds, Fixed Deposits' 
+            },
+            { 
+                name: 'ICICI Direct', 
+                file: 'icici-direct.html', 
+                image: 'images/icici-direct.png', 
+                rating: 4.2, 
+                fees: '₹20 per trade', 
+                services: 'Equity, Mutual Funds, Insurance' 
+            },
+            { 
+                name: 'Kotak Securities', 
+                file: 'kotak-securities.html', 
+                image: 'images/kotak-securities.png', 
+                rating: 4.0, 
+                fees: '₹20 per trade', 
+                services: 'Equity, Mutual Funds, Loans' 
+            }
+        ];
+
+        document.getElementById('search').addEventListener('input', function() {
+            const query = this.value.toLowerCase();
+            const filteredAccounts = dmatAccounts.filter(account => account.name.toLowerCase().includes(query));
+            displayResults(filteredAccounts);
+        });
+
+        function displayResults(accounts) {
+            const resultsDiv = document.getElementById('results');
+            resultsDiv.innerHTML = accounts.map(account => `
+                <div>
+                    <img src="${account.image}" alt="${account.name}" style="width:100px;height:100px;">
+                    <h2><a href="${account.file}" target="_blank">${account.name}</a></h2>
+                    <p>Rating: ${account.rating} ⭐</p>
+                    <p>Fees: ${account.fees}</p>
+                    <p>Services: ${account.services}</p>
+                </div>
+            `).join('');
+        }
+
+        // Display all accounts initially
+        displayResults(dmatAccounts);
+    </script>
+</body>
+</html>

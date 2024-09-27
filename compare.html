@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compare Bank Accounts</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7f6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #007bff;
+            margin-bottom: 20px;
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+        .select-container {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .select-container select {
+            width: 30%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #fff;
+        }
+        .compare-button {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .compare-button:hover {
+            background-color: #0056b3;
+        }
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        .comparison-table th, .comparison-table td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        .comparison-table th {
+            background-color: #007bff;
+            color: #fff;
+        }
+        .comparison-table img {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Compare Bank Accounts</h1>
+        <div class="section">
+            <div class="select-container">
+                <select id="bank1">
+                    <option value="">Select Bank 1</option>
+                    
+                </select>
+                <select id="bank2">
+                    <option value="">Select Bank 2</option>
+                  
+                </select>
+                <select id="bank3">
+                    <option value="">Select Bank 3</option>
+                  
+                </select>
+            </div>
+            <button class="compare-button" onclick="compare()">Compare</button>
+            <table class="comparison-table" id="comparisonTable">
+                <thead>
+                    <tr>
+                        <th>Bank</th>
+                        <th>Account Type</th>
+                        <th>Fees</th>
+                        <th>Services</th>
+                        <th>Rating</th>
+                        <th>Image</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script>
+        const banks = {
+            'Basic Saving Account': [
+                { name: 'State Bank of India', file: 'sbi.html', image: 'images/sbi.png', rating: 4.5, fees: '₹500 per year', services: 'Savings, Loans, Insurance' },
+                { name: 'HDFC Bank', file: 'hdfc.html', image: 'images/hdfc.png', rating: 4.4, fees: '₹600 per year', services: 'Savings, Credit Cards, Loans' },
+                { name: 'ICICI Bank', file: 'icici.html', image: 'images/icici.png', rating: 4.3, fees: '₹550 per year', services: 'Savings, Investments, Loans' },
+                { name: 'Axis Bank', file: 'axis.html', image: 'images/axis.png', rating: 4.2, fees: '₹500 per year', services: 'Savings, Credit Cards, Loans' },
+                { name: 'Kotak Mahindra Bank', file: 'kotak.html', image: 'images/kotak.png', rating: 4.1, fees: '₹450 per year', services: 'Savings, Investments, Loans' },
+                { name: 'Punjab National Bank', file: 'pnb.html', image: 'images/pnb.png', rating: 4.0, fees: '₹400 per year', services: 'Savings, Loans, Insurance' },
+                { name: 'Bank of India', file: 'boi.html', image: 'images/boi.png', rating: 3.9, fees: '₹350 per year', services: 'Savings, Loans, Insurance' },
+                { name: 'Canara Bank', file: 'canara.html', image: 'images/canara.png', rating: 3.8, fees: '₹300 per year', services: 'Savings, Loans, Insurance' },
+                { name: 'Idfc bank', file: 'idfc.html', image: 'images/idfc.png', rating: 3.7, fees: '₹250 per year', services: 'Savings, Loans, Insurance' },
+                { name: 'IndusInd bank', file: 'indusind.html', image: 'images/indusind.png', rating: 4.0, fees: '₹500 per year', services: 'Savings, Credit Cards, Loans' }
+            ],
+            'Current Account': [
+                { name: 'HDFC Bank', file: 'hdfc_current.html', image: 'images/hdfc.png', rating: 4.6, fees: '₹1000 per year', services: 'Current, Business Loans, Trade Services' },
+                { name: 'ICICI Bank', file: 'icici_current.html', image: 'images/icici.png', rating: 4.5, fees: '₹950 per year', services: 'Current, Business Loans, Insurance' },
+                { name: 'Axis Bank', file: 'axis_current.html', image: 'images/axis.png', rating: 4.4, fees: '₹900 per year', services: 'Current, Business Loans, Trade Services' },
+                { name: 'Kotak Mahindra Bank', file: 'kotak_current.html', image: 'images/kotak.png', rating: 4.3, fees: '₹850 per year', services: 'Current, Business Loans, Trade Services' },
+                { name: 'State Bank of India', file: 'sbi_current.html', image: 'images/sbi.png', rating: 4.2, fees: '₹800 per year', services: 'Current, Business Loans, Insurance' },
+                { name: 'Punjab National Bank', file: 'pnb_current.html', image: 'images/pnb.png', rating: 4.1, fees: '₹750 per year', services: 'Current, Business Loans, Insurance' },
+                { name: 'Bank of india', file: 'boi_current.html', image: 'images/boi.png', rating: 4.0, fees: '₹700 per year', services: 'Current, Business Loans, Insurance' },
+                { name: 'Canara Bank', file: 'canara_current.html', image: 'images/canara.png', rating: 3.9, fees: '₹650 per year', services: 'Current, Business Loans, Insurance' },
+                { name: 'Idfc bank', file: 'idfc_current.html', image: 'images/union.png', rating: 3.8, fees: '₹600 per year', services: 'Current, Business Loans, Insurance' },
+                { name: 'IndusInd Bank', file: 'indusind_current.html', image: 'images/indusind.png', rating: 3.7, fees: '₹550 per year', services: 'Current, Business Loans, Insurance' }
+            ],
+            'Fixed Deposit Account': [
+                { name: 'State Bank of India', file: 'sbi_fd.html', image: 'images/sbi.png', rating: 4.7, interestRate: '5.5% p.a.', services: 'FD, Loans against FD, Tax Savings' },
+                { name: 'HDFC Bank', file: 'hdfc_fd.html', image: 'images/hdfc.png', rating: 4.6, interestRate: '5.4% p.a.', services: 'FD, Loans against FD, Tax Savings' },
+                { name: 'ICICI Bank', file: 'icici_fd.html', image: 'images/icici.png', rating: 4.5, interestRate: '5.3% p.a.', services: 'FD, Loans against FD, Tax Savings' },
+                { name: 'Axis Bank', file: 'axis_fd.html', image: 'images/axis.png', rating: 4.4, interestRate: '5.2% p.a.', services: 'FD, Loans against FD, Tax Savings' },
+                { name: 'Kotak Mahindra Bank', file: 'kotak_fd.html', image: 'images/kotak.png', rating: 4.3, interestRate: '5.1% p.a.', services: 'FD, Loans against FD, Tax Savings' },
+                { name: 'Punjab National Bank', file: 'pnb_fd.html', image: 'images/pnb.png', rating: 4.2, interestRate: '5.0% p.a.', services: 'FD, Loans against FD, Tax Savings' },
+                { name: 'Bank of India', file: 'boi_fd.html', image: 'images/boi.png', rating: 4.1, interestRate: '4.9% p.a.', services: 'FD, Loans against FD, Tax Savings' },
+                { name: 'Canara Bank', file: 'canara_fd.html', image: 'images/canara.png', rating: 4.0, interestRate: '4.8% p.a.', services: 'FD, Loans against FD, Tax Savings' },
+                { name: 'Idfc bank ', file: 'idfc_fd.html', image: 'images/union.png', rating: 4.0, interestRate: '4.7% p.a.', services: 'FD, Loans against FD, Tax Savings' },
+                { name: 'IndusInd Bank', file: 'indusind_fd.html', image: 'images/indusind.png', rating: 4.0, interestRate: '4.6% p.a.', services: 'FD, Loans against FD, Tax Savings' }
+            ],
+            'Women Benefits Account': [
+                { name: 'HDFC Bank', file: 'hdfc_women.html', image: 'images/hdfc.png', rating: 4.6, fees: '₹700 per year', services: 'Savings, Credit Cards, Loans' },
+                { name: 'ICICI Bank', file: 'icici_women.html', image: 'images/icici.png', rating: 4.5, fees: '₹650 per year', services: 'Savings, Investments, Loans' },
+                { name: 'Axis Bank', file: 'axis_women.html', image: 'images/axis.png', rating: 4.4, fees: '₹600 per year', services: 'Savings, Credit Cards, Loans' },
+                { name: 'Kotak Mahindra Bank', file: 'kotak_women.html', image: 'images/kotak.png', rating: 4.3, fees: '₹550 per year', services: 'Savings, Investments, Loans' },
+                { name: 'State Bank of India', file: 'sbi_women.html', image: 'images/sbi.png', rating: 4.2, fees: '₹500 per year', services: 'Savings, Loans, Insurance' },
+                { name: 'Punjab National Bank', file: 'pnb_women.html', image: 'images/pnb.png', rating: 4.1, fees: '₹450 per year', services: 'Savings, Loans, Insurance' },
+                { name: 'Bank of Baroda', file: 'baroda_women.html', image: 'images/baroda.png', rating: 4.0, fees: '₹400 per year', services: 'Savings, Loans, Insurance' },
+                { name: 'Canara Bank', file: 'canara_women.html', image: 'images/canara.png', rating: 3.9, fees: '₹350 per year', services: 'Savings, Loans, Insurance' },
+                { name: 'Idfc bank', file: 'idfc_women.html', image: 'images/union.png', rating: 3.8, fees: '₹300 per year', services: 'Savings, Loans, Insurance' },
+                { name: 'IndusInd Bank', file: 'indusind_women.html', image: 'images/indusind.png', rating: 3.7, fees: '₹250 per year', services: 'Savings, Credit Cards, Loans' }
+            ],
+            'Salary Account': [
+                { name: 'State Bank of India', file: 'sbi_salary.html', image: 'images/sbi.png', rating: 4.7, fees: '₹500 per year', services: 'Salary, Loans, Insurance' },
+                { name: 'HDFC Bank', file: 'hdfc_salary.html', image: 'images/hdfc.png', rating: 4.6, fees: '₹600 per year', services: 'Salary, Credit Cards, Loans' },
+                { name: 'ICICI Bank', file: 'icici_salary.html', image: 'images/icici.png', rating: 4.5, fees: '₹550 per year', services: 'Salary, Investments, Loans' },
+                { name: 'Axis Bank', file: 'axis_salary.html', image: 'images/axis.png', rating: 4.4, fees: '₹500 per year', services: 'Salary, Credit Cards, Loans' },
+                { name: 'Kotak Mahindra Bank', file: 'kotak_salary.html', image: 'images/kotak.png', rating: 4.3, fees: '₹450 per year', services: 'Salary, Investments, Loans' },
+                { name: 'Punjab National Bank', file: 'pnb_salary.html', image: 'images/pnb.png', rating: 4.2, fees: '₹400 per year', services: 'Salary, Loans, Insurance' },
+                { name: 'Bank of India', file: 'boi_salary.html', image: 'images/boi.png', rating: 4.1, fees: '₹350 per year', services: 'Salary, Loans, Insurance' },
+                { name: 'Canara Bank', file: 'canara_salary.html', image: 'images/canara.png', rating: 4.0, fees: '₹300 per year', services: 'Salary, Loans, Insurance' },
+                { name: 'Idfc bank', file: 'idfc_salary.html', image: 'images/union.png', rating: 4.0, fees: '₹250 per year', services: 'Salary, Loans, Insurance' },
+                { name: 'IndusInd Bank', file: 'indusind_salary.html', image: 'images/indusind.png', rating: 4.0, fees: '₹500 per year', services: 'Salary, Credit Cards, Loans' }
+            ],
+            
+            'Senior Citizens Account': [
+                { name: 'State Bank of India', file: 'sbi_prestige.html', image: 'images/sbi.png', rating: 4.7, fees: '₹1200 per year', services: 'Priority Banking, Loans, Insurance' },
+                { name: 'HDFC Bank', file: 'hdfc_prestige.html', image: 'images/hdfc.png', rating: 4.6, fees: '₹1300 per year', services: 'Priority Banking, Credit Cards, Loans' },
+                { name: 'ICICI Bank', file: 'icici_prestige.html', image: 'images/icici.png', rating: 4.5, fees: '₹1250 per year', services: 'Priority Banking, Investments, Loans' },
+                { name: 'Axis Bank', file: 'axis_prestige.html', image: 'images/axis.png', rating: 4.4, fees: '₹1150 per year', services: 'Priority Banking, Credit Cards, Loans' },
+                { name: 'Kotak Mahindra Bank', file: 'kotak_prestige.html', image: 'images/kotak.png', rating: 4.3, fees: '₹1100 per year', services: 'Priority Banking, Investments, Loans' },
+                { name: 'Punjab National Bank', file: 'pnb_prestige.html', image: 'images/pnb.png', rating: 4.2, fees: '₹1050 per year', services: 'Priority Banking, Loans, Insurance' },
+                { name: 'Bank of India', file: 'boi_prestige.html', image: 'images/boi.png', rating: 4.1, fees: '₹1000 per year', services: 'Priority Banking, Loans, Insurance' },
+                { name: 'Canara Bank', file: 'canara_prestige.html', image: 'images/canara.png', rating: 4.0, fees: '₹950 per year', services: 'Priority Banking, Loans, Insurance' },
+                { name: 'Union Bank of India', file: 'union_prestige.html', image: 'images/union.png', rating: 4.0, fees: '₹900 per year', services: 'Priority Banking, Loans, Insurance' },
+                { name: 'IndusInd Bank', file: 'indusind_prestige.html', image: 'images/indusind.png', rating: 4.0, fees: '₹1200 per year', services: 'Priority Banking, Credit Cards, Loans' }
+            ],
+            'Kids Account': [
+                { name: 'HDFC Bank', file: 'hdfc_kids.html', image: 'images/hdfc.png', rating: 4.6, fees: '₹200 per year', services: 'Savings, Educational Loans' },
+                { name: 'ICICI Bank', file: 'icici_kids.html', image: 'images/icici.png', rating: 4.5, fees: '₹180 per year', services: 'Savings, Educational Loans' },
+                { name: 'Axis Bank', file: 'axis_kids.html', image: 'images/axis.png', rating: 4.4, fees: '₹160 per year', services: 'Savings, Educational Loans' },
+                { name: 'Kotak Mahindra Bank', file: 'kotak_kids.html', image: 'images/kotak.png', rating: 4.3, fees: '₹140 per year', services: 'Savings, Educational Loans' },
+                { name: 'State Bank of India', file: 'sbi_kids.html', image: 'images/sbi.png', rating: 4.2, fees: '₹120 per year', services: 'Savings, Educational Loans' },
+                { name: 'Punjab National Bank', file: 'pnb_kids.html', image: 'images/pnb.png', rating: 4.1, fees: '₹100 per year', services: 'Savings, Educational Loans' },
+                { name: 'Bank of Baroda', file: 'baroda_kids.html', image: 'images/baroda.png', rating: 4.0, fees: '₹80 per year', services: 'Savings, Educational Loans' },
+                { name: 'Canara Bank', file: 'canara_kids.html', image: 'images/canara.png', rating: 3.9, fees: '₹60 per year', services: 'Savings, Educational Loans' },
+                { name: 'Union Bank of India', file: 'union_kids.html', image: 'images/union.png', rating: 3.8, fees: '₹40 per year', services: 'Savings, Educational Loans' },
+                { name: 'IndusInd Bank', file: 'indusind_kids.html', image: 'images/indusind.png', rating: 3.7, fees: '₹20 per year', services: 'Savings, Educational Loans' }
+            ],
+            'Student Account': [
+                { name: 'HDFC Bank', file: 'hdfc_student.html', image: 'images/hdfc.png', rating: 4.6, fees: '₹300 per year', services: 'Savings, Educational Loans, Scholarships' },
+                { name: 'ICICI Bank', file: 'icici_student.html', image: 'images/icici.png', rating: 4.5, fees: '₹280 per year', services: 'Savings, Educational Loans, Scholarships' },
+                { name: 'Axis Bank', file: 'axis_student.html', image: 'images/axis.png', rating: 4.4, fees: '₹260 per year', services: 'Savings, Educational Loans, Scholarships' },
+                { name: 'Kotak Mahindra Bank', file: 'kotak_student.html', image: 'images/kotak.png', rating: 4.3, fees: '₹240 per year', services: 'Savings, Educational Loans, Scholarships' },
+                { name: 'State Bank of India', file: 'sbi_student.html', image: 'images/sbi.png', rating: 4.2, fees: '₹220 per year', services: 'Savings, Educational Loans, Scholarships' },
+                { name: 'Punjab National Bank', file: 'pnb_student.html', image: 'images/pnb.png', rating: 4.1, fees: '₹200 per year', services: 'Savings, Educational Loans, Scholarships' },
+                { name: 'Bank of Baroda', file: 'baroda_student.html', image: 'images/baroda.png', rating: 4.0, fees: '₹180 per year', services: 'Savings, Educational Loans, Scholarships' },
+                { name: 'Canara Bank', file: 'canara_student.html', image: 'images/canara.png', rating: 3.9, fees: '₹160 per year', services: 'Savings, Educational Loans, Scholarships' },
+                { name: 'Idfc bank', file: 'idfc_student.html', image: 'images/union.png', rating: 3.8, fees: '₹140 per year', services: 'Savings, Educational Loans, Scholarships' },
+                { name: 'IndusInd Bank', file: 'indusind_student.html', image: 'images/indusind.png', rating: 3.7, fees: '₹120 per year', services: 'Savings, Educational Loans, Scholarships' }
+            ]
+        };
+
+            
+        
+
+        function populateOptions() {
+            const selectElements = document.querySelectorAll('select');
+            Object.keys(banks).forEach(accountType => {
+                banks[accountType].forEach(bank => {
+                    const option = `<option value="${accountType}|${bank.name}">${bank.name} (${accountType})</option>`;
+                    selectElements.forEach(select => select.insertAdjacentHTML('beforeend', option));
+                });
+            });
+        }
+
+        function compare() {
+            const bank1 = document.getElementById('bank1').value.split('|');
+            const bank2 = document.getElementById('bank2').value.split('|');
+            const bank3 = document.getElementById('bank3').value.split('|');
+            const selectedBanks = [bank1, bank2, bank3];
+
+            const tableBody = document.getElementById('comparisonTable').querySelector('tbody');
+            tableBody.innerHTML = '';
+
+            selectedBanks.forEach(([accountType, bankName]) => {
+                if (bankName) {
+                    const bank = banks[accountType].find(b => b.name === bankName);
+                    if (bank) {
+                        const row = `
+                            <tr>
+                                <td>${bank.name}</td>
+                                <td>${accountType}</td>
+                                <td>${bank.fees || 'N/A'}</td>
+                                <td>${bank.services}</td>
+                                <td>${bank.rating} ⭐</td>
+                                <td><img src="${bank.image}" alt="${bank.name}"></td>
+                            </tr>
+                        `;
+                        tableBody.insertAdjacentHTML('beforeend', row);
+                    }
+                }
+            });
+        }
+
+        window.onload = populateOptions;
+    </script>
+</body>
+</html>

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IndusInd Bank - Student Account</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e6f9ff;
+            color: #333;
+            margin: 0;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+
+        .image-section {
+            flex: 1;
+            min-width: 300px;
+            background-image: url('https://www.indusind.com/assets/images/logo.png');
+            background-size: cover;
+            background-position: center;
+            animation: slideInLeft 2s ease-in-out;
+        }
+
+        .content-section {
+            flex: 2;
+            padding: 20px;
+            animation: slideInRight 2s ease-in-out;
+        }
+
+        h1 {
+            color: #006bb3;
+            text-align: center;
+            animation: bounceIn 2s ease-in-out;
+        }
+
+        h2 {
+            color: #006bb3;
+            border-bottom: 2px solid #006bb3;
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+            animation: fadeInUp 2s ease-in-out;
+        }
+
+        p, ul {
+            line-height: 1.6;
+            margin-bottom: 20px;
+            animation: fadeInUp 2s ease-in-out;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 16px;
+            animation: fadeInUp 2s ease-in-out;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #006bb3;
+            color: white;
+            font-weight: bold;
+        }
+
+        a {
+            color: #006bb3;
+            text-decoration: none;
+            font-weight: bold;
+            animation: pulse 2s infinite;
+        }
+
+        a:hover {
+            color: #004c99;
+        }
+
+        .open-account {
+            display: block;
+            margin: 20px auto;
+            padding: 15px 30px;
+            font-size: 18px;
+            color: white;
+            background-color: #006bb3;
+            text-align: center;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            max-width: 300px;
+        }
+
+        .open-account:hover {
+            background-color: #004c99;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideInLeft {
+            from { transform: translateX(-100%); }
+            to { transform: translateX(0); }
+        }
+
+        @keyframes slideInRight {
+            from { transform: translateX(100%); }
+            to { transform: translateX(0); }
+        }
+
+        @keyframes bounceIn {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-20px);
+            }
+            60% {
+                transform: translateY(-10px);
+            }
+        }
+        .open-account {
+            display: block;
+            margin: 20px auto;
+            padding: 15px 30px;
+            font-size: 18px;
+            color: white;
+            background-color: #0073e6;
+            text-align: center;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            max-width: 300px;
+        }
+
+        .open-account:hover {
+            background-color: #005bb5;
+        }
+        @keyframes fadeInUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="image-section"></div>
+    <div class="content-section">
+        <h1>IndusInd Bank - Student Account</h1>
+
+        <p>The IndusInd Bank Student Account is designed to meet the specific banking needs of students, providing essential features and services to manage finances efficiently.</p>
+
+        <h2>Key Features</h2>
+        <table>
+            <tr>
+                <th>Zero Balance Account</th>
+                <td>No requirement to maintain a minimum balance.</td>
+            </tr>
+            <tr>
+                <th>ATM Card</th>
+                <td>Complimentary debit card with moderate withdrawal limits for safe spending.</td>
+            </tr>
+            <tr>
+                <th>Interest Rates</th>
+                <td>Interest calculated daily and credited monthly on the savings balance.</td>
+            </tr>
+            <tr>
+                <th>Online Banking</th>
+                <td>24x7 access to IndusNet for fund transfers, balance checks, and payments.</td>
+            </tr>
+            <tr>
+                <th>Mobile Banking</th>
+                <td>Manage finances on the go with the Indus Mobile App, including fund transfers and bill payments.</td>
+            </tr>
+            <tr>
+                <th>ATM Access</th>
+                <td>Free withdrawals at IndusInd Bank ATMs, with limited free transactions at non-IndusInd ATMs.</td>
+            </tr>
+            <tr>
+                <th>Cheque Book</th>
+                <td>Personalized cheque book may be issued if needed, although online methods are preferred.</td>
+            </tr>
+            <tr>
+                <th>Free SMS Alerts</th>
+                <td>Receive SMS alerts for all transactions to stay informed about account activity.</td>
+            </tr>
+            <tr>
+                <th>Discounts and Offers</th>
+                <td>Special offers and discounts on shopping, dining, and entertainment.</td>
+            </tr>
+            <tr>
+                <th>Education Loans</th>
+                <td>Assistance with student loans for higher education.</td>
+            </tr>
+        </table>
+
+        <h2>Eligibility</h2>
+        <ul>
+            <li>Age: Typically 18 to 25 years old.</li>
+            <li>Student Status: Must be a student at a recognized educational institution.</li>
+            <li>Indian Resident: Must be an Indian resident.</li>
+        </ul>
+
+        <h2>Documents Required</h2>
+        <ul>
+            <li><strong>Proof of Identity:</strong> Aadhaar card, Passport, PAN card, Voter ID.</li>
+            <li><strong>Proof of Address:</strong> Aadhaar, utility bills, or rental agreement.</li>
+            <li><strong>Student ID Card:</strong> Valid student ID card or bonafide certificate from the educational institution.</li>
+            <li><strong>Photographs:</strong> Recent passport-sized photographs (usually 1-2).</li>
+        </ul>
+
+        <h2>Fees and Charges</h2>
+        <ul>
+            <li><strong>Maintenance Fees:</strong> Typically none due to zero-balance requirement.</li>
+            <li><strong>ATM Charges:</strong> Unlimited free transactions at IndusInd Bank ATMs, with a limited number of free transactions at non-IndusInd ATMs. Nominal fees may apply beyond free limits.</li>
+            <li><strong>Debit Card Charges:</strong> Standard debit card is often free; premium cards may incur charges.</li>
+            <li><strong>Online Transaction Charges:</strong> Free for online banking services such as fund transfers and bill payments.</li>
+        </ul>
+
+        <h2>Benefits</h2>
+        <ul>
+            <li><strong>Financial Independence:</strong> Manage finances independently and learn basic banking and budgeting skills.</li>
+            <li><strong>Safety and Security:</strong> Includes safety features like transaction alerts and secure online banking.</li>
+            <li><strong>Convenience:</strong> Hassle-free management of funds, bill payments, and online shopping.</li>
+            <li><strong>Savings:</strong> Zero-balance requirement means no penalties and more savings.</li>
+            <li><strong>Access to Other Banking Services:</strong> Access to education loans, fixed deposits, and recurring deposits.</li>
+        </ul>
+
+        <h2>Additional Services</h2>
+        <ul>
+            <li><strong>Education Loans:</strong> Easy application for student loans for higher studies.</li>
+            <li><strong>Fixed and Recurring Deposits:</strong> Options for saving with higher interest rates.</li>
+            <li><strong>Parental Access:</strong> Some accounts may allow joint control by parents or guardians.</li>
+        </ul>
+
+        <h2>How to Open a Student Account</h2>
+        <ul>
+            <li>Visit a Branch: Go to the nearest IndusInd Bank branch with required documents.</li>
+            <li>Online Application: Some branches may allow online applications where you can fill in your details and upload documents via the bank’s website.</li>
+        </ul>
+
+        <a href="https://www.indusind.com" class="open-account">Apply Now</a>
+        <a href="compare.html" class="open-account">Compare with Other Banks</a>
+       
+       
+        <h2>Contact and Support</h2>
+        <p>For more information or assistance regarding the Student Account, you can contact IndusInd Bank’s customer care via phone or email. Alternatively, visit the nearest IndusInd Bank branch for personalized help.</p>
+        <p><strong>Customer Care:</strong> Contact details are available on the IndusInd Bank website.</p>
+        <p><strong>Website:</strong> For detailed information and online application, visit <a href="https://www.indusind.com">IndusInd Bank</a>.</p>
+    </div>
+</div>
+
+</body>
+</html>

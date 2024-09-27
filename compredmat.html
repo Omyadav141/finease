@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compare DMAT Accounts</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7f6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #007bff;
+            margin-bottom: 20px;
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+        .select-container {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .select-container select {
+            width: 30%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #fff;
+        }
+        .compare-button {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .compare-button:hover {
+            background-color: #0056b3;
+        }
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        .comparison-table th, .comparison-table td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        .comparison-table th {
+            background-color: #007bff;
+            color: #fff;
+        }
+        .comparison-table img {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Compare DMAT Accounts</h1>
+        <div class="section">
+            <div class="select-container">
+                <select id="bank1">
+                    <option value="">Select Bank 1</option>
+                </select>
+                <select id="bank2">
+                    <option value="">Select Bank 2</option>
+                </select>
+                <select id="bank3">
+                    <option value="">Select Bank 3</option>
+                </select>
+            </div>
+            <button class="compare-button" onclick="compare()">Compare</button>
+            <table class="comparison-table" id="comparisonTable">
+                <thead>
+                    <tr>
+                        <th>Bank</th>
+                        <th>Fees</th>
+                        <th>Services</th>
+                        <th>Rating</th>
+                        <th>Image</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Comparison data will be inserted here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        // DMAT account data
+        const dmatAccounts = [
+            { 
+                name: 'Zerodha', 
+                fees: '₹20 per trade', 
+                services: 'Equity, Mutual Funds, Bonds', 
+                rating: 4.5, 
+                image: 'images/zerodha.png' 
+            },
+            { 
+                name: 'Upstox', 
+                fees: '₹20 per trade', 
+                services: 'Equity, Mutual Funds, IPOs', 
+                rating: 4.3, 
+                image: 'images/upstox.png' 
+            },
+            { 
+                name: '5Paisa', 
+                fees: '₹10 per trade', 
+                services: 'Equity, Mutual Funds, Insurance', 
+                rating: 4.0, 
+                image: 'images/5paisa.png' 
+            },
+            { 
+                name: 'Angel One', 
+                fees: '₹20 per trade', 
+                services: 'Equity, Mutual Funds, Loans', 
+                rating: 4.2, 
+                image: 'images/angel-one.png' 
+            },
+            { 
+                name: 'Sharekhan', 
+                fees: '₹20 per trade', 
+                services: 'Equity, Mutual Funds, Portfolio Management', 
+                rating: 4.1, 
+                image: 'images/sharekhan.png' 
+            },
+            { 
+                name: 'Motilal Oswal', 
+                fees: '₹20 per trade', 
+                services: 'Equity, Mutual Funds, Research Reports', 
+                rating: 4.0, 
+                image: 'images/motilal-oswal.png' 
+            },
+            { 
+                name: 'India Infoline (IIFL)', 
+                fees: '₹20 per trade', 
+                services: 'Equity, Mutual Funds, Loans', 
+                rating: 4.1, 
+                image: 'images/iifl.png' 
+            },
+            { 
+                name: 'HDFC Securities', 
+                fees: '₹20 per trade', 
+                services: 'Equity, Mutual Funds, Fixed Deposits', 
+                rating: 4.3, 
+                image: 'images/hdfc-securities.png' 
+            },
+            { 
+                name: 'ICICI Direct', 
+                fees: '₹20 per trade', 
+                services: 'Equity, Mutual Funds, Insurance', 
+                rating: 4.2, 
+                image: 'images/icici-direct.png' 
+            },
+            { 
+                name: 'Kotak Securities', 
+                fees: '₹20 per trade', 
+                services: 'Equity, Mutual Funds, Loans', 
+                rating: 4.0, 
+                image: 'images/kotak-securities.png' 
+            }
+        ];
+
+        // Populate select options with DMAT accounts
+        function populateOptions() {
+            const selectElements = document.querySelectorAll('select');
+            dmatAccounts.forEach(account => {
+                const option = `<option value="${account.name}">${account.name}</option>`;
+                selectElements.forEach(select => select.insertAdjacentHTML('beforeend', option));
+            });
+        }
+
+        // Compare selected DMAT accounts
+        function compare() {
+            const bank1 = document.getElementById('bank1').value;
+            const bank2 = document.getElementById('bank2').value;
+            const bank3 = document.getElementById('bank3').value;
+            const selectedBanks = [bank1, bank2, bank3];
+
+            const tableBody = document.getElementById('comparisonTable').querySelector('tbody');
+            tableBody.innerHTML = '';
+
+            selectedBanks.forEach(bankName => {
+                if (bankName) {
+                    const account = dmatAccounts.find(acc => acc.name === bankName);
+                    if (account) {
+                        const row = `
+                            <tr>
+                                <td>${account.name}</td>
+                                <td>${account.fees}</td>
+                                <td>${account.services}</td>
+                                <td>${account.rating} ⭐</td>
+                                <td><img src="${account.image}" alt="${account.name}"></td>
+                            </tr>
+                        `;
+                        tableBody.insertAdjacentHTML('beforeend', row);
+                    }
+                }
+            });
+        }
+
+        // Initialize options when the page loads
+        window.onload = populateOptions;
+    </script>
+</body>
+</html>

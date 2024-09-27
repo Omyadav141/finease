@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOI - Current Account</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            height: 100%;
+            overflow-y: scroll;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+
+        .image-section {
+            flex: 1;
+            min-width: 300px;
+            background-image: url('https://www.bankofindia.co.in/images/boi_logo.png');
+            background-size: cover;
+            background-position: center;
+            animation: slideInLeft 2s ease-in-out;
+        }
+
+        .content-section {
+            flex: 2;
+            padding: 20px;
+            overflow-y: auto;
+            animation: slideInRight 2s ease-in-out;
+        }
+
+        h1 {
+            color: #003d66;
+            text-align: center;
+            animation: bounceIn 2s ease-in-out;
+        }
+
+        h2 {
+            color: #003d66;
+            margin-top: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 16px;
+            animation: fadeInUp 2s ease-in-out;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #003d66;
+            color: white;
+        }
+
+        .highlight {
+            background-color: #e6f0ff;
+        }
+
+        a {
+            color: #004d99;
+            text-decoration: none;
+            font-weight: bold;
+            animation: pulse 2s infinite;
+        }
+
+        a:hover {
+            color: #00264d;
+        }
+
+        .apply-now {
+            display: block;
+            margin: 20px auto;
+            padding: 15px 30px;
+            font-size: 18px;
+            color: white;
+            background-color: #004d99;
+            text-align: center;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            max-width: 300px;
+        }
+
+        .apply-now:hover {
+            background-color: #003366;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideInLeft {
+            from { transform: translateX(-100%); }
+            to { transform: translateX(0); }
+        }
+
+        @keyframes slideInRight {
+            from { transform: translateX(100%); }
+            to { transform: translateX(0); }
+        }
+
+        @keyframes bounceIn {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-20px);
+            }
+            60% {
+                transform: translateY(-10px);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="image-section"></div>
+    <div class="content-section">
+        <h1>BOI - Current Account</h1>
+
+        <h2>Features and Benefits – BOI Current Account</h2>
+        <table>
+            <tr>
+                <th>Feature</th>
+                <th>Details</th>
+            </tr>
+            <tr>
+                <td class="highlight">Account Type</td>
+                <td>Designed for business professionals and enterprises with unlimited transactions.</td>
+            </tr>
+            <tr>
+                <td class="highlight">Interest</td>
+                <td>No interest on the balance with the bank.</td>
+            </tr>
+            <tr>
+                <td class="highlight">Minimum Balance</td>
+                <td>Higher minimum balance required compared to savings accounts. Penalty for non-maintenance.</td>
+            </tr>
+            <tr>
+                <td class="highlight">Transfers</td>
+                <td>Account can be transferred to any branch, with monthly statements available.</td>
+            </tr>
+            <tr>
+                <td class="highlight">Deposits/Withdrawals</td>
+                <td>Unlimited deposits and withdrawals at the home branch.</td>
+            </tr>
+            <tr>
+                <td class="highlight">Internet Banking</td>
+                <td>Premium internet banking facility for account management and secure bill payment.</td>
+            </tr>
+            <tr>
+                <td class="highlight">Overdraft & Mobile Banking</td>
+                <td>Overdraft facilities, Internet banking, and Mobile banking available.</td>
+            </tr>
+        </table>
+
+        <h2>Eligibility Criteria – Bank of India Current Account</h2>
+        <table>
+            <tr>
+                <th>Entity</th>
+                <th>Details</th>
+            </tr>
+            <tr>
+                <td class="highlight">Hindu Undivided Family (HUF)</td>
+                <td>Eligible for opening a current account.</td>
+            </tr>
+            <tr>
+                <td class="highlight">Sole Proprietorship/Partnership</td>
+                <td>Eligible for opening a current account.</td>
+            </tr>
+            <tr>
+                <td class="highlight">Private/Public Limited Company</td>
+                <td>Eligible for opening a current account.</td>
+            </tr>
+            <tr>
+                <td class="highlight">Trust/Club/Society/Association</td>
+                <td>Eligible for opening a current account.</td>
+            </tr>
+            <tr>
+                <td class="highlight">Limited Liability Partnership (LLP)</td>
+                <td>Eligible for opening a current account.</td>
+            </tr>
+            <tr>
+                <td class="highlight">Foreign National Residing in India</td>
+                <td>Eligible for opening a current account.</td>
+            </tr>
+            <tr>
+                <td class="highlight">Foreign Institutional Investor (FII)</td>
+                <td>Eligible for opening a current account.</td>
+            </tr>
+        </table>
+
+        <h2>Documents Required</h2>
+        <table>
+            <tr>
+                <th>Category</th>
+                <th>Required Documents</th>
+            </tr>
+            <tr>
+                <td class="highlight">Individuals</td>
+                <td>
+                    <ul>
+                        <li>Proof of the company you're working in.</li>
+                        <li>Identity Proof: Aadhaar Card, PAN Card, Driving License, Voter ID, etc.</li>
+                        <li>Address Proof: Valid Passport, Utility Bill, Aadhaar Card, Property Tax Bill, etc.</li>
+                        <li>Seal of the company.</li>
+                        <li>Two passport-size color photographs.</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td class="highlight">Non-Individuals</td>
+                <td>
+                    <ul>
+                        <li>Hindu Undivided Family (HUF): Declaration from the Karta, Proof of Identification/Address Proof of Karta, Prescribed Joint Hindu Family letter signed by all adult co-parceners, Identity of adult co-parceners.</li>
+                        <li>Sole Proprietorship Firm: Identity Proof (PAN Card, Aadhaar Card, etc.) of the proprietor, Address Proof (Valid Passport, Utility Bill, Property Tax Bill, etc.), Registration Certificate issued by the Registrar of LLP, Certificate/License issued by Municipal authorities under the Shop & Establishment Act, Sales and Income Tax Returns in the name of the sole proprietor, CST/VAT Certificate, Certificate/Registration document issued by Sales Tax/Service Tax/Professional Tax authorities.</li>
+                        <li>Partnership Firms: Registration Certificate, Partnership Deed, Beneficial Owners List holding more than 15% in the firm, Address Proof & ID Proof, Power of Attorney (POA).</li>
+                        <li>Limited Liability Partnerships (LLP): Power of Attorney (POA), Registration Certificate issued by Registrar of LLP, Identity Proof of POA holders (PAN Card of the entity), Address Proof: Aadhaar Card of the sole proprietor/entity, Valid Passport, Two passport-size color photographs, LLP Agreement, Designated Partners Updated List.</li>
+                        <li>Private/Public Limited Company: Beneficial Owners List holding 25% share or capital, Address Proof & ID Proof, Memorandum & Articles of Association, Power of Attorney (POA), Certificate of Incorporation.</li>
+                        <li>Trust, Society, Unincorporated Association & Club: Certificate of Registration, Power of Attorney (POA), Trust Deed, Address Proof & ID Proof (trustees, executors, administrators, etc.), Beneficial Owners List.</li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+
+        <h2>Contact Information</h2>
+        <table>
+            <tr>
+                <th>Service</th>
+                <th>Contact Info</th>
+            </tr>
+            <tr>
+                <td class="highlight">Customer Care</td>
+                <td>1800-223-220 (Toll-Free)</td>
+            </tr>
+            <tr>
+                <td>Branch Locator</td>
+                <td><a href="https://www.bankofindia.co.in" target="_blank">Find your nearest branch</a></td>
+            </tr>
+            <tr>
+                <td class="highlight">Email Support</td>
+                <td>ercare@bankofindia.co.in</td>
+            </tr>
+            <tr>
+                <td>Website</td>
+                <td><a href="https://www.bankofindia.co.in" target="_blank">www.bankofindia.co.in</a></td>
+            </tr>
+        </table>
+        <a href="compare.html" target="_blank" class="apply-now">compare them with other bank account-type</a>
+      
+       
+        <a href="https://www.bankofindia.co.in" target="_blank" class="apply-now">open Instantly account Now</a>
+    </div>
+    
+</div>
+
+</body>
+</html>

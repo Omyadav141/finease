@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SBI - Saving Bank Accounts</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            margin: 0;
+            height: 100%;
+            overflow-y: scroll;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+
+        .image-section {
+            flex: 1;
+            min-width: 300px;
+            background-image: url('https://www.sbi.co.in/documents/16012/20258/SBI_Logo.png');
+            background-size: cover;
+            background-position: center;
+            animation: slideInLeft 2s ease-in-out;
+        }
+
+        .content-section {
+            flex: 2;
+            padding: 20px;
+            overflow-y: auto;
+            animation: slideInRight 2s ease-in-out;
+        }
+
+        h1 {
+            color: #004d99;
+            text-align: center;
+            animation: bounceIn 2s ease-in-out;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 16px;
+            animation: fadeInUp 2s ease-in-out;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #004d99;
+            color: white;
+        }
+
+        .highlight {
+            background-color: #e6f2ff;
+        }
+
+        a {
+            color: #0073e6;
+            text-decoration: none;
+            font-weight: bold;
+            animation: pulse 2s infinite;
+        }
+
+        a:hover {
+            color: #005bb5;
+        }
+
+        .open-account {
+            display: block;
+            margin: 20px auto;
+            padding: 15px 30px;
+            font-size: 18px;
+            color: white;
+            background-color: #0073e6;
+            text-align: center;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            max-width: 300px;
+        }
+
+        .open-account:hover {
+            background-color: #005bb5;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideInLeft {
+            from { transform: translateX(-100%); }
+            to { transform: translateX(0); }
+        }
+
+        @keyframes slideInRight {
+            from { transform: translateX(100%); }
+            to { transform: translateX(0); }
+        }
+
+        @keyframes bounceIn {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-20px);
+            }
+            60% {
+                transform: translateY(-10px);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="image-section"></div>
+    <div class="content-section">
+        <h1>SBI - Saving Bank Accounts</h1>
+
+        <p>Open a saving bank account online with SBI and enjoy mobile, internet, and YONO banking features. Choose from various types of savings accounts based on your eligibility and requirements.</p>
+
+        <h2>Features</h2>
+        <table>
+            <tr>
+                <th>Feature</th>
+                <th>Details</th>
+            </tr>
+            <tr>
+                <td class="highlight">Mobile Banking</td>
+                <td>Manage your account from your mobile phone with SBI's mobile banking app.</td>
+            </tr>
+            <tr>
+                <td>SMS Alerts</td>
+                <td>Receive instant alerts on your transactions through SMS.</td>
+            </tr>
+            <tr>
+                <td class="highlight">Internet Banking</td>
+                <td>Access your account online and perform various banking transactions.</td>
+            </tr>
+            <tr>
+                <td>YONO</td>
+                <td>Use SBI's YONO app for banking and lifestyle services.</td>
+            </tr>
+            <tr>
+                <td class="highlight">State Bank Anywhere</td>
+                <td>Access banking services anywhere with SBI's online platforms.</td>
+            </tr>
+            <tr>
+                <td>SBI Quick Missed Call Facility</td>
+                <td>Quick access to account information through missed calls.</td>
+            </tr>
+            <tr>
+                <td class="highlight">Cheque Leaves</td>
+                <td>First 10 cheque leaves free in a financial year. Thereafter, charges apply.</td>
+            </tr>
+            <tr>
+                <td>Withdrawals</td>
+                <td>Restricted free withdrawals based on Monthly Average Balance maintained.</td>
+            </tr>
+            <tr>
+                <td class="highlight">Pass Book</td>
+                <td>A passbook is issued to record transactions. Duplicate passbook can be issued if lost.</td>
+            </tr>
+            <tr>
+                <td>Account Statement</td>
+                <td>Free consolidated account statement available.</td>
+            </tr>
+        </table>
+
+        <h2>Eligibility</h2>
+        <table>
+            <tr>
+                <th>Eligibility</th>
+            </tr>
+            <tr>
+                <td class="highlight">All Individuals</td>
+            </tr>
+            <tr>
+                <td>Government Departments/Bodies/Agencies</td>
+            </tr>
+            <tr>
+                <td>Self-help Groups</td>
+            </tr>
+            <tr>
+                <td>Women and Children Development Groups</td>
+            </tr>
+            <tr>
+                <td>Various Other Groups as Specified</td>
+            </tr>
+        </table>
+
+        <h2>Interest Rates</h2>
+        <table>
+            <tr>
+                <th>Deposit Amount</th>
+                <th>Interest Rate</th>
+            </tr>
+            <tr>
+                <td class="highlight">Less than ₹10 Crores</td>
+                <td>2.70% p.a. (w.e.f. 15.10.22)</td>
+            </tr>
+            <tr>
+                <td>₹10 Crores and Above</td>
+                <td>3.00% p.a. (w.e.f. 15.10.22)</td>
+            </tr>
+        </table>
+
+        <h2>Contact Information</h2>
+        <table>
+            <tr>
+                <th>Service</th>
+                <th>Contact Info</th>
+            </tr>
+            <tr>
+                <td class="highlight">Customer Care</td>
+                <td>1800-425-3800 (Toll-Free)</td>
+            </tr>
+            <tr>
+                <td>Branch Locator</td>
+                <td><a href="https://www.sbi.co.in/web/contact-us/branch-locator" target="_blank">Find your nearest branch</a></td>
+            </tr>
+            <tr>
+                <td class="highlight">Email Support</td>
+                <td>customercare@sbi.co.in</td>
+            </tr>
+            <tr>
+                <td>Website</td>
+                <td><a href="https://www.sbi.co.in" target="_blank">www.sbi.co.in</a></td>
+            </tr>
+        </table>
+        <h2>Contact Information</h2>
+        <table>
+            <tr>
+                <th>Service</th>
+                <th>Contact Info</th>
+            </tr>
+            <tr>
+                <td class="highlight">Customer Care</td>
+                <td>1800-258-3838 (Toll-Free)</td>
+            </tr>
+            <tr>
+                <td>Branch Locator</td>
+                <td><a href="https://www.hdfcbank.com/branch-atm-locator" target="_blank">Find your nearest branch</a></td>
+            </tr>
+            <tr>
+                <td class="highlight">Email Support</td>
+                <td>support@hdfcbank.com</td>
+            </tr>
+            <tr>
+                <td>Website</td>
+                <td><a href="https://www.hdfcbank.com" target="_blank">www.hdfcbank.com</a></td>
+            </tr>
+        </table>
+        <a href="compare.html" target="_blank" class="open-account">Compare them with other bank account-type</a>
+
+        <a href="https://www.sbi.co.in" target="_blank" class="open-account">Open New Account</a>
+
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SBI - Regular Current Account</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            margin: 0;
+            height: 100%;
+            overflow-y: scroll;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+
+        .image-section {
+            flex: 1;
+            min-width: 300px;
+            background-image: url('https://www.sbi.co.in/documents/16012/20258/SBI_Logo.png');
+            background-size: cover;
+            background-position: center;
+            animation: slideInLeft 2s ease-in-out;
+        }
+
+        .content-section {
+            flex: 2;
+            padding: 20px;
+            overflow-y: auto;
+            animation: slideInRight 2s ease-in-out;
+        }
+
+        h1 {
+            color: #004d99;
+            text-align: center;
+            animation: bounceIn 2s ease-in-out;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 16px;
+            animation: fadeInUp 2s ease-in-out;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #004d99;
+            color: white;
+        }
+
+        .highlight {
+            background-color: #e6f2ff;
+        }
+
+        a {
+            color: #0073e6;
+            text-decoration: none;
+            font-weight: bold;
+            animation: pulse 2s infinite;
+        }
+
+        a:hover {
+            color: #005bb5;
+        }
+
+        .open-account {
+            display: block;
+            margin: 20px auto;
+            padding: 15px 30px;
+            font-size: 18px;
+            color: white;
+            background-color: #0073e6;
+            text-align: center;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            max-width: 300px;
+        }
+
+        .open-account:hover {
+            background-color: #005bb5;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideInLeft {
+            from { transform: translateX(-100%); }
+            to { transform: translateX(0); }
+        }
+
+        @keyframes slideInRight {
+            from { transform: translateX(100%); }
+            to { transform: translateX(0); }
+        }
+
+        @keyframes bounceIn {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-20px);
+            }
+            60% {
+                transform: translateY(-10px);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="image-section"></div>
+    <div class="content-section">
+        <h1>SBI - Regular Current Account</h1>
+
+        <p>The Regular Current Account is ideal for small businessmen, professionals, traders, etc., who need a current account with all the facilities at a nominal cost.</p>
+
+        <h2>Features, Benefits, and Advantages</h2>
+        <table>
+            <tr>
+                <th>Feature</th>
+                <th>Details</th>
+            </tr>
+            <tr>
+                <td class="highlight">Monthly Average Balance</td>
+                <td>Rs 5,000</td>
+            </tr>
+            <tr>
+                <td>Free Cash Deposit</td>
+                <td>Up to Rs 5,00,000 per month</td>
+            </tr>
+            <tr>
+                <td class="highlight">Cash Withdrawal</td>
+                <td>Free at all 22000+ SBI branches</td>
+            </tr>
+            <tr>
+                <td>Corporate Internet Banking</td>
+                <td>Free access to the safest, securest, fastest service</td>
+            </tr>
+            <tr>
+                <td class="highlight">NEFT/RTGS</td>
+                <td>Free through Internet and Mobile Banking</td>
+            </tr>
+            <tr>
+                <td>Cheque Leaves</td>
+                <td>50 multicity cheques free per month</td>
+            </tr>
+        </table>
+
+        <h2>Charges</h2>
+        <table>
+            <tr>
+                <th>Charge</th>
+                <th>Details</th>
+            </tr>
+            <tr>
+                <td class="highlight">Monthly Average Balance</td>
+                <td>Rs 5,000</td>
+            </tr>
+            <tr>
+                <td>Statement of Current Account (Original)</td>
+                <td>Free</td>
+            </tr>
+            <tr>
+                <td class="highlight">Duplicate Statement</td>
+                <td>Rs 100 + GST per page (40 entries)</td>
+            </tr>
+            <tr>
+                <td>Cheque Leaves Beyond Free Limit</td>
+                <td>Rs 3 + GST per cheque leaf</td>
+            </tr>
+            <tr>
+                <td class="highlight">Transfer of Account</td>
+                <td>Free</td>
+            </tr>
+            <tr>
+                <td>Cash Deposit (Non-Home Branch)</td>
+                <td>Maximum limit Rs 5,00,000 per day</td>
+            </tr>
+            <tr>
+                <td class="highlight">Cash Withdrawal</td>
+                <td>Unlimited free at home branch, Rs 1,00,000 per day (Non-Home Branch)</td>
+            </tr>
+            <tr>
+                <td>Demand Draft Charges</td>
+                <td>
+                    Up to Rs 5000: Rs 25 (incl. GST)<br>
+                    Rs 5000 to Rs 10000: Rs 50 (incl. GST)<br>
+                    Rs 10000 to Rs 100000: Rs 5 per Rs 1000 (Min. Rs 60 incl. GST)<br>
+                    Above Rs 100000: Rs 4 per Rs 1000 (Min. Rs 600 incl. GST)
+                </td>
+            </tr>
+            <tr>
+                <td class="highlight">Outstation Cheque Collection</td>
+                <td>
+                    Up to Rs 10000: Rs 50 + GST<br>
+                    Above Rs 10000 up to Rs 100000: Rs 100 + GST<br>
+                    Above Rs 100000: Rs 200 + GST
+                </td>
+            </tr>
+            <tr>
+                <td>NEFT Charges</td>
+                <td>
+                    Free through Net Banking/Mobile Banking<br>
+                    At Branch:<br>
+                    Up to Rs 10000: Rs 2.50 + GST<br>
+                    Above Rs 10000 up to Rs 100000: Rs 5 + GST<br>
+                    Above Rs 100000 up to Rs 200000: Rs 15 + GST<br>
+                    Above Rs 200000: Rs 25 + GST
+                </td>
+            </tr>
+            <tr>
+                <td class="highlight">RTGS Charges</td>
+                <td>
+                    Free through Net Banking/Mobile Banking<br>
+                    At Branch:<br>
+                    Rs 2 Lacs to Rs 5 Lacs: Rs 25 + GST<br>
+                    Above Rs 5 Lacs: Rs 50 + GST
+                </td>
+            </tr>
+            <tr>
+                <td>Cash Pickup</td>
+                <td>Normal charges + Agency charges at actuals</td>
+            </tr>
+            <tr>
+                <td class="highlight">SMS Alerts</td>
+                <td>Free</td>
+            </tr>
+            <tr>
+                <td>Account Keeping Charges</td>
+                <td>Rs 550 + GST</td>
+            </tr>
+            <tr>
+                <td class="highlight">Current Account Closing Charges</td>
+                <td>
+                    Up to 14 days of opening: NIL<br>
+                    After 14 days: Rs 1000 + GST
+                </td>
+            </tr>
+            <tr>
+                <td>MAB Non-Maintenance Charges</td>
+                <td>Rs 500 + GST per month</td>
+            </tr>
+        </table>
+
+        <h2>Interest Rates</h2>
+        <table>
+            <tr>
+                <th>Deposit Amount</th>
+                <th>Interest Rate</th>
+            </tr>
+            <tr>
+                <td class="highlight">8.50%* p.a. onwards</td>
+                <td>w.e.f. 05.04.2024</td>
+            </tr>
+        </table>
+
+        <h2>Download Account Opening Form</h2>
+        <ul>
+            <li><a href="https://www.sbi.co.in/documents/16012/21124/Account_Opening_Form.pdf" target="_blank">Download Account Opening Form</a></li>
+            <li><a href="https://www.sbi.co.in/documents/16012/21125/Sole_Proprietorship_Form.pdf" target="_blank">Account Opening Form for Sole Proprietorship Firm</a></li>
+            <li><a href="https://www.sbi.co.in/documents/16012/21126/Non_Individual_Form.pdf" target="_blank">Account Opening Form for Non-Individuals (Other than Sole Proprietorship Firm)</a></li>
+        </ul>
+
+        <h2>Contact Information</h2>
+        <table>
+            <tr>
+                <th>Service</th>
+                <th>Contact Info</th>
+            </tr>
+            <tr>
+                <td class="highlight">Customer Care</td>
+                <td>1800-258-3838 (Toll-Free)</td>
+            </tr>
+            <tr>
+                <td>Branch Locator</td>
+                <td><a href="https://www.hdfcbank.com/branch-atm-locator" target="_blank">Find your nearest branch</a></td>
+            </tr>
+            <tr>
+                <td class="highlight">Email Support</td>
+                <td>support@hdfcbank.com</td>
+            </tr>
+            <tr>
+                <td>Website</td>
+                <td><a href="https://www.hdfcbank.com" target="_blank">www.hdfcbank.com</a></td>
+            </tr>
+        </table>
+        
+        <a href="https://www.sbi.co.in" target="_blank" class="open-account">Open New Account</a>
+        <a href="compare.html" target="_blank" class="open-account">Compare them with other bank account-type</a>
+
+    </div>
+</div>
+
+</body>
+</html>

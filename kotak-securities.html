@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kotak Securities</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #e60000;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            animation: slideInDown 1s ease-out;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        h2 {
+            color: #e60000;
+            text-align: center;
+            margin-top: 20px;
+            animation: fadeIn 2s ease-in;
+        }
+
+        .button-container button {
+            background-color: #e60000;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .button-container button:hover {
+            background-color: #cc0000;
+        }
+
+        .product-basket,
+        .brokerage-plan,
+        .pros-cons,
+        .additional-features,
+        .other-investment-options,
+        .ratings,
+        .customer-service,
+        .ease-of-use,
+        .contact-section {
+            background-color: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            animation: fadeInUp 1s ease-in-out;
+        }
+
+        .tick {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            background-color: green;
+            color: white;
+            text-align: center;
+            line-height: 16px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+
+        .pros-cons {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .pros,
+        .cons {
+            width: 48%;
+        }
+
+        .ratings ul,
+        .customer-service ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .ratings ul li,
+        .customer-service ul li {
+            display: flex;
+            align-items: center;
+        }
+
+        .ratings ul li::before,
+        .customer-service ul li::before {
+            content: '★';
+            color: gold;
+            margin-right: 5px;
+        }
+
+        .charges-margins {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+
+        .charges-margins div {
+            background-color: #ffebee;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .open-account {
+            display: block;
+            margin: 20px auto;
+            padding: 15px 30px;
+            font-size: 18px;
+            color: white;
+            background-color: #ca2712;
+            text-align: center;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            max-width: 300px;
+        }
+
+        .open-account:hover {
+            background-color: #cd1616;
+        }
+        @keyframes slideInDown {
+            from {
+                transform: translateY(-100%);
+            }
+
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .contact-section {
+            background-color: white;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        canvas {
+            margin-top: 20px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Kotak Securities</h1>
+        <nav>
+            <ul>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#plans">Brokerage Plans</a></li>
+                <li><a href="#pros-cons">Pros & Cons</a></li>
+                <li><a href="#features">Additional Features</a></li>
+                <li><a href="#investment-options">Investment Options</a></li>
+                <li><a href="#ratings">Ratings & Reviews</a></li>
+                <li><a href="#contact">Contact Information</a></li>
+            </ul>
+        </nav>
+    </header>
+   
+    <div class="container">
+        <!-- Products Section -->
+        <section id="products" class="product-basket">
+            <h2>Product Basket</h2>
+            <p>Kotak Securities offers a variety of investment products such as equities, mutual funds, IPOs, and more.</p>
+        </section>
+
+        <!-- Brokerage Plans Section -->
+        <section id="plans" class="brokerage-plan">
+            <h2>Brokerage Plans</h2>
+            <p>Choose from a variety of plans such as Fixed Brokerage Plan, Dynamic Brokerage Plan, and Free Intraday Trading Plan.</p>
+        </section>
+
+        <!-- Pros & Cons Section -->
+        <section id="pros-cons" class="pros-cons">
+            <div class="pros">
+                <h2>Pros</h2>
+                <ul>
+                    <li><span class="tick">✔</span> Comprehensive research reports</li>
+                    <li><span class="tick">✔</span> Easy to use trading platform</li>
+                    <li><span class="tick">✔</span> Free intraday trading</li>
+                </ul>
+            </div>
+            <div class="cons">
+                <h2>Cons</h2>
+                <ul>
+                    <li><span class="tick">✘</span> Higher brokerage for beginners</li>
+                    <li><span class="tick">✘</span> Limited customer support hours</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Additional Features Section -->
+        <section id="features" class="additional-features">
+            <h2>Additional Features</h2>
+            <ul>
+                <li>Real-time Market Updates</li>
+                <li>Customizable Trading Platforms</li>
+                <li>Comprehensive Market Research Tools</li>
+            </ul>
+        </section>
+
+        <!-- Investment Options Section -->
+        <section id="investment-options" class="other-investment-options">
+            <h2>Other Investment Options</h2>
+            <p>In addition to stocks and mutual funds, Kotak Securities offers a range of investment options like bonds, derivatives, and commodities trading.</p>
+        </section>
+
+        <!-- Ratings & Reviews Section -->
+        <section id="ratings" class="ratings">
+            <h2>Ratings & Reviews</h2>
+            <ul>
+                <li>★ 4.5/5 Customer Satisfaction</li>
+                <li>★ 4/5 Trading Platform Ease of Use</li>
+                <li>★ 3.8/5 Customer Support</li>
+            </ul>
+        </section>
+
+        <!-- Contact Information Section -->
+        <section class="contact-section" id="contact">
+            <h2>Contact Information</h2>
+            <p>For inquiries or support, you can contact Kotak Securities through the following channels:</p>
+            <ul>
+                <li><strong>Email:</strong> service.securities@kotak.com</li>
+                <li><strong>Phone:</strong> 1800 209 9191</li>
+                <li><strong>Website:</strong> <a href="https://www.kotaksecurities.com" target="_blank">www.kotaksecurities.com</a></li>
+            </ul>
+        </section>
+
+        <!-- Bar Chart Section -->
+        <canvas id="complaintChart" width="400" height="200"></canvas>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        var ctx = document.getElementById('complaintChart').getContext('2d');
+        var complaintChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Resolved', 'Pending', 'Escalated'],
+                datasets: [{
+                    label: 'Complaints Status',
+                    data: [50, 30, 20],
+                    backgroundColor: [
+                        'rgba(0, 128, 0, 0.6)',
+                        'rgba(255, 165, 0, 0.6)',
+                        'rgba(255, 0, 0, 0.6)'
+                    ],
+                    borderColor: [
+                        'rgba(0, 128, 0, 1)',
+                        'rgba(255, 165, 0, 1)',
+                        'rgba(255, 0, 0, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+     <a href="https://www.kotaksecurities.com/landing-page/paid/bing-zero-intraday-charges-demat-account/?utm_source=bing&utm_medium=cpc&utm_campaign=KSEC-Brand-Search-Exact&utm_adgroup=Kotak-Securities&utm_term=kotak%20securities&utm_device=c&msclkid=9a54c2ba35231d443d5ca451d55ae835" target="_blank" class="open-account">Open a Free Demat Account Online | Invest Right, Invest Now 📈</a>
+
+     <a href="compredmat.html" target="_blank" class="open-account">Compare them with other bank account-type</a>
+     
+
+</body>
+
+</html>

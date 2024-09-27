@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upstox Securities</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #e60000;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            animation: slideInDown 1s ease-out;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        h2 {
+            color: #e60000;
+            text-align: center;
+            margin-top: 20px;
+            animation: fadeIn 2s ease-in;
+        }
+        .button-container button {
+            background-color: #e60000;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .button-container button:hover {
+            background-color: #cc0000;
+        }
+        .section {
+            background-color: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            animation: fadeInUp 1s ease-in-out;
+        }
+        .section ul {
+            list-style: none;
+            padding: 0;
+        }
+        .section ul li {
+            margin-bottom: 10px;
+        }
+        .section h3 {
+            margin-top: 20px;
+            color: #e60000;
+        }
+        .open-account {
+            display: block;
+            margin: 20px auto;
+            padding: 15px 30px;
+            font-size: 18px;
+            color: white;
+            background-color: #ca2712;
+            text-align: center;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            max-width: 300px;
+        }
+
+        .open-account:hover {
+            background-color: #cd1616;
+        }
+        .pros-cons {
+            display: flex;
+            justify-content: space-between;
+        }
+        .pros, .cons {
+            width: 48%;
+        }
+        @keyframes slideInDown {
+            from {
+                transform: translateY(-100%);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Upstox Securities</h1>
+    <nav>
+        <ul>
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#service-basket">Service Basket</a></li>
+            <li><a href="#brokerage-plan">Brokerage Plan</a></li>
+            <li><a href="#pros-cons">Pros & Cons</a></li>
+            <li><a href="#additional-features">Additional Features</a></li>
+            <li><a href="#other-options">Other Options</a></li>
+            <li><a href="#charges">Charges</a></li>
+            <li><a href="#customer-service">Customer Service</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="container">
+    <section id="overview" class="section">
+        <h2>Overview</h2>
+        <p>Upstox Securities offers a comprehensive range of financial services through its online trading platform. It provides a variety of investment products, including equities, mutual funds, IPOs, and more. The platform is known for its advanced technology and competitive pricing.</p>
+        <a href="https://upstox.com" target="_blank" class="open-account">Open a Free Demat Account Online | Invest Right, Invest Now 📈</a>
+
+       </section>
+
+    <section id="features" class="section">
+        <h2>Features</h2>
+        <ul>
+            <li><strong>Zero Brokerage on Delivery Trades:</strong> No brokerage charges for equity delivery trades.</li>
+            <li><strong>Low Brokerage Fees:</strong> ₹20 per order for intraday, futures, and options trades.</li>
+            <li><strong>Paperless Account Opening:</strong> Seamless digital account opening with Aadhaar-based e-KYC.</li>
+            <li><strong>Advanced Trading Platforms:</strong> Upstox Pro Web and Mobile platforms offer extensive charting tools and technical indicators.</li>
+        </ul>
+    </section>
+
+    <section id="service-basket" class="section">
+        <h2>Service Basket</h2>
+        <ul>
+            <li><strong>Equity Trading:</strong>
+                <ul>
+                    <li>Equity Delivery: Free brokerage.</li>
+                    <li>Equity Intraday: ₹20 per order or 0.05% of trade value, whichever is lower.</li>
+                </ul>
+            </li>
+            <li><strong>Derivatives Trading:</strong>
+                <ul>
+                    <li>Futures & Options: ₹20 per order.</li>
+                    <li>Commodity Derivatives: Available on the MCX platform.</li>
+                </ul>
+            </li>
+            <li><strong>Mutual Funds:</strong> Invest in direct mutual funds with zero commissions.</li>
+            <li><strong>Currency Trading:</strong> Trade currency futures and options.</li>
+            <li><strong>IPO Investments:</strong> Apply for IPOs through the Upstox platform.</li>
+            <li><strong>Margin Trading:</strong> Up to 20x leverage for intraday trading.</li>
+            <li><strong>Loan Against Shares:</strong> Loans against securities held in the Demat account.</li>
+        </ul>
+    </section>
+
+    <section id="brokerage-plan" class="section">
+        <h2>Brokerage Plan</h2>
+        <ul>
+            <li><strong>Basic Plan:</strong>
+                <ul>
+                    <li>Equity Delivery: ₹0 brokerage.</li>
+                    <li>Equity Intraday: ₹20 per order or 0.05% of trade value, whichever is lower.</li>
+                    <li>Equity Futures: ₹20 per order or 0.05% of trade value, whichever is lower.</li>
+                    <li>Equity Options: ₹20 per order.</li>
+                </ul>
+            </li>
+            <li><strong>Priority Plan:</strong>
+                <ul>
+                    <li>Monthly Fee: ₹999 for equities, F&O, and currency segments; ₹499 for commodities.</li>
+                    <li>Brokerage Fees: Flat ₹20 per order.</li>
+                    <li>Leverage: Up to 20x margin.</li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+
+    <section id="pros-cons" class="section">
+        <h2>Pros and Cons</h2>
+        <div class="pros-cons">
+            <div class="pros">
+                <h3>Pros</h3>
+                <ul>
+                    <li>Competitive flat fee structure.</li>
+                    <li>Advanced trading platforms with extensive features.</li>
+                    <li>Free equity delivery trading.</li>
+                    <li>Paperless account opening process.</li>
+                </ul>
+            </div>
+            <div class="cons">
+                <h3>Cons</h3>
+                <ul>
+                    <li>Higher demat debit transaction fees compared to some competitors.</li>
+                    <li>No 3-in-1 accounts (banking, trading, and demat in one).</li>
+                    <li>Connectivity issues in smaller cities or with low bandwidth.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="additional-features" class="section">
+        <h2>Additional Features</h2>
+        <ul>
+            <li><strong>Upstox Pro Trading Platforms:</strong> Advanced charting, 100+ technical indicators, and customizable layouts.</li>
+            <li><strong>API for Algo Trading:</strong> Robust API for algorithmic and custom trading strategies.</li>
+            <li><strong>Margin Trading Facility:</strong> Leverage up to 20x.</li>
+            <li><strong>Brokerage & Margin Calculators:</strong> Tools to estimate trading costs and manage margins.</li>
+            <li><strong>Mutual Funds Investment Platform:</strong> Zero-commission direct mutual funds.</li>
+            <li><strong>Alerts & Notifications:</strong> Custom price alerts and real-time notifications.</li>
+        </ul>
+    </section>
+
+    <section id="other-options" class="section">
+        <h2>Other Investment Options</h2>
+        <ul>
+            <li>Exchange-Traded Funds (ETFs)</li>
+            <li>Digital Gold</li>
+            <li>Sovereign Gold Bonds (SGBs)</li>
+            <li>Bonds and Debt Instruments</li>
+        </ul>
+    </section>
+
+    <section id="charges" class="section">
+        <h2>Charges</h2>
+        <ul>
+            <li><strong>Account Opening Charges:</strong> Typically free or nominal.</li>
+            <li><strong>Annual Maintenance Charge (AMC):</strong> ₹249 per year for Demat account.</li>
+            <li><strong>Transaction Charges:</strong> ₹18.5 per script for demat debit transactions.</li>
+        </ul>
+    </section>
+
+    <section id="customer-service" class="section">
+        <h2>Customer Service</h2>
+        <ul>
+            <li><strong>Customer Support Phone Number:</strong> 022-6130-9999</li>
+            <li><strong>Email Support:</strong> support@upstox.com (general), sales@upstox.com (sales)</li>
+            <li><strong>Registered Office:</strong> Upstox (RKSV Securities India Pvt. Ltd.), 30th Floor, Sunshine Tower, Senapati Bapat Marg, Dadar (West), Mumbai - 400013</li>
+            <li><strong>Social Media:</strong> Twitter (@upstox), Facebook (@upstox)</li>
+        </ul>
+    </section>
+    <a href="compredmat.html" target="_blank" class="open-account">Compare them with other bank account-type</a>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <div class="container">
+        <!-- Existing content here -->
+        <div id="contact" class="contact-section">
+            <h3>Complaints chart-container</h3>
+            
+            <div class="chart-container">
+                <canvas id="complaintChart"></canvas>
+            </div>
+        </div>
+    </div>
+    <script>
+        const ctx = document.getElementById('complaintChart').getContext('2d');
+        const complaintChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Complaints Received', 'Complaints Resolved'],
+                datasets: [{
+                    label: 'Complaints',
+                    data: [120000, 110000], // Example data
+                    backgroundColor: ['#ff6384', '#36a2eb'],
+                    borderColor: ['#ff6384', '#36a2eb'],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+                
+            </section>
+        </section>  
+</div>
+
+</body>
+</html>

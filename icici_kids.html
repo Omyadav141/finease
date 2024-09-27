@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICICI Bank - Senior Citizens and Young Stars Accounts</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            margin: 0;
+            height: 100%;
+            overflow-y: scroll;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+
+        .image-section {
+            flex: 1;
+            min-width: 300px;
+            background-image: url('https://www.icicibank.com/assets/images/common/logo.png');
+            background-size: cover;
+            background-position: center;
+            animation: slideInLeft 2s ease-in-out;
+        }
+
+        .content-section {
+            flex: 2;
+            padding: 20px;
+            overflow-y: auto;
+            animation: slideInRight 2s ease-in-out;
+        }
+
+        h1 {
+            color: #1c4587;
+            text-align: center;
+            animation: bounceIn 2s ease-in-out;
+        }
+
+        h2 {
+            color: #1c4587;
+            margin-top: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 16px;
+            animation: fadeInUp 2s ease-in-out;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #1c4587;
+            color: white;
+        }
+
+        .highlight {
+            background-color: #e6f2ff;
+        }
+
+        a {
+            color: #0073e6;
+            text-decoration: none;
+            font-weight: bold;
+            animation: pulse 2s infinite;
+        }
+
+        a:hover {
+            color: #005bb5;
+        }
+
+        .open-account {
+            display: block;
+            margin: 20px auto;
+            padding: 15px 30px;
+            font-size: 18px;
+            color: white;
+            background-color: #0073e6;
+            text-align: center;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            max-width: 300px;
+        }
+
+        .open-account:hover {
+            background-color: #005bb5;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideInLeft {
+            from { transform: translateX(-100%); }
+            to { transform: translateX(0); }
+        }
+
+        @keyframes slideInRight {
+            from { transform: translateX(100%); }
+            to { transform: translateX(0); }
+        }
+        .open-account {
+            display: block;
+            margin: 20px auto;
+            padding: 15px 30px;
+            font-size: 18px;
+            color: white;
+            background-color: #0073e6;
+            text-align: center;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            max-width: 300px;
+        }
+
+        .open-account:hover {
+            background-color: #005bb5;
+        }
+
+        @keyframes bounceIn {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-20px);
+            }
+            60% {
+                transform: translateY(-10px);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="image-section"></div>
+    <div class="content-section">
+        <h1>ICICI Bank:- Young Stars Account</h1>
+
+        
+        
+        <p>An account designed for children below 18 years, managed by a guardian, providing features to help them start their banking journey.</p>
+
+        <a href="https://www.icicibank.com/personal-banking/accounts/savings-account/young-stars-account" class="open-account">Open Young Stars Account Instantly Online</a>
+
+        <h3>Features</h3>
+        <table>
+            <tr>
+                <th>Feature</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td class="highlight">Spending Limits</td>
+                <td>Daily spending limit of Rs. 2,500 using the debit card.</td>
+            </tr>
+            <tr>
+                <td>Interest</td>
+                <td>Quarterly compounded interest.</td>
+            </tr>
+            <tr>
+                <td class="highlight">Parental Controls</td>
+                <td>Guardians can monitor and manage spending.</td>
+            </tr>
+            <tr>
+                <td>Free Internet Banking</td>
+                <td>For both guardians and minors.</td>
+            </tr>
+        </table>
+
+        <h3>Minimum Balance & Fees</h3>
+        <table>
+            <tr>
+                <th>Details</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td class="highlight">Minimum Balance</td>
+                <td>Rs. 2,500.</td>
+            </tr>
+            <tr>
+                <td class="highlight">Fees</td>
+                <td>Rs. 100 per quarter if balance falls below the requirement.</td>
+            </tr>
+        </table>
+
+        <h3>Documents Required</h3>
+        <ul>
+            <li>Guardian’s KYC</li>
+            <li>Minor's proof of age</li>
+        </ul>
+
+        <h2>Account Opening Process</h2>
+        <table>
+            <tr>
+                <th>Process</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td class="highlight">Online Process</td>
+                <td>Certain accounts like the Regular Savings Account and Advantage Woman Account can be opened instantly online. It requires basic KYC documents to be uploaded on the ICICI Bank portal. Account activation can be immediate for verified accounts.</td>
+            </tr>
+            <tr>
+                <td class="highlight">Offline Process</td>
+                <td>For accounts opened at branches, the process may take 2-5 business days depending on document verification.</td>
+            </tr>
+        </table>
+
+        <h2>Documents Required (All Accounts)</h2>
+        <ul>
+            <li>Identity Proof: Aadhaar, PAN card, Passport, Voter ID, etc.</li>
+            <li>Address Proof: Utility bill, Aadhaar, Passport, rental agreement, etc.</li>
+            <li>Photograph: Passport-sized photographs</li>
+        </ul>
+
+        <h2>Contact Information</h2>
+        <table>
+            <tr>
+                <th>Service</th>
+                <th>Contact Info</th>
+            </tr>
+            <tr>
+                <td class="highlight">Customer Care</td>
+                <td>1800-258-3838 (Toll-Free)</td>
+            </tr>
+            <tr>
+                <td>Branch Locator</td>
+                <td><a href="https://www.icicibank.com/branch-atm-locator" target="_blank">Find your nearest branch</a></td>
+            </tr>
+            <tr>
+                <td class="highlight">Email Support</td>
+                <td><a href="mailto:support@icicibank.com">support@icicibank.com</a></td>
+            </tr>
+            <tr>
+                <td>Website</td>
+                <td><a href="https://www.icicibank.com" target="_blank">www.icicibank.com</a></td>
+            </tr>
+        </table>
+
+        <a href="compare.html" target="_blank" class="open-account">Compare them with other bank account-types</a>
+
+    </div>
+</div>
+
+</body>
+</html>

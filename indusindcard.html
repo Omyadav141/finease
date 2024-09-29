@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IndusInd Bank Credit Cards</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;500;700&display=swap');
+
+        body {
+            font-family: 'Raleway', sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            animation: fadeInBody 2s ease-in-out;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 80px auto;
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            overflow: hidden;
+        }
+
+        .left-section {
+            width: 60%;
+            position: relative;
+            padding-right: 20px;
+        }
+
+        .card-slider {
+            width: 100%;
+            height: 300px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .slides {
+            display: flex;
+            transition: transform 0.8s ease-in-out;
+        }
+
+        .slide {
+            min-width: 100%;
+            text-align: center;
+        }
+
+        .slide img {
+            width: 80%;
+            border-radius: 15px;
+            height: 200px;
+        }
+
+        .card-name {
+            margin-top: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        .slider-controls {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 10px;
+        }
+
+        .slider-btn {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 50%;
+            transition: background-color 0.3s;
+        }
+
+        .slider-btn:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .right-section {
+            width: 35%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .info {
+            margin-top: 30px;
+            line-height: 1.8;
+            font-size: 16px;
+            color: #2c3e50;
+        }
+
+        .info h2 {
+            color: #2980b9;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .info ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .info ul li {
+            background-color: #f7f7f7;
+            margin-bottom: 10px;
+            padding: 10px 15px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .info ul li:hover {
+            background-color: #ecf0f1;
+            transform: translateY(-5px);
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            font-size: 32px;
+            margin-bottom: 30px;
+            font-weight: 700;
+            letter-spacing: 1.2px;
+            position: relative;
+            display: inline-block;
+        }
+
+        h1::after {
+            content: "";
+            display: block;
+            width: 100px;
+            height: 3px;
+            background-color: #2980b9;
+            margin: 10px auto 0 auto;
+            animation: slideIn 1s ease-out;
+        }
+
+        .btn {
+            display: block;
+            text-align: center;
+            background-color: #2980b9;
+            color: #fff;
+            padding: 12px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            margin-top: 40px;
+            letter-spacing: 1px;
+            transition: background-color 0.4s ease, transform 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #3498db;
+            transform: scale(1.05);
+        }
+
+        .banner {
+            width: 100%;
+            margin-top: 40px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .banner img {
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+        }
+
+        @keyframes slideIn {
+            from {
+                width: 0;
+            }
+            to {
+                width: 100px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Left Section - Card Slider -->
+        <div class="left-section">
+            <h1>IndusInd Bank Credit Cards</h1>
+            <div class="card-slider">
+                <div class="slides">
+                    <div class="slide">
+                        <img src="Indusind_Legend_Credit_Card_8bb68fe652.jpeg" alt="Legend Credit Card">
+                        <div class="card-name">IndusInd Bank Legend</div>
+                    </div>
+                    <div class="slide">
+                        <img src="indusind pinnacle credit card.jpg" alt="Pinnacle Credit Card">
+                        <div class="card-name">IndusInd Bank Pinnacle</div>
+                    </div>
+                    <div class="slide">
+                        <img src="Induslnd platinum aura edge credit card.jpeg.jpg" alt="Platinum Aura Edge Credit Card">
+                        <div class="card-name">IndusInd Bank Platinum Aura Edge</div>
+                    </div>
+                    <div class="slide">
+                        <img src="induslnd platinum credit card.jpeg.jpg" alt="Platinum Credit Card">
+                        <div class="card-name">IndusInd Bank Platinum</div>
+                    </div>
+                    <div class="slide">
+                        <img src="induslnd nexxt crdit card.jpeg.jpg" alt="Nexxt Credit Card">
+                        <div class="card-name">IndusInd Bank Nexxt</div>
+                    </div>
+                    <div class="slide">
+                        <img src="vistara.jpeg" alt="Vistara Credit Card">
+                        <div class="card-name">IndusInd Bank Vistara</div>
+                    </div>
+                </div>
+                <!-- Slider Controls -->
+                <div class="slider-controls">
+                    <button class="slider-btn" id="prev">❮</button>
+                    <button class="slider-btn" id="next">❯</button>
+                </div>
+            </div>
+
+            <!-- Information Section -->
+            <div class="info">
+                <h2>Eligibility</h2>
+                <ul id="eligibility-list">
+                    <!-- Eligibility info will be dynamically inserted here -->
+                </ul>
+
+                <h2>Features</h2>
+                <ul id="features-list">
+                    <!-- Features info will be dynamically inserted here -->
+                </ul>
+
+                <h2>Fees</h2>
+                <ul id="fees-list">
+                    <!-- Fees info will be dynamically inserted here -->
+                </ul>
+            </div>
+            <a href="#" class="btn">Apply Now</a>
+        </div>
+
+        <!-- Right Section - Brand Ambassador Banner -->
+        <div class="right-section">
+            <div class="banner">
+                <img src="farhan.jpeg" alt="Brand Ambassador Banner">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const slides = document.querySelector('.slides');
+        const prevBtn = document.getElementById('prev');
+        const nextBtn = document.getElementById('next');
+
+        const eligibilityList = document.getElementById('eligibility-list');
+        const featuresList = document.getElementById('features-list');
+        const feesList = document.getElementById('fees-list');
+
+        let index = 0;
+
+        const cardsInfo = [
+            {
+                name: "IndusInd Bank Legend",
+                eligibility: [
+                    "Minimum age: 21 years",
+                    "Annual income: ₹15-25 Lakhs",
+                    "Good credit score"
+                ],
+                features: [
+                    "Priority Pass, Lounge Access",
+                    "Golf privileges and Concierge Services",
+                    "1.5-2.5 reward points per ₹100 spent"
+                ],
+                fees: [
+                    "Joining Fee: ₹9,999 + GST",
+                    "Annual Fee: ₹4,999 + GST (Waivable)"
+                ]
+            },
+            {
+                name: "IndusInd Bank Pinnacle",
+                eligibility: [
+                    "Minimum age: 21 years",
+                    "Annual income: ₹25 Lakhs+",
+                    "Excellent credit score"
+                ],
+                features: [
+                    "Luxury hotel membership",
+                    "Complimentary golf sessions",
+                    "2.5 reward points per ₹100 spent"
+                ],
+                fees: [
+                    "Joining Fee: ₹12,999 + GST",
+                    "Annual Fee: ₹4,999 + GST (Waivable)"
+                ]
+            },
+            {
+                name: "IndusInd Bank Platinum Aura Edge",
+                eligibility: [
+                    "Minimum age: 18 years",
+                    "Annual income: ₹5 Lakhs+"
+                ],
+                features: [
+                    "Fuel surcharge waiver",
+                    "Discounts on restaurants",
+                    "1 reward point per ₹100 spent"
+                ],
+                fees: [
+                    "Joining Fee: ₹2,999 + GST",
+                    "Annual Fee: ₹999 + GST"
+                ]
+            },
+            {
+                name: "IndusInd Bank Platinum",
+                eligibility: [
+                    "Minimum age: 18 years",
+                    "Annual income: ₹5 Lakhs+"
+                ],
+                features: [
+                    "Fuel surcharge waiver",
+                    "Complimentary movie tickets",
+                    "Discounts on dining and shopping"
+                ],
+                fees: [
+                    "Joining Fee: ₹999 + GST",
+                    "Annual Fee: ₹999 + GST"
+                ]
+            },
+            {
+                name: "IndusInd Bank Nexxt",
+                eligibility: [
+                    "Minimum age: 21 years",
+                    "Annual income: ₹5 Lakhs+"
+                ],
+                features: [
+                    "First interactive credit card with EMV feature",
+                    "Custom payment options"
+                ],
+                fees: [
+                    "Joining Fee: ₹3,000 + GST",
+                    "Annual Fee: ₹1,000 + GST"
+                ]
+            },
+            {
+                name: "IndusInd Bank Vistara",
+                eligibility: [
+                    "Minimum age: 21 years",
+                    "Annual income: ₹12 Lakhs+"
+                ],
+                features: [
+                    "Free Club Vistara Gold Membership",
+                    "Complimentary flight tickets",
+                    "Lounge access and air travel insurance"
+                ],
+                fees: [
+                    "Joining Fee: ₹10,000 + GST",
+                    "Annual Fee: ₹5,000 + GST"
+                ]
+            }
+        ];
+
+        const loadInfo = (index) => {
+            eligibilityList.innerHTML = cardsInfo[index].eligibility.map(item => `<li>${item}</li>`).join('');
+            featuresList.innerHTML = cardsInfo[index].features.map(item => `<li>${item}</li>`).join('');
+            feesList.innerHTML = cardsInfo[index].fees.map(item => `<li>${item}</li>`).join('');
+        };
+
+        loadInfo(index);
+
+        prevBtn.addEventListener('click', () => {
+            index = (index > 0) ? index - 1 : cardsInfo.length - 1;
+            slides.style.transform = `translateX(-${index * 100}%)`;
+            loadInfo(index);
+        });
+
+        nextBtn.addEventListener('click', () => {
+            index = (index < cardsInfo.length - 1) ? index + 1 : 0;
+            slides.style.transform = `translateX(-${index * 100}%)`;
+            loadInfo(index);
+        });
+    </script>
+</body>
+</html>

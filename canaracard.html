@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canara Bank Credit Cards</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;500;700&display=swap');
+
+        body {
+            font-family: 'Raleway', sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            animation: fadeInBody 2s ease-in-out;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 80px auto;
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            overflow: hidden;
+        }
+
+        .left-section {
+            width: 60%;
+            position: relative;
+            padding-right: 20px;
+        }
+
+        .card-slider {
+            width: 100%;
+            height: 300px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .slides {
+            display: flex;
+            transition: transform 0.8s ease-in-out;
+        }
+
+        .slide {
+            min-width: 100%;
+            text-align: center;
+        }
+
+        .slide img {
+            width: 80%;
+            border-radius: 15px;
+            height: 200px;
+        }
+
+        .card-name {
+            margin-top: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        .slider-controls {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 10px;
+        }
+
+        .slider-btn {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 50%;
+            transition: background-color 0.3s;
+        }
+
+        .slider-btn:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .right-section {
+            width: 35%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .info {
+            margin-top: 30px;
+            line-height: 1.8;
+            font-size: 16px;
+            color: #2c3e50;
+        }
+
+        .info h2 {
+            color: #2980b9;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .info ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .info ul li {
+            background-color: #f7f7f7;
+            margin-bottom: 10px;
+            padding: 10px 15px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .info ul li:hover {
+            background-color: #ecf0f1;
+            transform: translateY(-5px);
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            font-size: 32px;
+            margin-bottom: 30px;
+            font-weight: 700;
+            letter-spacing: 1.2px;
+            position: relative;
+            display: inline-block;
+        }
+
+        h1::after {
+            content: "";
+            display: block;
+            width: 100px;
+            height: 3px;
+            background-color: #2980b9;
+            margin: 10px auto 0 auto;
+            animation: slideIn 1s ease-out;
+        }
+
+        .btn {
+            display: block;
+            text-align: center;
+            background-color: #2980b9;
+            color: #fff;
+            padding: 12px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            margin-top: 40px;
+            letter-spacing: 1px;
+            transition: background-color 0.4s ease, transform 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #3498db;
+            transform: scale(1.05);
+        }
+
+        .banner {
+            width: 100%;
+            margin-top: 40px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .banner img {
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+        }
+
+        @keyframes slideIn {
+            from {
+                width: 0;
+            }
+            to {
+                width: 100px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Left Section - Card Slider -->
+        <div class="left-section">
+            <h1>Canara Bank Credit Cards</h1>
+            <div class="card-slider">
+                <div class="slides">
+                    <div class="slide">
+                        <img src="Canara corporate credit card.jpg" alt="Canara Card 1">
+                        <div class="card-name">Canara corporate </div>
+                    </div>
+                    <div class="slide">
+                        <img src="Canara rupay platinum credit card.jpg" alt="Canara Card 2">
+                        <div class="card-name">Canara rupay platinum</div>
+                    </div>
+                    <div class="slide">
+                        <img src="Canara visa classic credit card.jpg" alt="Canara Card 3">
+                        <div class="card-name">Canara visa classic </div>
+                    </div>
+                    <div class="slide">
+                        <img src="Canara rupay select credit card.jpg" alt="Canara Card 4">
+                        <div class="card-name">Canara rupay select</div>
+                    </div>
+                    <div class="slide">
+                        <img src="Canara visa gold credit card.jpg" alt="Canara Card 5">
+                        <div class="card-name">Canara visa gold</div>
+                    </div>
+                    <div class="slide">
+                        <img src="Canara-bank-card6.jpg" alt="Canara Card 6">
+                        <div class="card-name">Canara Card 6</div>
+                    </div>
+                    <div class="slide">
+                        <img src="canara-bank-card7.jpg" alt="Canara Card 7">
+                        <div class="card-name">Canara Card 7</div>
+                    </div>
+                    <div class="slide">
+                        <img src="canara-bank-card8.jpg" alt="Canara Card 8">
+                        <div class="card-name">Canara Card 8</div>
+                    </div>
+                </div>
+                <!-- Slider Controls -->
+                <div class="slider-controls">
+                    <button class="slider-btn" id="prev">❮</button>
+                    <button class="slider-btn" id="next">❯</button>
+                </div>
+            </div>
+
+            <!-- Information Section -->
+            <div class="info">
+                <h2>Eligibility</h2>
+                <ul id="eligibility-list">
+                    <li>Minimum age: 21 years</li>
+                    <li>Annual income: ₹2 Lakhs+</li>
+                    <li>Good credit score</li>
+                </ul>
+
+                <h2>Features</h2>
+                <ul id="features-list">
+                    <li>Reward points on every transaction</li>
+                    <li>Cashback on select categories</li>
+                    <li>No annual fee for lifetime</li>
+                </ul>
+
+                <h2>Fees</h2>
+                <ul id="fees-list">
+                    <li>Joining Fee: ₹499 + GST</li>
+                    <li>Annual Fee: ₹499 + GST</li>
+                </ul>
+            </div>
+            <a href="#" class="btn">Apply Now</a>
+        </div>
+
+        <!-- Right Section - Brand Ambassador Banner -->
+        <div class="right-section">
+            <div class="banner">
+                <img src="canarabrand.jpeg" alt="Brand Ambassador Banner">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const slides = document.querySelector('.slides');
+        const prevBtn = document.getElementById('prev');
+        const nextBtn = document.getElementById('next');
+
+        let index = 0;
+
+        function updateCardInfo() {
+            const totalSlides = document.querySelectorAll('.slide').length;
+            slides.style.transform = `translateX(${-index * 100}%)`;
+            
+            // Update eligibility, features, and fees based on the current index
+            const eligibilityData = [
+                ["Minimum age: 21 years", "Annual income: ₹2 Lakhs+", "Good credit score"],
+                ["Minimum age: 22 years", "Annual income: ₹3 Lakhs+", "Credit history check"],
+                ["Minimum age: 23 years", "Annual income: ₹4 Lakhs+", "No existing loans"],
+                ["Minimum age: 24 years", "Annual income: ₹5 Lakhs+", "Stable employment"],
+                ["Minimum age: 25 years", "Annual income: ₹6 Lakhs+", "Age of the applicant"],
+                ["Minimum age: 26 years", "Annual income: ₹7 Lakhs+", "No late payments"],
+                ["Minimum age: 27 years", "Annual income: ₹8 Lakhs+", "Clean credit report"],
+                ["Minimum age: 28 years", "Annual income: ₹9 Lakhs+", "Existing bank relationship"],
+            ];
+
+            const featuresData = [
+                ["Reward points on every transaction", "Cashback on select categories", "No annual fee for lifetime"],
+                ["Low-interest rates", "Fuel surcharge waiver", "Contactless payments"],
+                ["International acceptance", "Flexible repayment options", "Enhanced security features"],
+                ["Exclusive dining offers", "Free add-on cards", "Priority service"],
+                ["Annual fee waived on spending", "Discounts on shopping", "Free credit report"],
+                ["Rewards for utility payments", "Zero fraud liability", "Extended warranty on purchases"],
+                ["Flexible payment plans", "Online account management", "Instant card issuance"],
+                ["Special offers during festivals", "Cash withdrawal facility", "Insurance coverage"],
+            ];
+
+            const feesData = [
+                ["Joining Fee: ₹499 + GST", "Annual Fee: ₹499 + GST"],
+                ["Joining Fee: ₹299 + GST", "Annual Fee: ₹299 + GST"],
+                ["Joining Fee: ₹699 + GST", "Annual Fee: ₹699 + GST"],
+                ["Joining Fee: ₹999 + GST", "Annual Fee: ₹999 + GST"],
+                ["Joining Fee: ₹199 + GST", "Annual Fee: ₹199 + GST"],
+                ["Joining Fee: ₹399 + GST", "Annual Fee: ₹399 + GST"],
+                ["Joining Fee: ₹799 + GST", "Annual Fee: ₹799 + GST"],
+                ["Joining Fee: ₹599 + GST", "Annual Fee: ₹599 + GST"],
+            ];
+
+            // Update the lists based on the current index
+            const eligibilityList = document.getElementById('eligibility-list');
+            const featuresList = document.getElementById('features-list');
+            const feesList = document.getElementById('fees-list');
+
+            eligibilityList.innerHTML = '';
+            featuresList.innerHTML = '';
+            feesList.innerHTML = '';
+
+            eligibilityData[index].forEach(item => {
+                const li = document.createElement('li');
+                li.textContent = item;
+                eligibilityList.appendChild(li);
+            });
+
+            featuresData[index].forEach(item => {
+                const li = document.createElement('li');
+                li.textContent = item;
+                featuresList.appendChild(li);
+            });
+
+            feesData[index].forEach(item => {
+                const li = document.createElement('li');
+                li.textContent = item;
+                feesList.appendChild(li);
+            });
+        }
+
+        prevBtn.addEventListener('click', () => {
+            index = (index > 0) ? index - 1 : slides.children.length - 1;
+            updateCardInfo();
+        });
+
+        nextBtn.addEventListener('click', () => {
+            index = (index < slides.children.length - 1) ? index + 1 : 0;
+            updateCardInfo();
+        });
+
+        // Initialize the slider on page load
+        updateCardInfo();
+    </script>
+</body>
+</html>

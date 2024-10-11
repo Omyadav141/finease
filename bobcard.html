@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank of Baroda Credit Cards</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;500;700&display=swap');
+
+        body {
+            font-family: 'Raleway', sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            animation: fadeInBody 2s ease-in-out;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 80px auto;
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            overflow: hidden;
+        }
+
+        .left-section {
+            width: 50%;
+            position: relative;
+            padding-right: 20px;
+        }
+
+        .card-slider {
+            width: 310px;  /* Set card width to 310px */
+            height: 250px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .slides {
+            display: flex;
+            transition: transform 0.8s ease-in-out;
+        }
+
+        .slide {
+            min-width: 100%;
+        }
+
+        .slide img {
+            width: 100%;
+            border-radius: 15px;
+        }
+
+        .slider-controls {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 10px;
+        }
+
+        .slider-btn {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 50%;
+            transition: background-color 0.3s;
+        }
+
+        .slider-btn:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .right-section {
+            width: 45%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .ambassador-image {
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .info {
+            margin-top: 30px;
+            line-height: 1.8;
+            font-size: 16px;
+            color: #2c3e50;
+        }
+
+        .info h2 {
+            color: #2980b9;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .info ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .info ul li {
+            background-color: #f7f7f7;
+            margin-bottom: 10px;
+            padding: 10px 15px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .info ul li:hover {
+            background-color: #ecf0f1;
+            transform: translateY(-5px);
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            font-size: 32px;
+            margin-bottom: 30px;
+            font-weight: 700;
+            letter-spacing: 1.2px;
+            position: relative;
+            display: inline-block;
+        }
+
+        h1::after {
+            content: "";
+            display: block;
+            width: 100px;
+            height: 3px;
+            background-color: #2980b9;
+            margin: 10px auto 0 auto;
+            animation: slideIn 1s ease-out;
+        }
+
+        .btn {
+            display: block;
+            text-align: center;
+            background-color: #2980b9;
+            color: #fff;
+            padding: 12px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            margin-top: 40px;
+            letter-spacing: 1px;
+            transition: background-color 0.4s ease, transform 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #3498db;
+            transform: scale(1.05);
+        }
+
+        @keyframes slideIn {
+            from {
+                width: 0;
+            }
+            to {
+                width: 100px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Left Section - Card Slider -->
+        <div class="left-section">
+            <h1>Bank of Baroda Credit Cards</h1>
+            <div class="card-slider">
+                <div class="slides">
+                    <div class="slide"><img src="bank of baroda corporate credit card.jpeg.jpg" alt="Gold Card Image"></div>
+                    <div class="slide"><img src="bank of baroda eterna credit card.jpeg.jpg" alt="Platinum Card Image"></div>
+                    <div class="slide"><img src="bank of baroda premier credit card.jpeg.jpg" alt="Cashback Card Image"></div>
+                </div>
+                <!-- Slider Controls -->
+                <div class="slider-controls">
+                    <button class="slider-btn" id="prev">❮</button>
+                    <button class="slider-btn" id="next">❯</button>
+                </div>
+            </div>
+
+            <!-- Information Section -->
+            <div class="info">
+                <h2>Eligibility</h2>
+                <ul id="eligibility-list">
+                    <!-- Eligibility info will be dynamically inserted here -->
+                </ul>
+
+                <h2>Features</h2>
+                <ul id="features-list">
+                    <!-- Features info will be dynamically inserted here -->
+                </ul>
+
+                <h2>Interest Rate</h2>
+                <ul>
+                    <li id="interest-rate">1.75% - 3.25% per month (21% - 39% annually)</li>
+                </ul>
+
+                <h2>Fees</h2>
+                <ul id="fees-list">
+                    <!-- Fees info will be dynamically inserted here -->
+                </ul>
+            </div>
+            <a href="#" class="btn">Apply Now</a>
+        </div>
+
+        <!-- Right Section - Brand Ambassador Image -->
+        <div class="right-section">
+            <img src="brand.jpeg" alt="Brand Ambassador" class="ambassador-image">
+        </div>
+    </div>
+
+    <script>
+        const slides = document.querySelector('.slides');
+        const prevBtn = document.getElementById('prev');
+        const nextBtn = document.getElementById('next');
+
+        const eligibilityList = document.getElementById('eligibility-list');
+        const featuresList = document.getElementById('features-list');
+        const feesList = document.getElementById('fees-list');
+        const interestRate = document.getElementById('interest-rate');
+
+        let index = 0;
+
+        const cardsInfo = [
+            {
+                name: "Gold Card",
+                eligibility: [
+                    "Minimum age: 21 years",
+                    "Minimum annual income: ₹3 Lakhs",
+                    "Good credit history"
+                ],
+                features: [
+                    "2 reward points for every ₹100 spent",
+                    "Fuel surcharge waiver",
+                    "Complimentary insurance cover",
+                    "Exclusive discounts at partner merchants"
+                ],
+                fees: [
+                    "Joining Fee: ₹500",
+                    "Annual Fee: ₹500 (Waived on spending ₹50,000 in a year)"
+                ]
+            },
+            {
+                name: "Platinum Card",
+                eligibility: [
+                    "Minimum age: 21 years",
+                    "Minimum annual income: ₹7 Lakhs",
+                    "Good credit history"
+                ],
+                features: [
+                    "5 reward points for every ₹100 spent on dining and travel",
+                    "Complimentary lounge access",
+                    "Zero lost card liability",
+                    "Cashback on select categories"
+                ],
+                fees: [
+                    "Joining Fee: ₹1,000",
+                    "Annual Fee: ₹1,000 (Waived on spending ₹1,00,000 in a year)"
+                ]
+            },
+            {
+                name: "Cashback Card",
+                eligibility: [
+                    "Minimum age: 21 years",
+                    "Minimum annual income: ₹5 Lakhs",
+                    "Good credit history"
+                ],
+                features: [
+                    "Up to 5% cashback on select categories",
+                    "No annual fee on minimum spending",
+                    "Instant discounts on e-commerce",
+                    "Cashback credited every month"
+                ],
+                fees: [
+                    "Joining Fee: ₹750",
+                    "Annual Fee: ₹750 (Waived on spending ₹30,000 in a year)"
+                ]
+            }
+        ];
+
+        function updateCardInfo() {
+            const currentCard = cardsInfo[index];
+            eligibilityList.innerHTML = currentCard.eligibility.map(item => `<li>${item}</li>`).join('');
+            featuresList.innerHTML = currentCard.features.map(item => `<li>${item}</li>`).join('');
+            feesList.innerHTML = currentCard.fees.map(item => `<li>${item}</li>`).join('');
+        }
+
+        function showNextSlide() {
+            index = (index + 1) % cardsInfo.length;
+            slides.style.transform = `translateX(-${index * 100}%)`;
+            updateCardInfo();
+        }
+
+        function showPrevSlide() {
+            index = (index - 1 + cardsInfo.length) % cardsInfo.length;
+            slides.style.transform = `translateX(-${index * 100}%)`;
+            updateCardInfo();
+        }
+
+        nextBtn.addEventListener('click', showNextSlide);
+        prevBtn.addEventListener('click', showPrevSlide);
+
+        // Initialize with the first card info
+        updateCardInfo();
+    </script>
+</body>
+</html>

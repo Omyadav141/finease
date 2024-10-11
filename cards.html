@@ -10,7 +10,7 @@
       font-family: 'Poppins', sans-serif;
       margin: 0;
       padding: 0;
-      background: linear-gradient(135deg, #3C3B3F, #605C3C); /* Luxury themed background */
+      background: black; /* Luxury themed background */
       color: #333;
     }
 
@@ -20,7 +20,7 @@
       font-size: 3em;
       margin-bottom: 20px;
       padding: 20px;
-      background-color: rgba(0, 0, 0, 0.5);
+      background-color: #FFD700;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
       font-weight: bold;
     }
@@ -34,19 +34,24 @@
 
     /* Card Style */
     .card {
-      background-color: white;
+      background-color: rgb(0, 0, 0);
       border-radius: 15px;
       overflow: hidden;
       display: flex;
       flex-direction: column;
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
       transition: transform 0.4s ease, box-shadow 0.4s ease;
-      border-top: 5px solid #007bff;
+      border-top: 5px solid #000000;
+      box-shadow: 0 6px 15px rgba(237, 211, 15, 0.944);
+    
     }
 
     .card:hover {
       transform: translateY(-10px);
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 12px 30px rgb(220, 171, 10);
+      background-color: #FFD700;
+      
+      
     }
 
     .card img {
@@ -64,13 +69,13 @@
     .card h3 {
       margin-top: 10px;
       font-size: 1.5em;
-      color: #007bff;
+      color: #fafbfc;
       font-weight: bold;
     }
 
     .card p {
       font-size: 1em;
-      color: #666;
+      color: #f9f9f9;
       margin-bottom: 15px;
     }
 
@@ -105,6 +110,95 @@
     .card {
       animation: fadeIn 0.5s ease-in;
     }
+    .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #e0d9d9;
+            color: rgb(0, 0, 0);
+            border-radius: 10px;
+            position: relative;
+            overflow: hidden;
+            animation: glowBorder 2s infinite;
+        }
+
+        .footer-logo {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #000000;
+            text-align: left;
+        }
+
+        .footer-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .footer-links li {
+            display: inline-block;
+        }
+
+        .footer-links a {
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: #f5a623;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 10px;
+            justify-content: flex-end;
+        }
+
+        .social-icons a {
+            font-size: 1.5em;
+            color: white;
+            transition: transform 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            transform: scale(1.2);
+        }
+
+        /* Glowing border animation */
+        @keyframes glowBorder {
+            0% {
+                box-shadow: 0 0 10px #f5a623, 0 0 20px #f5a623, 0 0 30px #f5a623;
+            }
+            50% {
+                box-shadow: 0 0 20px #f5a623, 0 0 30px #f5a623, 0 0 40px #f5a623;
+            }
+            100% {
+                box-shadow: 0 0 10px #f5a623, 0 0 20px #f5a623, 0 0 30px #f5a623;
+            }
+        }
+
+        footer {
+            padding: 10px 0;
+            background-color: #000000;
+            text-align: center;
+            color: #c4b9b9;
+            margin-top: 20px;
+            position: relative;
+        }
+
+        footer p {
+            font-size: 0.9em;
+            margin-top: 15px;
+        }
+
+        /* Light border hover effect */
+        .footer-content:hover {
+            box-shadow: 0 0 15px 2px rgba(255, 255, 255, 0.6);
+            transition: box-shadow 0.3s ease;
+        }
 
   </style>
 </head>
@@ -207,7 +301,7 @@
     </div>
 
     <div class="card">
-      <img src="boicard.jpg" alt="Card 11 Image">
+      <img src="boi mastercard gold credit card.webp" alt="Card 11 Image">
       <div class="card-body">
         <h3>Bank of India Credit Card</h3>
         <p>Special travel perks including free airport lounge access worldwide.</p>
@@ -261,6 +355,24 @@
       </div>
     </div>
   </div>
+  <footer>
+    <div class="container footer-content">
+        <div class="footer-logo">FINEASE</div>
+        <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html">Reviews</a></li>
+            <li><a href="bank-account.html">Bank Accounts</a></li>
+            <li><a href="cards.html">Credit cards</a></li>
+            <li><a href="loan.html">Loan</a></li>
+        </ul>
+        <div class="social-icons">
+            <a href="#" aria-label="Facebook"><img src="facebook-logo.jpeg" alt="Facebook" width="24"></a>
+            <a href="#" aria-label="Twitter"><img src="X-Logo.png" alt="X" width="24"></a>
+            <a href="#" aria-label="Instagram"><img src="Instagram-Logo.jpeg" alt="Instagram" width="24"></a>
+        </div>
+    </div>
+    <p>&copy; fineaseweb@gmail.com. All rights reserved.</p>
+</footer>
   
 </body>
 </html>

@@ -5,21 +5,126 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Demat Account Comparison</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000000; /* Light blue background for beauty */
+            margin: 0;
+            padding: 20px;
+            animation: fadeIn 1s ease-out;
+        }
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #e0d9d9;
+            color: rgb(0, 0, 0);
+            border-radius: 10px;
+            position: relative;
+            overflow: hidden;
+            animation: glowBorder 2s infinite;
+        }
+
+        .footer-logo {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #000000;
+            text-align: left;
+        }
+
+        .footer-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .footer-links li {
+            display: inline-block;
+        }
+
+        .footer-links a {
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: #f5a623;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 10px;
+            justify-content: flex-end;
+        }
+
+        .social-icons a {
+            font-size: 1.5em;
+            color: white;
+            transition: transform 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            transform: scale(1.2);
+        }
+
+        /* Glowing border animation */
+        @keyframes glowBorder {
+            0% {
+                box-shadow: 0 0 10px #f5a623, 0 0 20px #f5a623, 0 0 30px #f5a623;
+            }
+            50% {
+                box-shadow: 0 0 20px #f5a623, 0 0 30px #f5a623, 0 0 40px #f5a623;
+            }
+            100% {
+                box-shadow: 0 0 10px #f5a623, 0 0 20px #f5a623, 0 0 30px #f5a623;
+            }
+        }
+
+        footer {
+            padding: 10px 0;
+            background-color: #000000;
+            text-align: center;
+            color: #c4b9b9;
+            margin-top: 20px;
+            position: relative;
+        }
+
+        footer p {
+            font-size: 0.9em;
+            margin-top: 15px;
+        }
+
+        /* Light border hover effect */
+        .footer-content:hover {
+            box-shadow: 0 0 15px 2px rgba(255, 255, 255, 0.6);
+            transition: box-shadow 0.3s ease;
+        }
+    </style>
 </head>
 <body>
     <header>
         <h1>Demat Account Comparison</h1>
     </header>
+    
+        
+        <div class="headline"></div>
+        <marquee behavior="smooth" direction="left">Welcome to BANK ACCOUNT SECTION <img src="new.gif" alt=""> | WHERE YOU CAN SELECT YOUR TYPE OF ACCOUNT <img src="new.gif" alt="">| AND COMPARE THEM WITH BANKS | If any QUERY please contact <img src="new.gif" alt=""> | Use desktop for better understanding | Thank You for visiting.</marquee>
+        
     <main>
         <input type="text" id="search" placeholder="Search for Demat accounts...">
         <div id="results"></div>
     </main>
+
+      
     <script>
         const dmatAccounts = [
             { 
                 name: 'Zerodha', 
                 file: 'zerodha.html', 
-                image: 'images/zerodha.png', 
+                image: 'zerodha.png', 
                 rating: 4.5, 
                 fees: '₹20 per trade', 
                 services: 'Equity, Mutual Funds, Bonds' 
@@ -27,7 +132,7 @@
             { 
                 name: 'Upstox', 
                 file: 'upstox.html', 
-                image: 'images/upstox.png', 
+                image: 'upstox.jpeg', 
                 rating: 4.3, 
                 fees: '₹20 per trade', 
                 services: 'Equity, Mutual Funds, IPOs' 
@@ -35,7 +140,7 @@
             { 
                 name: '5Paisa', 
                 file: '5paisa.html', 
-                image: 'images/5paisa.png', 
+                image: '5paisa.png', 
                 rating: 4.0, 
                 fees: '₹10 per trade', 
                 services: 'Equity, Mutual Funds, Insurance' 
@@ -43,7 +148,7 @@
             { 
                 name: 'Angel One', 
                 file: 'angel-one.html', 
-                image: 'images/angel-one.png', 
+                image: 'angelone.png', 
                 rating: 4.2, 
                 fees: '₹20 per trade', 
                 services: 'Equity, Mutual Funds, Loans' 
@@ -51,7 +156,7 @@
             { 
                 name: 'Sharekhan', 
                 file: 'sharekhan.html', 
-                image: 'images/sharekhan.png', 
+                image: 'sharekhan.png', 
                 rating: 4.1, 
                 fees: '₹20 per trade', 
                 services: 'Equity, Mutual Funds, Portfolio Management' 
@@ -59,7 +164,7 @@
             { 
                 name: 'Motilal Oswal', 
                 file: 'motilal-oswal.html', 
-                image: 'images/motilal-oswal.png', 
+                image: 'motilal-oswal.jpeg', 
                 rating: 4.0, 
                 fees: '₹20 per trade', 
                 services: 'Equity, Mutual Funds, Research Reports' 
@@ -67,7 +172,7 @@
             { 
                 name: 'India Infoline (IIFL)', 
                 file: 'iifl.html', 
-                image: 'images/iifl.png', 
+                image: 'iifl.jpeg', 
                 rating: 4.1, 
                 fees: '₹20 per trade', 
                 services: 'Equity, Mutual Funds, Loans' 
@@ -75,7 +180,7 @@
             { 
                 name: 'HDFC Securities', 
                 file: 'hdfc-securities.html', 
-                image: 'images/hdfc-securities.png', 
+                image: 'hdfcsec.jpg', 
                 rating: 4.3, 
                 fees: '₹20 per trade', 
                 services: 'Equity, Mutual Funds, Fixed Deposits' 
@@ -83,7 +188,7 @@
             { 
                 name: 'ICICI Direct', 
                 file: 'icici-direct.html', 
-                image: 'images/icici-direct.png', 
+                image: 'icicidirect.jpeg', 
                 rating: 4.2, 
                 fees: '₹20 per trade', 
                 services: 'Equity, Mutual Funds, Insurance' 
@@ -91,13 +196,13 @@
             { 
                 name: 'Kotak Securities', 
                 file: 'kotak-securities.html', 
-                image: 'images/kotak-securities.png', 
+                image: 'kotaksec.jpg', 
                 rating: 4.0, 
                 fees: '₹20 per trade', 
                 services: 'Equity, Mutual Funds, Loans' 
             }
         ];
-
+        
         document.getElementById('search').addEventListener('input', function() {
             const query = this.value.toLowerCase();
             const filteredAccounts = dmatAccounts.filter(account => account.name.toLowerCase().includes(query));
@@ -120,5 +225,23 @@
         // Display all accounts initially
         displayResults(dmatAccounts);
     </script>
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-logo">FINEASE</div>
+            <ul class="footer-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html">Reviews</a></li>
+                <li><a href="bank-account.html">Bank Accounts</a></li>
+                <li><a href="cards.html">Credit cards</a></li>
+                <li><a href="loan.html">Loan</a></li>
+            </ul>
+            <div class="social-icons">
+                <a href="#" aria-label="Facebook"><img src="facebook-logo.jpeg" alt="Facebook" width="24"></a>
+                <a href="#" aria-label="Twitter"><img src="X-Logo.png" alt="X" width="24"></a>
+                <a href="#" aria-label="Instagram"><img src="Instagram-Logo.jpeg" alt="Instagram" width="24"></a>
+            </div>
+        </div>
+        <p>&copy; fineaseweb@gmail.com. All rights reserved.</p>
+    </footer>
 </body>
 </html>

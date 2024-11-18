@@ -4,250 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us</title>
-    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="styles.css"> 
     <style>
-        /* Reset and base styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
         
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        
-        @keyframes slideInFromLeft {
-            from { transform: translateX(-100%); }
-            to { transform: translateX(0); }
-        }
-        
-        @keyframes slideInFromRight {
-            from { transform: translateX(100%); }
-            to { transform: translateX(0); }
-        }
-        
-        @keyframes slideInFromTop {
-            from { transform: translateY(-100%); }
-            to { transform: translateY(0); }
-        }
-        
-        @keyframes slideInFromBottom {
-            from { transform: translateY(100%); }
-            to { transform: translateY(0); }
-        }
-        
-        @keyframes zoomIn {
-            from { transform: scale(0.5); opacity: 0; }
-            to { transform: scale(1); opacity: 1; }
-        }
-        
-        @keyframes rotateIn {
-            from { transform: rotate(-360deg); opacity: 0; }
-            to { transform: rotate(0); opacity: 1; }
-        }
-        
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-            40% { transform: translateY(-30px); }
-            60% { transform: translateY(-15px); }
-        }
-        
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
-        }
-        
-        @keyframes shake {
-            0%, 100% { transform: translateX(0); }
-            10%, 30%, 50%, 70%, 90% { transform: translateX(-10px); }
-            20%, 40%, 60%, 80% { transform: translateX(10px); }
-        }
-        
-        @keyframes flipInX {
-            from {
-                transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
-                animation-timing-function: ease-in;
-                opacity: 0;
-            }
-            40% {
-                transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
-                animation-timing-function: ease-in;
-            }
-            60% {
-                transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
-                opacity: 1;
-            }
-            80% {
-                transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
-            }
-            to {
-                transform: perspective(400px);
-            }
-        }
-        
-        @keyframes lightSpeedIn {
-            from {
-                transform: translate3d(100%, 0, 0) skewX(-30deg);
-                opacity: 0;
-            }
-            60% {
-                transform: skewX(20deg);
-                opacity: 1;
-            }
-            80% {
-                transform: skewX(-5deg);
-            }
-            to {
-                transform: translate3d(0, 0, 0);
-            }
-        }
-        
-        body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
-            color: #bd8787;
-            background-color: #f8f8f8;
-            animation: fadeIn 1s ease-out;
-        }
-        
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        /* Header styles */
-        header {
-            background-color: #1d1717;
-            color: #ffd700;
-            padding: 1rem 0;
-            position: fixed;
-            width: 100%;
-            z-index: 1000;
-            transition: all 0.3s ease;
-        }
-        
-        header.scrolled {
-            background-color: rgba(21, 21, 21, 0.9);
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-        
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .logo {
-            font-size: 2rem;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            animation: slideInFromLeft 1s ease-out, pulse 2s infinite;
-        }
-        
-        nav ul {
-            list-style-type: none;
-            display: flex;
-        }
-        
-        nav ul li {
-            margin-left: 30px;
-            animation: slideInFromRight 1s ease-out;
-        }
-        
-        nav ul li a {
-            color: #ffd700;
-            text-decoration: none;
-            font-weight: bold;
-            transition: all 0.3s ease;
-            text-transform: uppercase;
-            font-size: 0.9rem;
-            letter-spacing: 1px;
-            position: relative;
-        }
-        
-        nav ul li a::after {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 2px;
-            bottom: -5px;
-            left: 0;
-            background-color: #ffd700;
-            transform: scaleX(0);
-            transition: transform 0.3s ease;
-        }
-        
-        nav ul li a:hover::after {
-            transform: scaleX(1);
-        }
-        
-        /* Hero section styles */
-        .hero {
-            background-image: url('https://th.bing.com/th/id/OIP.9QASrT2abfaVsFzReruBcgHaER?rs=1&pid=ImgDetMain');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            color: white;
-            text-align: center;
-            padding: 200px 0 100px;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.5);
-            animation: fadeIn 2s ease-out;
-        }
-        
-        .hero-content {
-            position: relative;
-            z-index: 1;
-        }
-        
-        .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 20px;
-            animation: zoomIn 1s ease-out, pulse 2s infinite;
-        }
-        
-        .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 30px;
-            animation: fadeIn 2s ease-out;
-        }
-        
-        .cta-button {
-            display: inline-block;
-            background-color: #ffd700;
-            color: #1a1a1a;
-            padding: 12px 30px;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: bold;
-            text-transform: uppercase;
-            transition: all 0.3s ease;
-            animation: bounce 1s ease-out;
-        }
-        
-        .cta-button:hover {
-            background-color: #ffffff;
-            transform: scale(1.05);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-        }
-        
-        /* Section styles */
         section {
             padding: 80px 0;
             background-color: white;
@@ -683,7 +442,7 @@
     <section id="contact">
         <div class="container">
             <h2>Raise Your COMPLAINT</h2>
-            <form class="contact-form">
+            <form class="contact-form" action="mailto:fineaseweb@gmail.com" method="post" enctype="text/plain">
                 <div class="form-group">
                     <label for="name">Name:</label>
                     <input type="text" id="name" name="name" required>
@@ -699,10 +458,10 @@
                 <div class="form-group">
                     <label for="service">Complaint About:</label>
                     <select id="service" name="service">
-                        <option value="credit-card">Credit Card</option>
-                        <option value="loan">LOAN</option>
-                        <option value="dmat">D-mat Accounts</option>
-                        <option value="bank-accounts">Bank Accounts</option>
+                        <option value="rental">Banking</option>
+                        <option value="services">D-mat </option>
+                        <option value="rental">CREDIT CARD</option>
+                        <option value="services">LOAN</option>
                     </select>
                 </div>
                 <div class="form-group">
@@ -711,6 +470,7 @@
                 </div>
                 <button type="submit" class="submit-button">Send Inquiry</button>
             </form>
+            
         </div>
     </section>
 
@@ -720,10 +480,10 @@
             <div class="footer-logo">FINEASE</div>
             <ul class="footer-links">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="index.html">Reviews</a></li>
-                <li><a href="bank-account.html">Bank Accounts</a></li>
-                <li><a href="cards.html">Credit cards</a></li>
-                <li><a href="loan.html">Loan</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="rental.html">Rental</a></li>
+                <li><a href="servicing.html">Services</a></li>
+                <li><a href="help.html">Help</a></li>
             </ul>
             <div class="social-icons">
                 <a href="#" aria-label="Facebook"><img src="facebook-logo.jpeg" alt="Facebook" width="24"></a>
@@ -731,7 +491,7 @@
                 <a href="#" aria-label="Instagram"><img src="Instagram-Logo.jpeg" alt="Instagram" width="24"></a>
             </div>
         </div>
-        <p>&copy; fineaseweb@gmail.com. All rights reserved.</p>
+        <p>&copy; fineaseweb@gmail.com All rights reserved.</p>
     </footer>
 </body>
 </html>

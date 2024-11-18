@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICICI Bank Car Loans</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            margin: 0;
+            height: 100%;
+            overflow-y: scroll;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+
+        .image-section {
+            flex: 1;
+            min-width: 300px;
+            background-size: cover;
+            background-position: center;
+            animation: slideInLeft 2s ease-in-out;
+        }
+
+        .content-section {
+            flex: 2;
+            padding: 20px;
+            overflow-y: auto;
+            animation: slideInRight 2s ease-in-out;
+        }
+
+        h1 {
+            color: #1c4587;
+            text-align: center;
+            animation: bounceIn 2s ease-in-out;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 16px;
+            animation: fadeInUp 2s ease-in-out;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #1c4587;
+            color: white;
+        }
+
+        .highlight {
+            background-color: #e6f2ff;
+        }
+
+        a {
+            color: #0073e6;
+            text-decoration: none;
+            font-weight: bold;
+            animation: pulse 2s infinite;
+        }
+
+        a:hover {
+            color: #005bb5;
+        }
+
+        .apply-now {
+            display: block;
+            margin: 20px auto;
+            padding: 15px 30px;
+            font-size: 18px;
+            color: white;
+            background-color: #0073e6;
+            text-align: center;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            max-width: 300px;
+        }
+
+        .apply-now:hover {
+            background-color: #005bb5;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideInLeft {
+            from { transform: translateX(-100%); }
+            to { transform: translateX(0); }
+        }
+
+        @keyframes slideInRight {
+            from { transform: translateX(100%); }
+            to { transform: translateX(0); }
+        }
+
+        @keyframes bounceIn {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-20px);
+            }
+            60% {
+                transform: translateY(-10px);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="content-section">
+        <h1>ICICI Bank Car Loans</h1>
+
+        <h2>New Car Loan</h2>
+        <table>
+            <tr>
+                <th>Details</th>
+                <th>Information</th>
+            </tr>
+            <tr>
+                <td class="highlight">Loan Amount</td>
+                <td>Up to ₹1 crore</td>
+            </tr>
+            <tr>
+                <td class="highlight">Interest Rates</td>
+                <td>Starting from 9.10% per annum</td>
+            </tr>
+            <tr>
+                <td class="highlight">Repayment Tenure</td>
+                <td>12 to 84 months</td>
+            </tr>
+            <tr>
+                <td class="highlight">Features</td>
+                <td>
+                    <ul>
+                        <li>100% On-Road Funding</li>
+                        <li>Minimal Documentation</li>
+                        <li>Quick Approval</li>
+                        <li>Flexible Tenure</li>
+                        <li>Suitable for purchasing a new car</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td class="highlight">Eligibility</td>
+                <td>Salaried individuals aged 20 to 65 with a monthly income of ₹30,000. Self-employed individuals aged 21 to 70.</td>
+            </tr>
+        </table>
+
+        <h2>Pre-Owned Car Loan</h2>
+        <table>
+            <tr>
+                <th>Details</th>
+                <th>Information</th>
+            </tr>
+            <tr>
+                <td class="highlight">Loan Amount</td>
+                <td>Up to ₹1 crore</td>
+            </tr>
+            <tr>
+                <td class="highlight">Interest Rates</td>
+                <td>Starting from 9.10% per annum</td>
+            </tr>
+            <tr>
+                <td class="highlight">Repayment Tenure</td>
+                <td>12 to 84 months</td>
+            </tr>
+            <tr>
+                <td class="highlight">Features</td>
+                <td>
+                    <ul>
+                        <li>100% On-Road Funding</li>
+                        <li>Minimal Documentation</li>
+                        <li>Quick Approval</li>
+                        <li>Flexible Tenure</li>
+                        <li>Suitable for purchasing a pre-owned car</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td class="highlight">Eligibility</td>
+                <td>Salaried individuals aged 20 to 65 with a monthly income of ₹30,000. Self-employed individuals aged 21 to 70.</td>
+            </tr>
+        </table>
+
+        <h2>General Features</h2>
+        <table>
+            <tr>
+                <th>Details</th>
+                <th>Information</th>
+            </tr>
+            <tr>
+                <td class="highlight">Income Proof</td>
+                <td>No income proof required</td>
+            </tr>
+            <tr>
+                <td class="highlight">Part Payment</td>
+                <td>Allowed before loan tenure ends</td>
+            </tr>
+            <tr>
+                <td class="highlight">Foreclosure Charges</td>
+                <td>No charges after 3 months</td>
+            </tr>
+            <tr>
+                <td class="highlight">Loan to Value (LTV)</td>
+                <td>Up to 100% of on-road price</td>
+            </tr>
+            <tr>
+                <td class="highlight">Insurance Options</td>
+                <td>Personal accident and critical illness covers available</td>
+            </tr>
+            <tr>
+                <td class="highlight">Customer Service</td>
+                <td>24/7 support available</td>
+            </tr>
+            <tr>
+                <td class="highlight">Online Access</td>
+                <td>Manage loan account online</td>
+            </tr>
+        </table>
+
+        <h2>Additional Benefits</h2>
+        <ul>
+            <li>Tailored solutions for your car loan needs</li>
+            <li>Support for various car purchase needs</li>
+            <li>Ease of access via ICICI Bank branches and digital platforms</li>
+            <li>Eligibility for government schemes and subsidies</li>
+            <li>Competitive interest rates</li>
+            <li>Easy online loan application</li>
+            <li>Nominal processing charges</li>
+            <li>Special rates for existing customers</li>
+        </ul>
+
+        <a href="icici_car_loan_application.html" class="apply-now">Apply for ICICI Car Loan</a>
+    </div>
+</div>
+
+</body>
+</html>

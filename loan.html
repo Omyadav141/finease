@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Selection</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000000;
+            margin: 0;
+            padding: 20px;
+            animation: fadeIn 1s ease-out;
+        }
+
+        h1 {
+            text-align: center;
+            color: #FFD700;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #000000;
+            color: whitesmoke;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #ffffff;
+        }
+
+        .input-group input[type="text"],
+        .input-group select {
+            width: calc(100% - 20px);
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            transition: border-color 0.3s ease;
+        }
+
+        .input-group input[type="text"]:focus,
+        .input-group select:focus {
+            border-color: #334f6e;
+        }
+
+        .gender-group {
+            margin-bottom: 15px;
+            color: white;
+        }
+
+        .loan-type-group {
+            margin-bottom: 15px;
+        }
+
+        .loan-list {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .loan-box {
+            background-color: #000000;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            color: #FFD700;
+            box-shadow: 0 6px 15px rgba(237, 211, 15, 0.944);
+        }
+
+        .loan-box:hover {
+            transform: scale(1.05);
+            background-color: #FFD700;
+            color: #000000;
+        }
+
+        .loan-box img {
+            width: 100px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .loan-box h3 {
+            margin: 10px 0;
+        }
+
+        .loan-box p {
+            margin: 5px 0;
+        }
+
+        .loan-box .rating {
+            color: #f39c12;
+        }
+
+        .loan-box button {
+            background-color: #007bff;
+            color: #eeeeee;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .loan-box button:hover {
+            background-color: #d0d3d6;
+        }
+
+        footer {
+            padding: 10px 0;
+            background-color: #000000;
+            text-align: center;
+            color: #c4b9b9;
+            margin-top: 20px;
+        }
+
+        footer p {
+            font-size: 0.9em;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Loan Selection</h1>
+        <marquee behavior="smooth" direction="left">Welcome to LOAN SECTION | SELECT YOUR TYPE OF ACCOUNT AND COMPARE
+            THEM WITH BANKS | If any QUERY please contact | Use desktop for better understanding | Thank You for
+            visiting.</marquee>
+
+        <div class="input-group">
+            <label for="age">Age:</label>
+            <input type="text" id="age" name="age" required>
+        </div>
+        <div class="input-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div class="input-group">
+            <label for="profession">Profession:</label>
+            <select id="profession" name="profession" required>
+                <option value="">Select your profession</option>
+                <option value="Student">Student</option>
+                <option value="Employee">Employee</option>
+                <option value="Business">Business</option>
+                <option value="Freelancer">Freelancer</option>
+                <option value="Retired">Retired</option>
+                <option value="Other">Other</option>
+            </select>
+        </div>
+        <div class="gender-group">
+            <label>Gender:</label>
+            <label><input type="radio" name="gender" value="Male" required> Male</label>
+            <label><input type="radio" name="gender" value="Female" required> Female</label>
+            <label><input type="radio" name="gender" value="Other" required> Other</label>
+        </div>
+        <button onclick="showLoanTypeSection()">Next</button>
+
+        <div id="loan-type-section" style="display:none;">
+            <div class="loan-type-group">
+                <label>Select Loan Type:</label>
+                <label><input type="radio" name="loan-type" value="Personal Loan"> Personal Loan</label>
+                <label><input type="radio" name="loan-type" value="Home Loan"> Home Loan</label>
+                <label><input type="radio" name="loan-type" value="Gold Loan"> Gold Loan</label>
+                <label><input type="radio" name="loan-type" value="Car Loan"> Car Loan</label>
+                <label><input type="radio" name="loan-type" value="Education Loan"> Education Loan</label>
+                <label><input type="radio" name="loan-type" value="Business Loan"> Business Loan</label>
+                <label><input type="radio" name="loan-type" value="Agriculture Loan"> Agriculture Loan</label>
+            </div>
+            <button onclick="showLoanOptions()">Show Loan</button>
+        </div>
+
+        <div id="loan-list" class="loan-list"></div>
+    </div>
+
+    <script>
+        function showLoanTypeSection() {
+            document.getElementById("loan-type-section").style.display = "block";
+        }
+
+        const loans = {
+            'Personal Loan': [
+                { name: 'State Bank of India', file: 'sbi_personal_loan.html', image: 'images/sbi.png', rating: 4.5, fees: '₹500 per year', services: 'Savings, Loans, Insurance' },
+                { name: 'HDFC Bank', file: 'hdfc_personal_loan.html', image: 'hdfc.jpeg', rating: 4.4, fees: '₹600 per year', services: 'Savings, Credit Cards, Loans' },
+                { name: 'ICICI Bank', file: 'icici_personal_loan.html', rating: 4.3, fees: '₹550 per year', services: 'Savings, Investments, Loans' },
+                { name: 'Axis Bank', file: 'axis_personal_loan.html', image: 'images/axis.png', rating: 4.2, fees: '₹500 per year', services: 'Savings, Credit Cards, Loans' },
+                { name: 'Kotak Mahindra Bank', file: 'kotak_personal_loan.html', image: 'images/kotak.png', rating: 4.1, fees: '₹450 per year', services: 'Savings, Investments, Loans' },
+                { name: 'Au small financae bank', file: 'au_personal.html', image: 'images/pnb.png', rating: 4.0, fees: '₹400 per year', services: 'Savings, Loans, Insurance' },
+                { name: 'Bank of India', file: 'boi_personal_loan.html', image: 'images/boi.png', rating: 3.9, fees: '₹350 per year', services: 'Savings, Loans, Insurance' },
+                { name: 'Canara Bank', file: 'canara_personal.html', image: 'images/canara.png', rating: 3.8, fees: '₹300 per year', services: 'Savings, Loans, Insurance' },
+                { name: 'Idfc bank', file: 'idfc_personal_loan.html', image: 'images/idfc.png', rating: 3.7, fees: '₹250 per year', services: 'Savings, Loans, Insurance' },
+                { name: 'IndusInd bank', file: 'indusind_personal.html', image: 'images/indusind.png', rating: 4.0, fees: '₹500 per year', services: 'Savings, Credit Cards, Loans' }
+                // More banks as needed
+            ],
+            'Home Loan': [
+                { name: 'State Bank of India', file: 'sbi_home_loan.html', image: 'images/sbi.png', rating: 4.5, fees: '₹500 per year', services: 'Savings, Loans, Insurance' },
+                { name: 'HDFC Bank', file: 'hdfc_home_loan.html_loan', image: 'hdfc.jpeg', rating: 4.4, fees: '₹600 per year', services: 'Savings, Credit Cards, Loans' },
+                { name: 'ICICI Bank', file: 'icici_home_loan.html', rating: 4.3, fees: '₹550 per year', services: 'Savings, Investments, Loans' },
+                { name: 'Axis Bank', file: 'axis_home.html', image: 'images/axis.png', rating: 4.2, fees: '₹500 per year', services: 'Savings, Credit Cards, Loans' },
+                { name: 'Kotak Mahindra Bank', file: 'kotak_home_loan.html', image: 'images/kotak.png', rating: 4.1, fees: '₹450 per year', services: 'Savings, Investments, Loans' },
+                { name: 'Au small financae bank', file: 'au_homebank.html', image: 'images/pnb.png', rating: 4.0, fees: '₹400 per year', services: 'Savings, Loans, Insurance' },
+                { name: 'Bank of India', file: 'boi_home_loan.html', image: 'images/boi.png', rating: 3.9, fees: '₹350 per year', services: 'Savings, Loans, Insurance' },
+                { name: 'Canara Bank', file: 'canara_home.html', image: 'images/canara.png', rating: 3.8, fees: '₹300 per year', services: 'Savings, Loans, Insurance' },
+                { name: 'Idfc bank', file: 'idfc_home_loan.html', image: 'images/idfc.png', rating: 3.7, fees: '₹250 per year', services: 'Savings, Loans, Insurance' },
+                { name: 'IndusInd bank', file: 'indusind_home.html', image: 'images/indusind.png', rating: 4.0, fees: '₹500 per year', services: 'Savings, Credit Cards, Loans' }
+                // More banks as needed
+            ],
+            'Car Loan': [
+                { name: 'State Bank of India', file: 'sbi_car_loan.html', image: 'images/sbi.png', rating: 4.5, fees: '₹500 per year', services: 'Savings, Loans, Insurance' },
+                { name: 'HDFC Bank', file: 'hdfc_car_loan.html', image: 'hdfc.jpeg', rating: 4.4, fees: '₹600 per year', services: 'Savings, Credit Cards, Loans' },
+                { name: 'ICICI Bank', file: 'icici_carloan.html', rating: 4.3, fees: '₹550 per year', services: 'Savings, Investments, Loans' },
+                { name: 'Axis Bank', file: 'axis_car.html', image: 'images/axis.png', rating: 4.2, fees: '₹500 per year', services: 'Savings, Credit Cards, Loans' },
+                { name: 'Kotak Mahindra Bank', file: 'kotak_car.html', image: 'images/kotak.png', rating: 4.1, fees: '₹450 per year', services: 'Savings, Investments, Loans' },
+                { name: 'Au small financae bank', file: 'au_car.html', image: 'images/pnb.png', rating: 4.0, fees: '₹400 per year', services: 'Savings, Loans, Insurance' },
+                { name: 'Bank of India', file: 'boi_car_loan.html', image: 'images/boi.png', rating: 3.9, fees: '₹350 per year', services: 'Savings, Loans, Insurance' },
+                { name: 'Canara Bank', file: 'canara_car.html', image: 'images/canara.png', rating: 3.8, fees: '₹300 per year', services: 'Savings, Loans, Insurance' },
+                { name: 'Idfc bank', file: 'idfc_car_loan.html', image: 'images/idfc.png', rating: 3.7, fees: '₹250 per year', services: 'Savings, Loans, Insurance' },
+                { name: 'IndusInd bank', file: 'indusind_car.html', image: 'images/indusind.png', rating: 4.0, fees: '₹500 per year', services: 'Savings, Credit Cards, Loans' }
+                // More banks as needed
+            ],
+            'Gold Loan': [
+                { name: 'State Bank of India', file: 'sbi_gold_loan.html', image: 'images/sbi.png', rating: 4.5, fees: '₹500 per year', services: 'Savings, Loans, Insurance' },
+                { name: 'HDFC Bank', file: 'hdfc_gold_loan.html', image: 'hdfc.jpeg', rating: 4.4, fees: '₹600 per year', services: 'Savings, Credit Cards, Loans' },
+                { name: 'ICICI Bank', file: 'icici_gold_loan.html', rating: 4.3, fees: '₹550 per year', services: 'Savings, Investments, Loans' },
+                { name: 'Axis Bank', file: 'axis_gold.html', image: 'images/axis.png', rating: 4.2, fees: '₹500 per year', services: 'Savings, Credit Cards, Loans' },
+                { name: 'Kotak Mahindra Bank', file: 'kotak_gold.html', image: 'images/kotak.png', rating: 4.1, fees: '₹450 per year', services: 'Savings, Investments, Loans' },
+                { name: 'Au small financae bank', file: 'au_goldbank.html', image: 'images/pnb.png', rating: 4.0, fees: '₹400 per year', services: 'Savings, Loans, Insurance' },
+                { name: 'Bank of India', file: 'boi_gold_loan.html', image: 'images/boi.png', rating: 3.9, fees: '₹350 per year', services: 'Savings, Loans, Insurance' },
+                { name: 'Canara Bank', file: 'canara_gold.html', image: 'images/canara.png', rating: 3.8, fees: '₹300 per year', services: 'Savings, Loans, Insurance' },
+                { name: 'Idfc bank', file: 'idfc_gold_loan.html', image: 'images/idfc.png', rating: 3.7, fees: '₹250 per year', services: 'Savings, Loans, Insurance' },
+                { name: 'IndusInd bank', file: 'indusind_gold.html', image: 'images/indusind.png', rating: 4.0, fees: '₹500 per year', services: 'Savings, Credit Cards, Loans' }
+
+
+            ],
+            'Education Loan': [
+                { name: 'State Bank of India', file: 'sbi_education_loan.html', image: 'images/sbi.png', rating: 4.5, fees: '₹500 per year', services: 'Savings, Loans, Insurance' },
+                { name: 'HDFC Bank', file: 'hdfc_education_loan.html', image: 'hdfc.jpeg', rating: 4.4, fees: '₹600 per year', services: 'Savings, Credit Cards, Loans' },
+                { name: 'ICICI Bank', file: 'icici_education_loan.html', rating: 4.3, fees: '₹550 per year', services: 'Savings, Investments, Loans' },
+                { name: 'Axis Bank', file: 'axis_education.html', image: 'images/axis.png', rating: 4.2, fees: '₹500 per year', services: 'Savings, Credit Cards, Loans' },
+                { name: 'Kotak Mahindra Bank', file: 'kotak_education.html', image: 'images/kotak.png', rating: 4.1, fees: '₹450 per year', services: 'Savings, Investments, Loans' },
+                { name: 'Au small financae bank', file: 'au_education.html', image: 'images/pnb.png', rating: 4.0, fees: '₹400 per year', services: 'Savings, Loans, Insurance' },
+                { name: 'Bank of India', file: 'boi_education_loan.html', image: 'images/boi.png', rating: 3.9, fees: '₹350 per year', services: 'Savings, Loans, Insurance' },
+                { name: 'Canara Bank', file: 'canara_education.html', image: 'images/canara.png', rating: 3.8, fees: '₹300 per year', services: 'Savings, Loans, Insurance' },
+                { name: 'Idfc bank', file: 'idfc_education_loan.html', image: 'images/idfc.png', rating: 3.7, fees: '₹250 per year', services: 'Savings, Loans, Insurance' },
+                { name: 'IndusInd bank', file: 'indusind_education.html', image: 'images/indusind.png', rating: 4.0, fees: '₹500 per year', services: 'Savings, Credit Cards, Loans' }
+
+
+            ],
+            'Business Loan': [
+                { name: 'State Bank of India', file: 'sbi_business_loan.html', image: 'images/sbi.png', rating: 4.5, fees: '₹500 per year', services: 'Savings, Loans, Insurance' },
+                { name: 'HDFC Bank', file: 'hdfc_business_loan.html', image: 'hdfc.jpeg', rating: 4.4, fees: '₹600 per year', services: 'Savings, Credit Cards, Loans' },
+                { name: 'ICICI Bank', file: 'icici_business_loan.html', rating: 4.3, fees: '₹550 per year', services: 'Savings, Investments, Loans' },
+                { name: 'Axis Bank', file: 'axis_business.html', image: 'images/axis.png', rating: 4.2, fees: '₹500 per year', services: 'Savings, Credit Cards, Loans' },
+                { name: 'Kotak Mahindra Bank', file: 'kotak_business.html', image: 'images/kotak.png', rating: 4.1, fees: '₹450 per year', services: 'Savings, Investments, Loans' },
+                { name: 'Au small financae bank', file: 'au_business.html', image: 'images/pnb.png', rating: 4.0, fees: '₹400 per year', services: 'Savings, Loans, Insurance' },
+                { name: 'Bank of India', file: 'boi_business_loan.html', image: 'images/boi.png', rating: 3.9, fees: '₹350 per year', services: 'Savings, Loans, Insurance' },
+                { name: 'Canara Bank', file: 'canara_business.html', image: 'images/canara.png', rating: 3.8, fees: '₹300 per year', services: 'Savings, Loans, Insurance' },
+                { name: 'Idfc bank', file: 'idfc_business_loan.html', image: 'images/idfc.png', rating: 3.7, fees: '₹250 per year', services: 'Savings, Loans, Insurance' },
+                { name: 'IndusInd bank', file: 'indusind_business.html', image: 'images/indusind.png', rating: 4.0, fees: '₹500 per year', services: 'Savings, Credit Cards, Loans' }
+                // Other loan types as needed
+            ],
+            'Agriculture Loan': [
+                { name: 'State Bank of India', file: 'sbi_agriculture_loan.html', image: 'images/sbi.png', rating: 4.5, fees: '₹500 per year', services: 'Savings, Loans, Insurance' },
+                { name: 'HDFC Bank', file: 'hdfc_agriculture_loan.html', image: 'hdfc.jpeg', rating: 4.4, fees: '₹600 per year', services: 'Savings, Credit Cards, Loans' },
+                { name: 'ICICI Bank', file: 'icici_agriculture_loan.html', rating: 4.3, fees: '₹550 per year', services: 'Savings, Investments, Loans' },
+                { name: 'Axis Bank', file: 'axis_agriculture.html', image: 'images/axis.png', rating: 4.2, fees: '₹500 per year', services: 'Savings, Credit Cards, Loans' },
+                { name: 'Kotak Mahindra Bank', file: 'kotak_agriculture.html', image: 'images/kotak.png', rating: 4.1, fees: '₹450 per year', services: 'Savings, Investments, Loans' },
+                { name: 'Au small financae bank', file: 'au_agriculture.html', image: 'images/pnb.png', rating: 4.0, fees: '₹400 per year', services: 'Savings, Loans, Insurance' },
+                { name: 'Bank of India', file: 'boi_agriculture_loan.html', image: 'images/boi.png', rating: 3.9, fees: '₹350 per year', services: 'Savings, Loans, Insurance' },
+                { name: 'Canara Bank', file: 'canara_agriculture.html', image: 'images/canara.png', rating: 3.8, fees: '₹300 per year', services: 'Savings, Loans, Insurance' },
+                { name: 'Idfc bank', file: 'idfc_agriculture_loan.html', image: 'images/idfc.png', rating: 3.7, fees: '₹250 per year', services: 'Savings, Loans, Insurance' },
+                { name: 'IndusInd bank', file: 'indusind_agriculture.html', image: 'images/indusind.png', rating: 4.0, fees: '₹500 per year', services: 'Savings, Credit Cards, Loans' }
+            ]
+        };
+
+        function showLoanOptions() {
+            const loanType = document.querySelector('input[name="loan-type"]:checked').value;
+            const loanList = document.getElementById("loan-list");
+            loanList.innerHTML = '';
+
+            loans[loanType].forEach(loan => {
+                const loanBox = document.createElement('div');
+                loanBox.className = 'loan-box';
+                loanBox.innerHTML = `
+                    <h3>${loan.name}</h3>
+                    <p>Rating: <span class="rating">${loan.rating}</span></p>
+                    <p>Fees: ${loan.fees}</p>
+                    <p>Services: ${loan.services}</p>
+                    <button onclick="window.location.href='${loan.file}'">Learn More</button>
+                `;
+                loanList.appendChild(loanBox);
+            });
+        }
+    </script>
+</body>
+
+</html>

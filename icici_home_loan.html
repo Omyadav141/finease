@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICICI Bank Home Loans</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            margin: 0;
+            height: 100%;
+            overflow-y: scroll;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+
+        .image-section {
+            flex: 1;
+            min-width: 300px;
+            background-image: url('https://www.icicibank.com/etc/designs/icici/brand/imgs/icici-logo.png');
+            background-size: cover;
+            background-position: center;
+            animation: slideInLeft 2s ease-in-out;
+        }
+
+        .content-section {
+            flex: 2;
+            padding: 20px;
+            overflow-y: auto;
+            animation: slideInRight 2s ease-in-out;
+        }
+
+        h1 {
+            color: #1c4587;
+            text-align: center;
+            animation: bounceIn 2s ease-in-out;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 16px;
+            animation: fadeInUp 2s ease-in-out;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #1c4587;
+            color: white;
+        }
+
+        .highlight {
+            background-color: #e6f2ff;
+        }
+
+        a {
+            color: #0073e6;
+            text-decoration: none;
+            font-weight: bold;
+            animation: pulse 2s infinite;
+        }
+
+        a:hover {
+            color: #005bb5;
+        }
+
+        .apply-now {
+            display: block;
+            margin: 20px auto;
+            padding: 15px 30px;
+            font-size: 18px;
+            color: white;
+            background-color: #0073e6;
+            text-align: center;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            max-width: 300px;
+        }
+
+        .apply-now:hover {
+            background-color: #005bb5;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideInLeft {
+            from { transform: translateX(-100%); }
+            to { transform: translateX(0); }
+        }
+
+        @keyframes slideInRight {
+            from { transform: translateX(100%); }
+            to { transform: translateX(0); }
+        }
+
+        @keyframes bounceIn {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-20px);
+            }
+            60% {
+                transform: translateY(-10px);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="image-section"></div>
+    <div class="content-section">
+        <h1>ICICI Bank Home Loans</h1>
+
+        <h2>Home Loan</h2>
+        <table>
+            <tr>
+                <th>Loan Type</th>
+                <th>Details</th>
+            </tr>
+            <tr>
+                <td class="highlight">Loan Amount</td>
+                <td>Up to ₹5 crores.</td>
+            </tr>
+            <tr>
+                <td class="highlight">Interest Rates</td>
+                <td>Starting from 8.75% per annum.</td>
+            </tr>
+            <tr>
+                <td class="highlight">Repayment Tenure</td>
+                <td>Flexible tenure ranging from 12 to 30 years.</td>
+            </tr>
+            <tr>
+                <td class="highlight">Features</td>
+                <td>
+                    <ul>
+                        <li>No Foreclosure Charges: No pre-closure charges if 12 EMIs are paid.</li>
+                        <li>Minimal Documentation: Requires minimal documentation, streamlining the application process.</li>
+                        <li>Fixed Interest Rates: Benefit from stable and predictable interest rates.</li>
+                        <li>No Collateral Required: Secure a home loan without the need to pledge collateral.</li>
+                        <li>Flexible Tenure: Choose a repayment tenure that suits your financial situation and goals.</li>
+                        <li>Usage: Suitable for purchasing a new home, home renovation, or construction.</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td class="highlight">Eligibility</td>
+                <td>Salaried individuals with a regular monthly income and a salary account with any bank in India.</td>
+            </tr>
+        </table>
+
+        <h2>Home Loan Balance Transfer</h2>
+        <table>
+            <tr>
+                <th>Loan Type</th>
+                <th>Details</th>
+            </tr>
+            <tr>
+                <td class="highlight">Loan Amount</td>
+                <td>Up to ₹5 crores.</td>
+            </tr>
+            <tr>
+                <td class="highlight">Interest Rates</td>
+                <td>Starting from 8.75% per annum.</td>
+            </tr>
+            <tr>
+                <td class="highlight">Repayment Tenure</td>
+                <td>Flexible tenure ranging from 12 to 30 years.</td>
+            </tr>
+            <tr>
+                <td class="highlight">Features</td>
+                <td>
+                    <ul>
+                        <li>Balance Transfer: Transfer your existing home loan to ICICI Bank for lower EMIs.</li>
+                        <li>Attractive Interest Rates: Enjoy competitive interest rates on the transferred loan amount.</li>
+                        <li>Flexible Tenure: The repayment tenure can be customized to suit your financial situation and goals.</li>
+                        <li>No Collateral Required: Similar to the primary home loan, no collateral is needed to avail the balance transfer facility.</li>
+                        <li>Usage: Ideal for reducing your loan servicing costs and improving cash flow by transferring high-cost loans to ICICI Bank.</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td class="highlight">Eligibility</td>
+                <td>Existing home loan borrowers looking to transfer their loan balance to ICICI Bank.</td>
+            </tr>
+        </table>
+
+        <h2>General Features of ICICI Bank Home Loans</h2>
+        <table>
+            <tr>
+                <th>Feature</th>
+                <th>Details</th>
+            </tr>
+            <tr>
+                <td class="highlight">No Income Proof Needed</td>
+                <td>No need to provide income proof documents.</td>
+            </tr>
+            <tr>
+                <td class="highlight">Part Payment Allowed</td>
+                <td>Option to repay part of the loan amount before the tenure ends.</td>
+            </tr>
+            <tr>
+                <td class="highlight">Waiver on Foreclosure Charges</td>
+                <td>No foreclosure charges after three months.</td>
+            </tr>
+            <tr>
+                <td class="highlight">High Loan to Value (LTV) Ratio</td>
+                <td>Up to 75% of the property value.</td>
+            </tr>
+            <tr>
+                <td class="highlight">Insurance Options</td>
+                <td>Personal accident cover and critical illness cover available for a nominal premium.</td>
+            </tr>
+            <tr>
+                <td class="highlight">24/7 Customer Service</td>
+                <td>Available round the clock to address any queries or concerns.</td>
+            </tr>
+            <tr>
+                <td class="highlight">Online Account Access</td>
+                <td>Manage your loan account online with ease, including tracking loan status, repayment schedules, and transaction history.</td>
+            </tr>
+        </table>
+
+        <h2>Additional Benefits</h2>
+        <table>
+            <tr>
+                <th>Benefit</th>
+                <th>Details</th>
+            </tr>
+            <tr>
+                <td class="highlight">Tailored Solutions

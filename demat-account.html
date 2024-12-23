@@ -19,7 +19,7 @@
             align-items: center;
             padding: 20px;
             background-color: #e0d9d9;
-            color: rgb(0, 0, 0);
+            color: rgb(255, 255, 255);
             border-radius: 10px;
             position: relative;
             overflow: hidden;
@@ -29,8 +29,9 @@
         .footer-logo {
             font-size: 1.5em;
             font-weight: bold;
-            color: #000000;
+            color: #766161;
             text-align: left;
+            
         }
 
         .footer-links {
@@ -91,7 +92,25 @@
             margin-top: 20px;
             position: relative;
         }
-
+        .menu-toggle {
+                display: block;
+                font-size: 1.5rem;
+                color: #ffd700;
+                cursor: pointer;
+                animation: pulse 2s infinite;
+            }
+        .logo {
+            font-size: 3rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            animation: slideInFromLeft 1s ease-out, pulse 2s infinite;
+            border: #000000;
+        }
+        .b{
+            color: #000000;
+        }
+        
         footer p {
             font-size: 0.9em;
             margin-top: 15px;
@@ -106,13 +125,22 @@
 </head>
 <body>
     <header>
-        <h1>Demat Account Comparison</h1>
+        <div class="container header-content">
+            <div class="logo">DMAT ACCOUNT COMPARISION</div>
+            <nav>
+                <div class="menu-toggle"></div>
+                <ul>
+                   
+                    <li><a href="index.html"  class="b">⬅ BACK</a></li>
+                        
+                </ul>
+            </nav>
+        </div>         
     </header>
     
         
         <div class="headline"></div>
-        <marquee behavior="smooth" direction="left">Welcome to BANK ACCOUNT SECTION <img src="new.gif" alt=""> | WHERE YOU CAN SELECT YOUR TYPE OF ACCOUNT <img src="new.gif" alt="">| AND COMPARE THEM WITH BANKS | If any QUERY please contact <img src="new.gif" alt=""> | Use desktop for better understanding | Thank You for visiting.</marquee>
-        
+       
     <main>
         <input type="text" id="search" placeholder="Search for Demat accounts...">
         <div id="results"></div>
